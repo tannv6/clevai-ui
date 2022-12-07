@@ -2,7 +2,7 @@ var React = require('react');
 
 var styles = {"test":"_3ybTi"};
 
-var styles$1 = {"type-1":"_1zSmH","type-2":"_m_qPR"};
+var styles$1 = {"type-3":"_12LKd"};
 
 var ExampleButton = function ExampleButton(_ref) {
   var text = _ref.text,
