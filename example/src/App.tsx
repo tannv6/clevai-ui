@@ -6,7 +6,7 @@ import 'clevai-ui/dist/index.css';
 const App = () => {
   return (
     <>
-      <ExampleButton text='AnhLH' type='type-2' />
+      <ExampleButton text='AnhLH' type='type-1' />
     </>
   );
 };

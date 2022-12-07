@@ -2,7 +2,7 @@ import { createElement } from 'react';
 
 var styles = {"test":"_3ybTi"};
 
-var styles$1 = {"type-3":"_12LKd"};
+var styles$1 = {"type-1":"_33j4F","type-2":"_3yQao"};
 
 var ExampleButton = function ExampleButton(_ref) {
   var text = _ref.text,
