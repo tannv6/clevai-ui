@@ -1,7 +1,11 @@
-.type-1{
-    background: blue;
+@import '../../base/css/common.scss';
+
+.type-1 {
+  background: $successColor;
+  @include font-medium;
 }
 
-.type-2{
-    background: red;
+.type-2 {
+  background: $errorColor;
+  @include font-regular;
 }

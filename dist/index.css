@@ -8,8 +8,159 @@
   text-align: center;
 }
 
+@font-face {
+  font-family: 'Regular SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Medium SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Medium.ttf") format("truetype");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Semibold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Semibold.ttf") format("truetype");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'Bold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Bold.ttf") format("truetype");
+  font-weight: 700; }
+
+._xaQ6C {
+  font-size: 28px;
+  line-height: 36px; }
+
+._5q2Fq {
+  font-size: 24px;
+  line-height: 32px; }
+
+._2PZyB {
+  font-size: 20px;
+  line-height: 28px; }
+
+._2DE81 {
+  font-size: 18px;
+  line-height: 24px; }
+
+._2ku65 {
+  font-size: 16px;
+  line-height: 22px; }
+
+._yHFhW {
+  font-size: 14px;
+  line-height: 18px; }
+
+._1hEMJ {
+  font-size: 12px;
+  line-height: 16px; }
+
+._6Y5t4 {
+  font-family: 'Bold SF Compact Rounded', sans-serif; }
+
+._kUJg- {
+  font-family: 'Semibold SF Compact Rounded', sans-serif; }
+
+._2v2vc {
+  font-family: 'Medium SF Compact Rounded', sans-serif; }
+
+._12YgX {
+  font-family: 'Regular SF Compact Rounded', sans-serif; }
+
 ._33j4F {
-  background: blue; }
+  background: #28b44f;
+  font-family: 'Medium SF Compact Rounded', sans-serif; }
 
 ._3yQao {
-  background: red; }
+  background: #ed1d31;
+  font-family: 'Regular SF Compact Rounded', sans-serif; }
+
+@font-face {
+  font-family: 'Regular SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Medium SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Medium.ttf") format("truetype");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Semibold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Semibold.ttf") format("truetype");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'Bold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Bold.ttf") format("truetype");
+  font-weight: 700; }
+
+._fX5D2 {
+  font-size: 28px;
+  line-height: 36px; }
+
+._3q58I {
+  font-size: 24px;
+  line-height: 32px; }
+
+._2iC0F {
+  font-size: 20px;
+  line-height: 28px; }
+
+._1aDJq {
+  font-size: 18px;
+  line-height: 24px; }
+
+._tfaPw {
+  font-size: 16px;
+  line-height: 22px; }
+
+._3rauF {
+  font-size: 14px;
+  line-height: 18px; }
+
+._3PR1A {
+  font-size: 12px;
+  line-height: 16px; }
+
+._3eTmN {
+  font-family: 'Bold SF Compact Rounded', sans-serif; }
+
+._2ouck {
+  font-family: 'Semibold SF Compact Rounded', sans-serif; }
+
+._3esy5 {
+  font-family: 'Medium SF Compact Rounded', sans-serif; }
+
+._1GwCX {
+  font-family: 'Regular SF Compact Rounded', sans-serif; }
+
+._4983V {
+  width: 16px;
+  height: 16px; }
+
+._2I7Rh {
+  width: 20px;
+  height: 20px; }
+
+._1zYyk {
+  width: 24px;
+  height: 24px; }
+
+._3tJsu {
+  width: 32px;
+  height: 32px; }
+
+._1j3h4 {
+  width: 44px;
+  height: 44px; }
+
+._DSHY6 {
+  fill: #ff8c05; }
+
+._3b0Z8 {
+  fill: #28b44f; }
+
+._1MXMB {
+  fill: #000810; }

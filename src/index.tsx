@@ -10,3 +10,4 @@ export const ExampleComponent = ({ text }: Props) => {
 };
 
 export * from './develop';
+export * from './base';

@@ -1,0 +1,38 @@
+@import '../../base/css/common.scss';
+
+.xs {
+  width: 16px;
+  height: 16px;
+}
+
+.sm {
+  width: 20px;
+  height: 20px;
+}
+
+.md {
+  width: 24px;
+  height: 24px;
+}
+
+.lg {
+  width: 32px;
+  height: 32px;
+}
+
+.xl {
+  width: 44px;
+  height: 44px;
+}
+
+.primary {
+  fill: $primaryColor;
+}
+
+.secondary {
+  fill: $successColor;
+}
+
+.gray {
+  fill: $grayColor;
+}
