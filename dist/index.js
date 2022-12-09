@@ -5,7 +5,7 @@ var React__default = _interopDefault(React);
 
 var styles = {"test":"_3ybTi"};
 
-var styles$1 = {"h1":"_xaQ6C","h2":"_5q2Fq","h3":"_2PZyB","h4":"_2DE81","body":"_2ku65","caption":"_yHFhW","i":"_1hEMJ","font-bold":"_6Y5t4","font-semibold":"_kUJg-","font-medium":"_2v2vc","font-regular":"_12YgX","type-1":"_33j4F","type-2":"_3yQao"};
+var styles$1 = {"h1":"_xaQ6C","h2":"_5q2Fq","h3":"_2PZyB","h4":"_2DE81","body":"_2ku65","caption":"_yHFhW","note":"_1T55e","font-bold":"_6Y5t4","font-semibold":"_kUJg-","font-medium":"_2v2vc","font-regular":"_12YgX","type-1":"_33j4F","type-2":"_3yQao"};
 
 var ExampleButton = function ExampleButton(_ref) {
   var text = _ref.text,
@@ -15,7 +15,7 @@ var ExampleButton = function ExampleButton(_ref) {
   }, text);
 };
 
-var styles$2 = {"h1":"_fX5D2","h2":"_3q58I","h3":"_2iC0F","h4":"_1aDJq","body":"_tfaPw","caption":"_3rauF","i":"_3PR1A","font-bold":"_3eTmN","font-semibold":"_2ouck","font-medium":"_3esy5","font-regular":"_1GwCX","xs":"_4983V","sm":"_2I7Rh","md":"_1zYyk","lg":"_3tJsu","xl":"_1j3h4","primary":"_DSHY6","secondary":"_3b0Z8","gray":"_1MXMB"};
+var styles$2 = {"h1":"_fX5D2","h2":"_3q58I","h3":"_2iC0F","h4":"_1aDJq","body":"_tfaPw","caption":"_3rauF","note":"_3E5Cb","font-bold":"_3eTmN","font-semibold":"_2ouck","font-medium":"_3esy5","font-regular":"_1GwCX","xs":"_4983V","sm":"_2I7Rh","md":"_1zYyk","lg":"_3tJsu","xl":"_1j3h4","primary":"_DSHY6","secondary":"_3b0Z8","gray":"_1MXMB"};
 
 var CircleIcon = function CircleIcon(_ref) {
   var size = _ref.size,
@@ -30,6 +30,61 @@ var CircleIcon = function CircleIcon(_ref) {
   }));
 };
 
+var styles$3 = {"h1":"_2vqE-","h2":"_3yJwX","h3":"_2P1HB","h4":"_enyR1","body":"_3Qjvi","caption":"_2mgJ7","note":"_WH81j","font-bold":"_3MkhO","font-semibold":"_1HPML","font-medium":"_gEqzI","font-regular":"_3U8jR"};
+
+var TYPES = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  body: 'body',
+  caption: 'caption',
+  note: 'note'
+};
+var Heading = function Heading(_ref) {
+  var children = _ref.children,
+    type = _ref.type,
+    font = _ref.font;
+  if (TYPES.h1 === type) {
+    return React__default.createElement("h1", {
+      className: styles$3[type] + " " + styles$3['font-' + font]
+    }, children);
+  }
+  if (TYPES.h2 === type) {
+    return React__default.createElement("h2", {
+      className: styles$3[type] + " " + styles$3['font-' + font]
+    }, children);
+  }
+  if (TYPES.h3 === type) {
+    return React__default.createElement("h3", {
+      className: styles$3[type] + " " + styles$3['font-' + font]
+    }, children);
+  }
+  if (TYPES.h4 === type) {
+    return React__default.createElement("h4", {
+      className: styles$3[type] + " " + styles$3['font-' + font]
+    }, children);
+  }
+  if (TYPES.body === type) {
+    return React__default.createElement("p", {
+      className: styles$3[type] + " " + styles$3['font-' + font]
+    }, children);
+  }
+  if (TYPES.caption === type) {
+    return React__default.createElement("p", {
+      className: styles$3[type] + " " + styles$3['font-' + font]
+    }, children);
+  }
+  if (TYPES.note === type) {
+    return React__default.createElement("label", {
+      className: styles$3[type] + " " + styles$3['font-' + font]
+    }, children);
+  }
+  return React__default.createElement("p", {
+    className: styles$3[type] + " " + styles$3['font-' + font]
+  }, children);
+};
+
 var ExampleComponent = function ExampleComponent(_ref) {
   var text = _ref.text;
   return React.createElement("div", {
@@ -40,4 +95,5 @@ var ExampleComponent = function ExampleComponent(_ref) {
 exports.CircleIcon = CircleIcon;
 exports.ExampleButton = ExampleButton;
 exports.ExampleComponent = ExampleComponent;
+exports.Heading = Heading;
 //# sourceMappingURL=index.js.map

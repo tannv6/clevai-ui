@@ -52,7 +52,7 @@
   font-size: 14px;
   line-height: 18px; }
 
-._1hEMJ {
+._1T55e {
   font-size: 12px;
   line-height: 16px; }
 
@@ -120,7 +120,7 @@
   font-size: 14px;
   line-height: 18px; }
 
-._3PR1A {
+._3E5Cb {
   font-size: 12px;
   line-height: 16px; }
 
@@ -164,3 +164,63 @@
 
 ._1MXMB {
   fill: #000810; }
+
+@font-face {
+  font-family: 'Regular SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Medium SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Medium.ttf") format("truetype");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Semibold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Semibold.ttf") format("truetype");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'Bold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Bold.ttf") format("truetype");
+  font-weight: 700; }
+
+._2vqE- {
+  font-size: 28px;
+  line-height: 36px; }
+
+._3yJwX {
+  font-size: 24px;
+  line-height: 32px; }
+
+._2P1HB {
+  font-size: 20px;
+  line-height: 28px; }
+
+._enyR1 {
+  font-size: 18px;
+  line-height: 24px; }
+
+._3Qjvi {
+  font-size: 16px;
+  line-height: 22px; }
+
+._2mgJ7 {
+  font-size: 14px;
+  line-height: 18px; }
+
+._WH81j {
+  font-size: 12px;
+  line-height: 16px; }
+
+._3MkhO {
+  font-family: 'Bold SF Compact Rounded', sans-serif; }
+
+._1HPML {
+  font-family: 'Semibold SF Compact Rounded', sans-serif; }
+
+._gEqzI {
+  font-family: 'Medium SF Compact Rounded', sans-serif; }
+
+._3U8jR {
+  font-family: 'Regular SF Compact Rounded', sans-serif; }
