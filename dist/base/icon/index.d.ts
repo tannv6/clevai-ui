@@ -1,1 +1,1 @@
-export { default as CircleIcon } from "./CircleIcon";
+export { default as Icon } from "./Icon";
