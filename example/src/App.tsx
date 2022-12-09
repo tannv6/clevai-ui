@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ExampleButton, CircleIcon, Heading } from 'clevai-ui';
+import { ExampleButton, Icon, Heading } from 'clevai-ui';
 import 'clevai-ui/dist/index.css';
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <>
       <h3>Lớp học livestream</h3>
       <ExampleButton text='AnhLH' type='type-2' />
-      <CircleIcon size='xs' color='gray' />
+      <Icon size='xl' color='gray' type='fb' />
       <Heading type='h4' font='semibold'>
         Lớp học livestream
       </Heading>

@@ -30,10 +30,29 @@ var CircleIcon = function CircleIcon(_ref) {
   }));
 };
 
-var Icon = function Icon(_ref) {
+var FacebookIcon = function FacebookIcon(_ref) {
   var size = _ref.size,
     color = _ref.color;
-  return React__default.createElement(CircleIcon, {
+  return React__default.createElement("svg", {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 320 512',
+    className: styles$2[size]
+  }, React__default.createElement("path", {
+    className: styles$2[color],
+    d: 'M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z'
+  }));
+};
+
+var icons = {
+  circle: CircleIcon,
+  fb: FacebookIcon
+};
+var Icon = function Icon(_ref) {
+  var size = _ref.size,
+    color = _ref.color,
+    type = _ref.type;
+  var Element = icons[type] || icons.circle;
+  return React__default.createElement(Element, {
     size: size,
     color: color
   });
