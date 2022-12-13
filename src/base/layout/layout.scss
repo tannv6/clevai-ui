@@ -1,0 +1,88 @@
+@import '../../base/css/common.scss';
+
+$levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+.container {
+  width: 1298px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.row {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bg-white {
+  background: $whiteColor;
+}
+
+.bg-tranparent {
+  background: unset;
+}
+
+.bg-background {
+  background: $backgroundColor;
+}
+
+@each $grid in $grids {
+  .col-#{$grid} {
+    width: ($grid / 12) * 100%;
+    float: left;
+  }
+}
+
+@each $level in $levels {
+  .br-#{$level} {
+    border-radius: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .mt-#{$level} {
+    margin-top: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .mr-#{$level} {
+    margin-right: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .ml-#{$level} {
+    margin-left: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .mb-#{$level} {
+    margin-bottom: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .pt-#{$level} {
+    padding-top: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .pr-#{$level} {
+    padding-right: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .pl-#{$level} {
+    padding-left: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .pb-#{$level} {
+    padding-bottom: $level * 2px;
+  }
+}
