@@ -1,0 +1,37 @@
+@import '../../base/css/common.scss';
+$levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+@each $level in $levels {
+  .mt-#{$level} {
+    margin-top: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .mr-#{$level} {
+    margin-right: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .ml-#{$level} {
+    margin-left: $level * 2px;
+  }
+}
+
+@each $level in $levels {
+  .mb-#{$level} {
+    margin-bottom: $level * 2px;
+  }
+}
+
+.label-1 {
+  @include caption;
+  @include font-semibold;
+  padding: 3px 8px;
+  background: $successColor;
+  display: inline-flex;
+  border-radius: 12px;
+  color: $whiteColor;
+  text-transform: uppercase;
+}

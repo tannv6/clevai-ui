@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Row, Icon, Heading, Container } from 'clevai-ui';
+import { Row, Icon, Heading, Container, Label } from 'clevai-ui';
 import 'clevai-ui/dist/index.css';
 
 const App = () => {
@@ -12,7 +12,8 @@ const App = () => {
       </Heading>
       <Container>
         <Row col={9} mt={8}>
-          <Row>
+          <Label type='1' mr={5}>Get</Label>
+          <Row mt={8}>
             <Row col={4} pl={5} pr={5}>
               <Row bg={'white'} pt={10} pb={10} pr={10} pl={10} br={5}>
                 <Heading type='body' font='semibold'>

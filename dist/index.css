@@ -74,12 +74,10 @@ h3,
 h4,
 h5,
 h6,
+span,
 p {
   padding: 0px;
   margin: 0px; }
-
-._2oxts {
-  color: red; }
 
 ._33j4F {
   background: #28b44f;
@@ -155,12 +153,10 @@ h3,
 h4,
 h5,
 h6,
+span,
 p {
   padding: 0px;
   margin: 0px; }
-
-._2oU5b {
-  color: red; }
 
 ._4983V {
   width: 12px;
@@ -262,12 +258,10 @@ h3,
 h4,
 h5,
 h6,
+span,
 p {
   padding: 0px;
   margin: 0px; }
-
-._q0-hp {
-  color: red; }
 
 @font-face {
   font-family: 'Regular SF Compact Rounded';
@@ -335,12 +329,10 @@ h3,
 h4,
 h5,
 h6,
+span,
 p {
   padding: 0px;
   margin: 0px; }
-
-._8mb0E {
-  color: red; }
 
 ._1pA9x {
   width: 1298px;
@@ -758,3 +750,241 @@ p {
 
 ._36TLb {
   padding-bottom: 24px; }
+
+@font-face {
+  font-family: 'Regular SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Medium SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Medium.ttf") format("truetype");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Semibold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Semibold.ttf") format("truetype");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'Bold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Bold.ttf") format("truetype");
+  font-weight: 700; }
+
+._JUQcC {
+  font-size: 28px;
+  line-height: 36px; }
+
+._1Uo8N {
+  font-size: 24px;
+  line-height: 32px; }
+
+._1nxRZ {
+  font-size: 20px;
+  line-height: 28px; }
+
+._2hDAo {
+  font-size: 18px;
+  line-height: 24px; }
+
+._tU9kN {
+  font-size: 16px;
+  line-height: 22px; }
+
+._3wrG_ {
+  font-size: 14px;
+  line-height: 18px; }
+
+._1-aWK {
+  font-size: 12px;
+  line-height: 16px; }
+
+._1lxgX {
+  font-family: 'Bold SF Compact Rounded', sans-serif; }
+
+._2iQLC {
+  font-family: 'Semibold SF Compact Rounded', sans-serif; }
+
+._3zKm9 {
+  font-family: 'Medium SF Compact Rounded', sans-serif; }
+
+._-s1su {
+  font-family: 'Regular SF Compact Rounded', sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  padding: 0px;
+  margin: 0px; }
+
+._2SeE6 {
+  margin-top: 0px; }
+
+._3GMwx {
+  margin-top: 2px; }
+
+._lhqWC {
+  margin-top: 4px; }
+
+._1AEdA {
+  margin-top: 6px; }
+
+._ucAb- {
+  margin-top: 8px; }
+
+._zj3pg {
+  margin-top: 10px; }
+
+._3QrqU {
+  margin-top: 12px; }
+
+._3YvGz {
+  margin-top: 14px; }
+
+._WGagA {
+  margin-top: 16px; }
+
+._1Oxi3 {
+  margin-top: 18px; }
+
+._2T-_s {
+  margin-top: 20px; }
+
+._ST89n {
+  margin-top: 22px; }
+
+._1tPSQ {
+  margin-top: 24px; }
+
+._1LD8y {
+  margin-right: 0px; }
+
+._23BQV {
+  margin-right: 2px; }
+
+._1Lanh {
+  margin-right: 4px; }
+
+._35dTQ {
+  margin-right: 6px; }
+
+._3SB-W {
+  margin-right: 8px; }
+
+._1N61f {
+  margin-right: 10px; }
+
+._2wB_x {
+  margin-right: 12px; }
+
+._xyHKU {
+  margin-right: 14px; }
+
+._3VPWk {
+  margin-right: 16px; }
+
+._1Wgk7 {
+  margin-right: 18px; }
+
+._1mAgb {
+  margin-right: 20px; }
+
+._2wU0h {
+  margin-right: 22px; }
+
+._2Jzr8 {
+  margin-right: 24px; }
+
+._2TUrs {
+  margin-left: 0px; }
+
+._2UYTT {
+  margin-left: 2px; }
+
+._3G2LO {
+  margin-left: 4px; }
+
+._fMoo8 {
+  margin-left: 6px; }
+
+._DWaXT {
+  margin-left: 8px; }
+
+._2iTFF {
+  margin-left: 10px; }
+
+._2--NC {
+  margin-left: 12px; }
+
+._2PCAU {
+  margin-left: 14px; }
+
+._1aZcP {
+  margin-left: 16px; }
+
+._39e8u {
+  margin-left: 18px; }
+
+._2diJD {
+  margin-left: 20px; }
+
+._3Gyxk {
+  margin-left: 22px; }
+
+._2H1eq {
+  margin-left: 24px; }
+
+._cufjB {
+  margin-bottom: 0px; }
+
+._2dA3N {
+  margin-bottom: 2px; }
+
+._nNDNr {
+  margin-bottom: 4px; }
+
+._1e43r {
+  margin-bottom: 6px; }
+
+._28V1m {
+  margin-bottom: 8px; }
+
+._3bzxt {
+  margin-bottom: 10px; }
+
+._AK6Sk {
+  margin-bottom: 12px; }
+
+._2jb17 {
+  margin-bottom: 14px; }
+
+._3cJyE {
+  margin-bottom: 16px; }
+
+._2vjTT {
+  margin-bottom: 18px; }
+
+._2FWwo {
+  margin-bottom: 20px; }
+
+._2sZcC {
+  margin-bottom: 22px; }
+
+._2xBkM {
+  margin-bottom: 24px; }
+
+._3MTkC {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Semibold SF Compact Rounded', sans-serif;
+  padding: 3px 8px;
+  background: #28b44f;
+  display: inline-flex;
+  border-radius: 12px;
+  color: #fff;
+  text-transform: uppercase; }

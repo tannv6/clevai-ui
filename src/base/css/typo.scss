@@ -40,6 +40,11 @@
   font-family: 'Regular SF Compact Rounded', sans-serif;
 }
 
+@mixin caption {
+  font-size: 14px;
+  line-height: 18px;
+}
+
 @mixin font-bold {
   font-family: 'Bold SF Compact Rounded', sans-serif;
 }

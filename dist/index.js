@@ -5,7 +5,7 @@ var React__default = _interopDefault(React);
 
 var styles = {"test":"_3ybTi"};
 
-var styles$1 = {"h1":"_xaQ6C","h2":"_5q2Fq","h3":"_2PZyB","h4":"_2DE81","body":"_2ku65","caption":"_yHFhW","note":"_1T55e","font-bold":"_6Y5t4","font-semibold":"_kUJg-","font-medium":"_2v2vc","font-regular":"_12YgX","anhlh":"_2oxts","type-1":"_33j4F","type-2":"_3yQao"};
+var styles$1 = {"h1":"_xaQ6C","h2":"_5q2Fq","h3":"_2PZyB","h4":"_2DE81","body":"_2ku65","caption":"_yHFhW","note":"_1T55e","font-bold":"_6Y5t4","font-semibold":"_kUJg-","font-medium":"_2v2vc","font-regular":"_12YgX","type-1":"_33j4F","type-2":"_3yQao"};
 
 var ExampleButton = function ExampleButton(_ref) {
   var text = _ref.text,
@@ -15,7 +15,7 @@ var ExampleButton = function ExampleButton(_ref) {
   }, text);
 };
 
-var styles$2 = {"h1":"_fX5D2","h2":"_3q58I","h3":"_2iC0F","h4":"_1aDJq","body":"_tfaPw","caption":"_3rauF","note":"_3E5Cb","font-bold":"_3eTmN","font-semibold":"_2ouck","font-medium":"_3esy5","font-regular":"_1GwCX","anhlh":"_2oU5b","xs":"_4983V","sm":"_2I7Rh","md":"_1zYyk","lg":"_3tJsu","xl":"_1j3h4","primary":"_DSHY6","secondary":"_3b0Z8","gray":"_1MXMB"};
+var styles$2 = {"h1":"_fX5D2","h2":"_3q58I","h3":"_2iC0F","h4":"_1aDJq","body":"_tfaPw","caption":"_3rauF","note":"_3E5Cb","font-bold":"_3eTmN","font-semibold":"_2ouck","font-medium":"_3esy5","font-regular":"_1GwCX","xs":"_4983V","sm":"_2I7Rh","md":"_1zYyk","lg":"_3tJsu","xl":"_1j3h4","primary":"_DSHY6","secondary":"_3b0Z8","gray":"_1MXMB"};
 
 var CircleIcon = function CircleIcon(_ref) {
   var size = _ref.size,
@@ -58,7 +58,7 @@ var Icon = function Icon(_ref) {
   });
 };
 
-var styles$3 = {"h1":"_2vqE-","h2":"_3yJwX","h3":"_2P1HB","h4":"_enyR1","body":"_3Qjvi","caption":"_2mgJ7","note":"_WH81j","font-bold":"_3MkhO","font-semibold":"_1HPML","font-medium":"_gEqzI","font-regular":"_3U8jR","anhlh":"_q0-hp"};
+var styles$3 = {"h1":"_2vqE-","h2":"_3yJwX","h3":"_2P1HB","h4":"_enyR1","body":"_3Qjvi","caption":"_2mgJ7","note":"_WH81j","font-bold":"_3MkhO","font-semibold":"_1HPML","font-medium":"_gEqzI","font-regular":"_3U8jR"};
 
 var TYPES = {
   h1: 'h1',
@@ -113,7 +113,7 @@ var Heading = function Heading(_ref) {
   }, children);
 };
 
-var styles$4 = {"h1":"_2TGE0","h2":"_Aylvo","h3":"_Vl8BK","h4":"_1Y4uE","body":"_2XMaV","caption":"_fcrmL","note":"_3p3FA","font-bold":"_26KrJ","font-semibold":"_3H8wI","font-medium":"_28rw-","font-regular":"_2gPGh","anhlh":"_8mb0E","container":"_1pA9x","row":"_2NwDW","bg-white":"_1G--D","bg-tranparent":"_35mKr","bg-background":"_2ixeh","col-1":"_3Mtkz","col-2":"_2pvKu","col-3":"_3OFM2","col-4":"_8OoRv","col-5":"_1BC09","col-6":"_V6Uaz","col-7":"_3R-up","col-8":"_1RFL_","col-9":"_2k-yC","col-10":"_2WQw-","col-11":"_10tsp","col-12":"_JGdcA","br-0":"_bCQwN","br-1":"_1hdBf","br-2":"_2Ln10","br-3":"_5QTZa","br-4":"_2rhBh","br-5":"_15xBj","br-6":"_14kb5","br-7":"_19Qbm","br-8":"_1BQda","br-9":"_1PUO6","br-10":"_1oEo0","br-11":"_2Chmu","br-12":"_rX__V","mt-0":"_3TOOm","mt-1":"_3HIEa","mt-2":"_1nfBk","mt-3":"_adW7p","mt-4":"_12n1Y","mt-5":"_17MgJ","mt-6":"_3Hlj3","mt-7":"_3d0nr","mt-8":"_2rsba","mt-9":"_3LYUW","mt-10":"_FUHlj","mt-11":"_3FGKv","mt-12":"_1uXku","mr-0":"_a61GE","mr-1":"_3EvmB","mr-2":"_gdfxS","mr-3":"_2R_5W","mr-4":"_23-F1","mr-5":"_rZgPI","mr-6":"_3A7KF","mr-7":"_2AJnj","mr-8":"_Gi7P4","mr-9":"_2zhVw","mr-10":"_1fURn","mr-11":"_9Pwrd","mr-12":"_3Y_ec","ml-0":"_3qQNM","ml-1":"_2MZ4b","ml-2":"_1M1qu","ml-3":"_2gT-z","ml-4":"_py_1a","ml-5":"_2w_Qv","ml-6":"_39-pZ","ml-7":"_2Ny6k","ml-8":"_Iw_t6","ml-9":"_1Oeyb","ml-10":"_32nFN","ml-11":"_f9Z2T","ml-12":"_1v_b4","mb-0":"_36YE-","mb-1":"_17p1K","mb-2":"_3qhnl","mb-3":"_10mU4","mb-4":"_2op15","mb-5":"_4csYA","mb-6":"_2AAlt","mb-7":"_1Gb9P","mb-8":"_VTOZd","mb-9":"_1sTrZ","mb-10":"_2i9js","mb-11":"_SlhQA","mb-12":"_3iNTL","pt-0":"_zQUKj","pt-1":"_30I2l","pt-2":"_peK6c","pt-3":"_1_tQo","pt-4":"_2Znqo","pt-5":"_23H7Y","pt-6":"_28OpO","pt-7":"_2w1Yc","pt-8":"_2kdr9","pt-9":"_3OmBg","pt-10":"_hl2sg","pt-11":"_3RyBi","pt-12":"_2xLsG","pr-0":"_3Lsa1","pr-1":"_qDXjQ","pr-2":"_1tIFl","pr-3":"_324I7","pr-4":"_2wwax","pr-5":"_O1uAw","pr-6":"_2kBJQ","pr-7":"_3cQAe","pr-8":"_1I0h5","pr-9":"_ipxjN","pr-10":"_3EvkI","pr-11":"_39XOR","pr-12":"_3Md5r","pl-0":"_1iIFV","pl-1":"_5az6_","pl-2":"_4bzV_","pl-3":"_1HeqZ","pl-4":"_2OUl2","pl-5":"_28YuU","pl-6":"_gmCF2","pl-7":"_2dm-y","pl-8":"_3isW7","pl-9":"_3WwMq","pl-10":"_VRMAX","pl-11":"_1THhH","pl-12":"_2vp-Z","pb-0":"_2GOqt","pb-1":"_vH5nK","pb-2":"_3w957","pb-3":"_W8a69","pb-4":"_1laJC","pb-5":"_3St8Y","pb-6":"_oDUhH","pb-7":"_3XfRG","pb-8":"_2sXp_","pb-9":"_3n7P5","pb-10":"_WO3OM","pb-11":"_1wbxO","pb-12":"_36TLb"};
+var styles$4 = {"h1":"_2TGE0","h2":"_Aylvo","h3":"_Vl8BK","h4":"_1Y4uE","body":"_2XMaV","caption":"_fcrmL","note":"_3p3FA","font-bold":"_26KrJ","font-semibold":"_3H8wI","font-medium":"_28rw-","font-regular":"_2gPGh","container":"_1pA9x","row":"_2NwDW","bg-white":"_1G--D","bg-tranparent":"_35mKr","bg-background":"_2ixeh","col-1":"_3Mtkz","col-2":"_2pvKu","col-3":"_3OFM2","col-4":"_8OoRv","col-5":"_1BC09","col-6":"_V6Uaz","col-7":"_3R-up","col-8":"_1RFL_","col-9":"_2k-yC","col-10":"_2WQw-","col-11":"_10tsp","col-12":"_JGdcA","br-0":"_bCQwN","br-1":"_1hdBf","br-2":"_2Ln10","br-3":"_5QTZa","br-4":"_2rhBh","br-5":"_15xBj","br-6":"_14kb5","br-7":"_19Qbm","br-8":"_1BQda","br-9":"_1PUO6","br-10":"_1oEo0","br-11":"_2Chmu","br-12":"_rX__V","mt-0":"_3TOOm","mt-1":"_3HIEa","mt-2":"_1nfBk","mt-3":"_adW7p","mt-4":"_12n1Y","mt-5":"_17MgJ","mt-6":"_3Hlj3","mt-7":"_3d0nr","mt-8":"_2rsba","mt-9":"_3LYUW","mt-10":"_FUHlj","mt-11":"_3FGKv","mt-12":"_1uXku","mr-0":"_a61GE","mr-1":"_3EvmB","mr-2":"_gdfxS","mr-3":"_2R_5W","mr-4":"_23-F1","mr-5":"_rZgPI","mr-6":"_3A7KF","mr-7":"_2AJnj","mr-8":"_Gi7P4","mr-9":"_2zhVw","mr-10":"_1fURn","mr-11":"_9Pwrd","mr-12":"_3Y_ec","ml-0":"_3qQNM","ml-1":"_2MZ4b","ml-2":"_1M1qu","ml-3":"_2gT-z","ml-4":"_py_1a","ml-5":"_2w_Qv","ml-6":"_39-pZ","ml-7":"_2Ny6k","ml-8":"_Iw_t6","ml-9":"_1Oeyb","ml-10":"_32nFN","ml-11":"_f9Z2T","ml-12":"_1v_b4","mb-0":"_36YE-","mb-1":"_17p1K","mb-2":"_3qhnl","mb-3":"_10mU4","mb-4":"_2op15","mb-5":"_4csYA","mb-6":"_2AAlt","mb-7":"_1Gb9P","mb-8":"_VTOZd","mb-9":"_1sTrZ","mb-10":"_2i9js","mb-11":"_SlhQA","mb-12":"_3iNTL","pt-0":"_zQUKj","pt-1":"_30I2l","pt-2":"_peK6c","pt-3":"_1_tQo","pt-4":"_2Znqo","pt-5":"_23H7Y","pt-6":"_28OpO","pt-7":"_2w1Yc","pt-8":"_2kdr9","pt-9":"_3OmBg","pt-10":"_hl2sg","pt-11":"_3RyBi","pt-12":"_2xLsG","pr-0":"_3Lsa1","pr-1":"_qDXjQ","pr-2":"_1tIFl","pr-3":"_324I7","pr-4":"_2wwax","pr-5":"_O1uAw","pr-6":"_2kBJQ","pr-7":"_3cQAe","pr-8":"_1I0h5","pr-9":"_ipxjN","pr-10":"_3EvkI","pr-11":"_39XOR","pr-12":"_3Md5r","pl-0":"_1iIFV","pl-1":"_5az6_","pl-2":"_4bzV_","pl-3":"_1HeqZ","pl-4":"_2OUl2","pl-5":"_28YuU","pl-6":"_gmCF2","pl-7":"_2dm-y","pl-8":"_3isW7","pl-9":"_3WwMq","pl-10":"_VRMAX","pl-11":"_1THhH","pl-12":"_2vp-Z","pb-0":"_2GOqt","pb-1":"_vH5nK","pb-2":"_3w957","pb-3":"_W8a69","pb-4":"_1laJC","pb-5":"_3St8Y","pb-6":"_oDUhH","pb-7":"_3XfRG","pb-8":"_2sXp_","pb-9":"_3n7P5","pb-10":"_WO3OM","pb-11":"_1wbxO","pb-12":"_36TLb"};
 
 var Row = function Row(_ref) {
   var mt = _ref.mt,
@@ -157,6 +157,27 @@ Container.defaultProps = {
   bg: 'tranparent'
 };
 
+var styles$5 = {"h1":"_JUQcC","h2":"_1Uo8N","h3":"_1nxRZ","h4":"_2hDAo","body":"_tU9kN","caption":"_3wrG_","note":"_1-aWK","font-bold":"_1lxgX","font-semibold":"_2iQLC","font-medium":"_3zKm9","font-regular":"_-s1su","mt-0":"_2SeE6","mt-1":"_3GMwx","mt-2":"_lhqWC","mt-3":"_1AEdA","mt-4":"_ucAb-","mt-5":"_zj3pg","mt-6":"_3QrqU","mt-7":"_3YvGz","mt-8":"_WGagA","mt-9":"_1Oxi3","mt-10":"_2T-_s","mt-11":"_ST89n","mt-12":"_1tPSQ","mr-0":"_1LD8y","mr-1":"_23BQV","mr-2":"_1Lanh","mr-3":"_35dTQ","mr-4":"_3SB-W","mr-5":"_1N61f","mr-6":"_2wB_x","mr-7":"_xyHKU","mr-8":"_3VPWk","mr-9":"_1Wgk7","mr-10":"_1mAgb","mr-11":"_2wU0h","mr-12":"_2Jzr8","ml-0":"_2TUrs","ml-1":"_2UYTT","ml-2":"_3G2LO","ml-3":"_fMoo8","ml-4":"_DWaXT","ml-5":"_2iTFF","ml-6":"_2--NC","ml-7":"_2PCAU","ml-8":"_1aZcP","ml-9":"_39e8u","ml-10":"_2diJD","ml-11":"_3Gyxk","ml-12":"_2H1eq","mb-0":"_cufjB","mb-1":"_2dA3N","mb-2":"_nNDNr","mb-3":"_1e43r","mb-4":"_28V1m","mb-5":"_3bzxt","mb-6":"_AK6Sk","mb-7":"_2jb17","mb-8":"_3cJyE","mb-9":"_2vjTT","mb-10":"_2FWwo","mb-11":"_2sZcC","mb-12":"_2xBkM","label-1":"_3MTkC"};
+
+var Label = function Label(_ref) {
+  var mt = _ref.mt,
+    mb = _ref.mb,
+    ml = _ref.ml,
+    mr = _ref.mr,
+    children = _ref.children,
+    type = _ref.type;
+  return React__default.createElement("span", {
+    className: styles$5["label-" + type] + ' ' + styles$5["mt-" + mt] + ' ' + styles$5["mr-" + mr] + ' ' + styles$5["mb-" + mb] + ' ' + styles$5["ml-" + ml]
+  }, children);
+};
+Label.defaultProps = {
+  mt: 0,
+  mb: 0,
+  mr: 0,
+  ml: 0,
+  type: '1'
+};
+
 var ExampleComponent = function ExampleComponent(_ref) {
   var text = _ref.text;
   return React.createElement("div", {
@@ -169,5 +190,6 @@ exports.ExampleButton = ExampleButton;
 exports.ExampleComponent = ExampleComponent;
 exports.Heading = Heading;
 exports.Icon = Icon;
+exports.Label = Label;
 exports.Row = Row;
 //# sourceMappingURL=index.js.map
