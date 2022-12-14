@@ -2,3 +2,13 @@
 @import './colors.scss';
 @import './typo.scss';
 @import './reset.scss';
+
+@mixin border-radius-pill {
+  border-radius: 50vh;
+}
+@mixin border-radius-4 {
+  border-radius: 4px;
+}
+@mixin border-radius-8 {
+  border-radius: 8px;
+}

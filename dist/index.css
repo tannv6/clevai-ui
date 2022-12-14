@@ -1018,24 +1018,24 @@ a {
   font-size: 14px;
   line-height: 18px;
   font-family: 'Semibold SF Compact Rounded', sans-serif;
+  border-radius: 50vh;
+  text-transform: uppercase;
+  display: inline-flex;
   padding: 3px 8px;
   background: #28b44f;
-  display: inline-flex;
-  border-radius: 12px;
-  color: #fff;
-  text-transform: uppercase; }
+  color: #fff; }
 
 ._1Ssf7 {
   font-size: 14px;
   line-height: 18px;
   font-family: 'Semibold SF Compact Rounded', sans-serif;
+  border-radius: 50vh;
+  text-transform: uppercase;
+  display: inline-flex;
   padding: 3px 8px 3px 17px;
   position: relative;
   background: #ed1d31;
-  display: inline-flex;
-  border-radius: 12px;
-  color: #fff;
-  text-transform: uppercase; }
+  color: #fff; }
   ._1Ssf7::after {
     position: absolute;
     content: '';
@@ -1050,34 +1050,32 @@ a {
   font-size: 14px;
   line-height: 18px;
   font-family: 'Semibold SF Compact Rounded', sans-serif;
+  border-radius: 50vh;
+  text-transform: uppercase;
+  display: inline-flex;
   padding: 3px 8px;
   background: #1890ff;
-  display: inline-flex;
-  border-radius: 12px;
-  color: #fff;
-  text-transform: uppercase; }
+  color: #fff; }
 
 ._3YHO5 {
   font-size: 14px;
   line-height: 18px;
   font-family: 'Semibold SF Compact Rounded', sans-serif;
+  border-radius: 50vh;
+  text-transform: uppercase;
+  display: inline-flex;
   padding: 3px 8px;
   background: #c382ff;
-  display: inline-flex;
-  border-radius: 12px;
-  color: #fff;
-  text-transform: uppercase; }
+  color: #fff; }
 
 ._3bCON {
   font-size: 14px;
   line-height: 18px;
   font-family: 'Semibold SF Compact Rounded', sans-serif;
+  border-radius: 50vh;
   padding: 3px 8px;
   background: #ff8c05;
-  display: inline-flex;
-  border-radius: 12px;
-  color: #fff;
-  text-transform: uppercase; }
+  color: #fff; }
 
 @font-face {
   font-family: 'Regular SF Compact Rounded';

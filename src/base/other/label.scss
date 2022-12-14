@@ -25,27 +25,27 @@ $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   }
 }
 
-.label-1 {
+@mixin label {
   @include caption;
   @include font-semibold;
+  @include border-radius-pill;
+  text-transform: uppercase;
+  display: inline-flex;
+}
+
+.label-1 {
+  @include label;
   padding: 3px 8px;
   background: $successColor;
-  display: inline-flex;
-  border-radius: 12px;
   color: $whiteColor;
-  text-transform: uppercase;
 }
 
 .label-2 {
-  @include caption;
-  @include font-semibold;
+  @include label;
   padding: 3px 8px 3px 17px;
   position: relative;
   background: $errorColor;
-  display: inline-flex;
-  border-radius: 12px;
   color: $whiteColor;
-  text-transform: uppercase;
   &::after {
     position: absolute;
     content: '';
@@ -59,34 +59,24 @@ $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 }
 
 .label-3 {
-  @include caption;
-  @include font-semibold;
+  @include label;
   padding: 3px 8px;
   background: $otherRoyalBlueColor;
-  display: inline-flex;
-  border-radius: 12px;
   color: $whiteColor;
-  text-transform: uppercase;
 }
 
 .label-4 {
-  @include caption;
-  @include font-semibold;
+  @include label;
   padding: 3px 8px;
   background: $otherElectricViolet;
-  display: inline-flex;
-  border-radius: 12px;
   color: $whiteColor;
-  text-transform: uppercase;
 }
 
 .label-5 {
   @include caption;
   @include font-semibold;
+  @include border-radius-pill;
   padding: 3px 8px;
   background: $informationColor;
-  display: inline-flex;
-  border-radius: 12px;
   color: $whiteColor;
-  text-transform: uppercase;
 }
