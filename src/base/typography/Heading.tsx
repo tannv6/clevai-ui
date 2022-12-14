@@ -5,6 +5,10 @@ interface Props {
   type: string;
   font: string;
   children: React.ReactNode;
+  display: string;
+  align: string;
+  color: string;
+  id?: string;
 }
 
 const TYPES = {
@@ -17,56 +21,75 @@ const TYPES = {
   note: 'note'
 };
 
-const Heading = ({ children, type, font }: Props) => {
+const Heading = ({
+  children,
+  type,
+  font,
+  display,
+  align,
+  color,
+  id
+}: Props) => {
+  const className = `${styles[type]} ${styles['display-' + display]} ${
+    styles['color-' + color]
+  } ${styles['align-' + align]} ${styles['font-' + font]}`;
   if (TYPES.h1 === type) {
     return (
-      <h1 className={`${styles[type]} ${styles['font-' + font]}`}>
+      <h1 id={id} className={className}>
         {children}
       </h1>
     );
   }
   if (TYPES.h2 === type) {
     return (
-      <h2 className={`${styles[type]} ${styles['font-' + font]}`}>
+      <h2 id={id} className={className}>
         {children}
       </h2>
     );
   }
   if (TYPES.h3 === type) {
     return (
-      <h3 className={`${styles[type]} ${styles['font-' + font]}`}>
+      <h3 id={id} className={className}>
         {children}
       </h3>
     );
   }
   if (TYPES.h4 === type) {
     return (
-      <h4 className={`${styles[type]} ${styles['font-' + font]}`}>
+      <h4 id={id} className={className}>
         {children}
       </h4>
     );
   }
   if (TYPES.body === type) {
     return (
-      <p className={`${styles[type]} ${styles['font-' + font]}`}>{children}</p>
+      <p id={id} className={className}>
+        {children}
+      </p>
     );
   }
   if (TYPES.caption === type) {
     return (
-      <p className={`${styles[type]} ${styles['font-' + font]}`}>{children}</p>
+      <p id={id} className={className}>
+        {children}
+      </p>
     );
   }
   if (TYPES.note === type) {
     return (
-      <label className={`${styles[type]} ${styles['font-' + font]}`}>
+      <label id={id} className={className}>
         {children}
       </label>
     );
   }
 
   return (
-    <p className={`${styles[type]} ${styles['font-' + font]}`}>{children}</p>
+    <p id={id} className={className}>
+      {children}
+    </p>
   );
 };
+
+Heading.defaultProps = { display: 'block', align: 'left', color: 'gray' };
 
 export default Heading;

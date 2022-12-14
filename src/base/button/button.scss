@@ -1,0 +1,15 @@
+@import '../../base/css/common.scss';
+
+.button-1 {
+  @include body;
+  @include font-semibold;
+  background: $primaryColor;
+  height: 42px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: $whiteColor;
+}

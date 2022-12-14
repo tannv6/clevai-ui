@@ -1,1 +1,23 @@
 @import '../../base/css/common.scss';
+
+.display-block {
+  display: block;
+}
+.display-inline {
+  display: inline;
+}
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.color-gray {
+  color: $grayColor;
+}
+.color-primary {
+  color: $primaryColor;
+}
