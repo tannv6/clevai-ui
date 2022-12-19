@@ -5,14 +5,35 @@ $informationColor: #ff8c05;
 $linkColor: #0000ff;
 
 $primaryColor: #ff8c05;
+$primaryDark10Color: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark20Color: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark30Color: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark40Color: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark50Color: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark60Color: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark70Color: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark80Color: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark90Color: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight10Color: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight20Color: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight30Color: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight40Color: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight50Color: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight60Color: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight70Color: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight80Color: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryLight90Color: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), linear-gradient(0deg, #FF8C05, #FF8C05);
 $secondaryColor: #1877f2;
 
-$grayColor: rgba(0, 8, 16, 100%);
-$primaryTextColor: rgba(0, 8, 16, 100%);
-$secondaryTextColor: rgba(0, 8, 16, 70%);
-$lableTextColor: rgba(0, 8, 16, 70%);
-$hintTextColor: rgba(0, 8, 16, 45%);
-$disabledColor: rgba(0, 8, 16, 30%);
+$grayColor: #000810;
+$gray85Color: #262D34
+$gray70Color: #4D5358;
+$gray60Color: #666B70;
+$gray45Color: #8C9093;
+$gray30Color: #B3B5B8;
+$gray15Color: #D9DADB;
+$gray10Color: #E6E7E8;
+$gray4Color: #F5F5F6;
 
 $otherJavaColor: #64dcc3;
 $otherBrightTurquoiseColor: #14d1fa;
