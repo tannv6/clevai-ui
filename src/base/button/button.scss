@@ -52,7 +52,7 @@
 }
 
 .primary {
-  color: white;
+  color: $whiteColor;
   &:not(:disabled) {
     &.student {
       &:hover {
@@ -64,12 +64,10 @@
     }
     &.parent {
       &:hover {
-        background: linear-gradient(0deg, #0000001a, #0000001a),
-          linear-gradient(0deg, #1877f2, #1877f2);
+        background: $secondaryDark10Color;
       }
       &:active {
-        background: linear-gradient(0deg, #00000033, #00000033),
-          linear-gradient(0deg, #1877f2, #1877f2);
+        background: $secondaryDark20Color;
       }
     }
   }
@@ -82,7 +80,7 @@
 .default {
   border: 1px solid $gray15Color;
   color: $gray70Color;
-  background: white;
+  background: $whiteColor;
   &.student {
     &:not(:disabled) {
       &:hover {
@@ -90,7 +88,7 @@
         border: 1px solid $primaryColor;
       }
       &:active {
-        background: #ff8c051a;
+        background: rgba(255, 140, 5, 0.1);
       }
     }
   }
@@ -101,7 +99,7 @@
         border: 1px solid $secondaryColor;
       }
       &:active {
-        background: #1877f21a;
+        background: rgba(24, 119, 242, 0.1);
       }
     }
   }
