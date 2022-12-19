@@ -1,15 +1,146 @@
 @import '../../base/css/common.scss';
 
-.button-1 {
+.btn-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.sm {
+  @include caption;
+  @include font-regular;
+  height: 24px;
+  gap: 4px;
+  border-radius: 6px;
+  padding: 0 12px;
+}
+.md {
   @include body;
   @include font-semibold;
-  background: $primaryColor;
-  height: 42px;
+  height: 32px;
+  gap: 8px;
+  border-radius: 6px;
+  padding: 0 20px;
+}
+.lg {
+  @include body;
+  @include font-semibold;
+  height: 40px;
+  gap: 8px;
+  border-radius: 6px;
+  padding: 0 24px;
+}
+.xl {
+  @include h4;
+  @include font-semibold;
+  height: 48px;
+  gap: 12px;
   border-radius: 8px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: $whiteColor;
+  padding: 0 32px;
+}
+
+.student {
+  background: $primaryColor;
+}
+
+.parent {
+  background: $secondaryColor;
+}
+
+.primary {
+  color: white;
+  &:not(:disabled) {
+    &.student {
+      &:hover {
+        background: $primaryDark10Color;
+      }
+      &:active {
+        background: $primaryDark20Color;
+      }
+    }
+    &.parent {
+      &:hover {
+        background: linear-gradient(0deg, #0000001a, #0000001a),
+          linear-gradient(0deg, #1877f2, #1877f2);
+      }
+      &:active {
+        background: linear-gradient(0deg, #00000033, #00000033),
+          linear-gradient(0deg, #1877f2, #1877f2);
+      }
+    }
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.default {
+  border: 1px solid $gray15Color;
+  color: $gray70Color;
+  background: white;
+  &.student {
+    &:not(:disabled) {
+      &:hover {
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+      }
+      &:active {
+        background: #ff8c051a;
+      }
+    }
+  }
+  &.parent {
+    &:not(:disabled) {
+      &:hover {
+        color: $secondaryColor;
+        border: 1px solid $secondaryColor;
+      }
+      &:active {
+        background: #1877f21a;
+      }
+    }
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.text {
+  color: $gray70Color;
+  background: none;
+  &:not(:disabled) {
+    &:hover {
+      background: $gray4Color;
+    }
+    &:active {
+      background: $gray10Color;
+    }
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.link {
+  color: $linkColor;
+  background: none;
+  &:not(:disabled) {
+    &:hover {
+      background: $gray4Color;
+    }
+    &:active {
+      background: $gray10Color;
+    }
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 }

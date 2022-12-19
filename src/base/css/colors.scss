@@ -5,35 +5,162 @@ $informationColor: #ff8c05;
 $linkColor: #0000ff;
 
 $primaryColor: #ff8c05;
-$primaryDark10Color: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryDark20Color: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryDark30Color: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryDark40Color: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryDark50Color: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryDark60Color: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryDark70Color: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryDark80Color: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryDark90Color: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight10Color: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight20Color: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight30Color: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight40Color: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight50Color: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight60Color: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight70Color: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight80Color: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), linear-gradient(0deg, #FF8C05, #FF8C05);
-$primaryLight90Color: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), linear-gradient(0deg, #FF8C05, #FF8C05);
+$primaryDark10Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryDark20Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryDark30Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryDark40Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryDark50Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryDark60Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryDark70Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryDark80Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryDark90Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.9)
+  ),
+  linear-gradient(0deg, #ff8c05, #ff8c05);
+$primaryLight10Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+$primaryLight20Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+$primaryLight30Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+$primaryLight40Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+$primaryLight50Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+$primaryLight60Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+$primaryLight70Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+$primaryLight80Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+$primaryLight90Color: linear-gradient(0deg, #ff8c05, #ff8c05),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+
 $secondaryColor: #1877f2;
+$secondaryDark10Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryDark20Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryDark30Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryDark40Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryDark50Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryDark60Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryDark70Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryDark80Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryDark90Color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.9)
+  ),
+  linear-gradient(0deg, #1877f2, #1877f2);
+$secondaryLight10Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+$secondaryLight20Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+$secondaryLight30Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+$secondaryLight40Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+$secondaryLight50Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+$secondaryLight60Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+$secondaryLight70Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+$secondaryLight80Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+$secondaryLight90Color: linear-gradient(0deg, #1877f2, #1877f2),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
 
 $grayColor: #000810;
-$gray85Color: #262D34
-$gray70Color: #4D5358;
-$gray60Color: #666B70;
-$gray45Color: #8C9093;
-$gray30Color: #B3B5B8;
-$gray15Color: #D9DADB;
-$gray10Color: #E6E7E8;
-$gray4Color: #F5F5F6;
+$gray85Color: #262d34;
+$gray70Color: #4d5358;
+$gray60Color: #666b70;
+$gray45Color: #8c9093;
+$gray30Color: #b3b5b8;
+$gray15Color: #d9dadb;
+$gray10Color: #e6e7e8;
+$gray4Color: #f5f5f6;
 
 $otherJavaColor: #64dcc3;
 $otherBrightTurquoiseColor: #14d1fa;

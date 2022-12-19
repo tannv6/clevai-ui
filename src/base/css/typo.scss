@@ -48,7 +48,10 @@
   font-size: 14px;
   line-height: 18px;
 }
-
+@mixin h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
 @mixin font-bold {
   font-family: 'Bold SF Compact Rounded', sans-serif;
 }
