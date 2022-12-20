@@ -1,6 +1,6 @@
 @import '../../base/css/common.scss';
 
-.btn-flex {
+@mixin btn-flex {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,51 +10,54 @@
   box-sizing: border-box;
 }
 
-.sm {
+.btn-size-sm {
   @include caption;
   @include font-regular;
+  @include btn-flex;
   height: 24px;
   gap: 4px;
   border-radius: 6px;
   padding: 0 12px;
 }
-.md {
+.btn-size-md {
   @include body;
   @include font-semibold;
+  @include btn-flex;
   height: 32px;
   gap: 8px;
   border-radius: 6px;
   padding: 0 20px;
 }
-.lg {
+.btn-size-lg {
   @include body;
   @include font-semibold;
+  @include btn-flex;
   height: 40px;
   gap: 8px;
   border-radius: 6px;
   padding: 0 24px;
 }
-.xl {
+.btn-size-xl {
   @include h4;
   @include font-semibold;
+  @include btn-flex;
   height: 48px;
   gap: 12px;
   border-radius: 8px;
   padding: 0 32px;
 }
 
-.student {
+.btn-bg-student {
   background: $primaryColor;
 }
 
-.parent {
+.btn-bg-parent {
   background: $secondaryColor;
 }
-
-.primary {
+.btn-type-primary {
   color: $whiteColor;
   &:not(:disabled) {
-    &.student {
+    &.btn-bg-student {
       &:hover {
         background: $primaryDark10Color;
       }
@@ -62,7 +65,7 @@
         background: $primaryDark20Color;
       }
     }
-    &.parent {
+    &.btn-bg-parent {
       &:hover {
         background: $secondaryDark10Color;
       }
@@ -77,11 +80,11 @@
   }
 }
 
-.default {
+.btn-type-default {
   border: 1px solid $gray15Color;
   color: $gray70Color;
   background: $whiteColor;
-  &.student {
+  &.btn-bg-student {
     &:not(:disabled) {
       &:hover {
         color: $primaryColor;
@@ -92,7 +95,7 @@
       }
     }
   }
-  &.parent {
+  &.btn-bg-parent {
     &:not(:disabled) {
       &:hover {
         color: $secondaryColor;
@@ -109,7 +112,7 @@
   }
 }
 
-.text {
+.btn-type-text {
   color: $gray70Color;
   background: none;
   &:not(:disabled) {
@@ -126,7 +129,7 @@
   }
 }
 
-.link {
+.btn-type-link {
   color: $linkColor;
   background: none;
   &:not(:disabled) {

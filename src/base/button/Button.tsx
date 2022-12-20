@@ -33,13 +33,13 @@ const Button = ({
     lg: 'sm',
     xl: 'md'
   };
-  const defaultClassName = 'btn-flex';
+
   return (
     <button
       id={id}
-      className={`${className} ${styles[defaultClassName]} ${
-        styles[`${system}`]
-      } ${styles[`${type}`]} ${styles[`${size}`]}`}
+      className={`${className} ${styles[`btn-bg-${system}`]} ${
+        styles[`btn-type-${type}`]
+      } ${styles[`btn-size-${size}`]}`}
       onClick={onPress}
       disabled={isDisable}
       style={{
