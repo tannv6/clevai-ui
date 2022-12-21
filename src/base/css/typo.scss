@@ -1,30 +1,65 @@
-.h1 {
-  font-size: 28px;
-  line-height: 36px;
+@mixin h1 {
+  font-size: 38px;
+  line-height: 46px;
 }
-.h2 {
+@mixin h2 {
+  font-size: 30px;
+  line-height: 38px;
+}
+@mixin h3 {
   font-size: 24px;
   line-height: 32px;
 }
-.h3 {
+@mixin h4 {
   font-size: 20px;
   line-height: 28px;
 }
-.h4 {
-  font-size: 18px;
-  line-height: 24px;
-}
-.body {
+@mixin body {
   font-size: 16px;
   line-height: 22px;
 }
-.caption {
+@mixin caption {
   font-size: 14px;
   line-height: 18px;
 }
-.note {
+@mixin note {
   font-size: 12px;
   line-height: 16px;
+}
+
+@mixin font-bold {
+  font-family: 'Bold SF Compact Rounded', sans-serif;
+}
+@mixin font-semibold {
+  font-family: 'Semibold SF Compact Rounded', sans-serif;
+}
+@mixin font-medium {
+  font-family: 'Medium SF Compact Rounded', sans-serif;
+}
+@mixin font-regular {
+  font-family: 'Regular SF Compact Rounded', sans-serif;
+}
+
+.h1 {
+  @include h1;
+}
+.h2 {
+  @include h2;
+}
+.h3 {
+  @include h3;
+}
+.h4 {
+  @include h4;
+}
+.body {
+  @include body;
+}
+.caption {
+  @include caption;
+}
+.note {
+  @include note;
 }
 
 .font-bold {
@@ -37,30 +72,5 @@
   font-family: 'Medium SF Compact Rounded', sans-serif;
 }
 .font-regular {
-  font-family: 'Regular SF Compact Rounded', sans-serif;
-}
-
-@mixin body {
-  font-size: 16px;
-  line-height: 22px;
-}
-@mixin caption {
-  font-size: 14px;
-  line-height: 18px;
-}
-@mixin h4 {
-  font-size: 18px;
-  line-height: 24px;
-}
-@mixin font-bold {
-  font-family: 'Bold SF Compact Rounded', sans-serif;
-}
-@mixin font-semibold {
-  font-family: 'Semibold SF Compact Rounded', sans-serif;
-}
-@mixin font-medium {
-  font-family: 'Medium SF Compact Rounded', sans-serif;
-}
-@mixin font-regular {
   font-family: 'Regular SF Compact Rounded', sans-serif;
 }
