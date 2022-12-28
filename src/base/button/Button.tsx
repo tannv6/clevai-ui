@@ -11,7 +11,7 @@ interface Props {
   icons?: ('facebook' | 'circle')[];
   width?: string;
   type: 'primary' | 'default' | 'text' | 'link';
-  system: 'student' | 'parent';
+  color: 'orange' | 'blue' | 'green' | 'crimson';
   size: 'sm' | 'md' | 'lg' | 'xl';
 }
 
@@ -23,7 +23,7 @@ const Button = ({
   isDisable,
   icons,
   type,
-  system,
+  color,
   size,
   width
 }: Props) => {
@@ -37,7 +37,7 @@ const Button = ({
   return (
     <button
       id={id}
-      className={`${className} ${styles[`btn-bg-${system}`]} ${
+      className={`${className} ${styles[`btn-bg-${color}`]} ${
         styles[`btn-type-${type}`]
       } ${styles[`btn-size-${size}`]}`}
       onClick={onPress}
