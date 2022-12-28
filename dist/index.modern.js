@@ -10,7 +10,7 @@ var ExampleButton = function ExampleButton(_ref) {
   }, text);
 };
 
-var styles$1 = {"h1":"_fX5D2","h2":"_3q58I","h3":"_2iC0F","h4":"_1aDJq","body":"_tfaPw","caption":"_3rauF","note":"_3E5Cb","font-bold":"_3eTmN","font-semibold":"_2ouck","font-medium":"_3esy5","font-regular":"_1GwCX","xs":"_4983V","sm":"_2I7Rh","md":"_1zYyk","lg":"_3tJsu","xl":"_1j3h4","primary":"_DSHY6","secondary":"_3b0Z8","gray":"_1MXMB"};
+var styles$1 = {"h1":"_fX5D2","h2":"_3q58I","h3":"_2iC0F","h4":"_1aDJq","body":"_tfaPw","caption":"_3rauF","note":"_3E5Cb","font-bold":"_3eTmN","font-semibold":"_2ouck","font-medium":"_3esy5","font-regular":"_1GwCX","xs":"_4983V","sm":"_2I7Rh","md":"_1zYyk","lg":"_3tJsu","xl":"_1j3h4","primary":"_DSHY6","secondary":"_3b0Z8","gray":"_1MXMB","white":"_7DIk1"};
 
 var CircleIcon = function CircleIcon(_ref) {
   var size = _ref.size,
@@ -38,9 +38,41 @@ var FacebookIcon = function FacebookIcon(_ref) {
   }));
 };
 
+var ArrowLeftIcon = function ArrowLeftIcon(_ref) {
+  var size = _ref.size,
+    color = _ref.color;
+  return React__default.createElement("svg", {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 8 14',
+    className: styles$1[size]
+  }, React__default.createElement("path", {
+    className: styles$1[color],
+    "fill-rule": 'evenodd',
+    "clip-rule": 'evenodd',
+    d: 'M7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L0.292892 7.70711C-0.097632 7.31658 -0.0976321 6.68342 0.292892 6.29289L6.29289 0.292893C6.68342 -0.0976313 7.31658 -0.0976314 7.70711 0.292892C8.09763 0.683417 8.09763 1.31658 7.70711 1.70711L2.41421 7L7.70711 12.2929C8.09763 12.6834 8.09763 13.3166 7.70711 13.7071Z'
+  }));
+};
+
+var ArrowRightIcon = function ArrowRightIcon(_ref) {
+  var size = _ref.size,
+    color = _ref.color;
+  return React__default.createElement("svg", {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 8 14',
+    className: styles$1[size]
+  }, React__default.createElement("path", {
+    className: styles$1[color],
+    "fill-rule": 'evenodd',
+    "clip-rule": 'evenodd',
+    d: 'M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.70711 6.29289C8.09763 6.68342 8.09763 7.31658 7.70711 7.70711L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z'
+  }));
+};
+
 var icons = {
   circle: CircleIcon,
-  fb: FacebookIcon
+  fb: FacebookIcon,
+  arrowLeft: ArrowLeftIcon,
+  arrowRight: ArrowRightIcon
 };
 var Icon = function Icon(_ref) {
   var size = _ref.size,
@@ -53,7 +85,7 @@ var Icon = function Icon(_ref) {
   });
 };
 
-var styles$2 = {"h1":"_2vqE-","h2":"_3yJwX","h3":"_2P1HB","h4":"_enyR1","body":"_3Qjvi","caption":"_2mgJ7","note":"_WH81j","font-bold":"_3MkhO","font-semibold":"_1HPML","font-medium":"_gEqzI","font-regular":"_3U8jR","display-block":"_31_XB","display-inline":"_3z0dd","align-center":"_r94Hl","align-left":"_f0wLZ","align-right":"_2U2Lp","color-gray":"_3CxI-","color-primary":"_LViNk"};
+var styles$2 = {"h1":"_2vqE-","h2":"_3yJwX","h3":"_2P1HB","h4":"_enyR1","body":"_3Qjvi","caption":"_2mgJ7","note":"_WH81j","font-bold":"_3MkhO","font-semibold":"_1HPML","font-medium":"_gEqzI","font-regular":"_3U8jR","display-block":"_31_XB","display-inline":"_3z0dd","align-center":"_r94Hl","align-left":"_f0wLZ","align-right":"_2U2Lp","color-white":"_SoiYy","color-gray":"_3CxI-","color-primary":"_LViNk"};
 
 var TYPES = {
   h1: 'h1',
@@ -126,7 +158,7 @@ Heading.defaultProps = {
   color: 'gray'
 };
 
-var styles$3 = {"h1":"_2TGE0","h2":"_Aylvo","h3":"_Vl8BK","h4":"_1Y4uE","body":"_2XMaV","caption":"_fcrmL","note":"_3p3FA","font-bold":"_26KrJ","font-semibold":"_3H8wI","font-medium":"_28rw-","font-regular":"_2gPGh","container":"_1pA9x","row":"_2NwDW","bg-white":"_1G--D","bg-tranparent":"_35mKr","bg-background":"_2ixeh","col-1":"_3Mtkz","col-2":"_2pvKu","col-3":"_3OFM2","col-4":"_8OoRv","col-5":"_1BC09","col-6":"_V6Uaz","col-7":"_3R-up","col-8":"_1RFL_","col-9":"_2k-yC","col-10":"_2WQw-","col-11":"_10tsp","col-12":"_JGdcA","br-0":"_bCQwN","br-1":"_1hdBf","br-2":"_2Ln10","br-3":"_5QTZa","br-4":"_2rhBh","br-5":"_15xBj","br-6":"_14kb5","br-7":"_19Qbm","br-8":"_1BQda","br-9":"_1PUO6","br-10":"_1oEo0","br-11":"_2Chmu","br-12":"_rX__V","mt-0":"_3TOOm","mt-1":"_3HIEa","mt-2":"_1nfBk","mt-3":"_adW7p","mt-4":"_12n1Y","mt-5":"_17MgJ","mt-6":"_3Hlj3","mt-7":"_3d0nr","mt-8":"_2rsba","mt-9":"_3LYUW","mt-10":"_FUHlj","mt-11":"_3FGKv","mt-12":"_1uXku","mr-0":"_a61GE","mr-1":"_3EvmB","mr-2":"_gdfxS","mr-3":"_2R_5W","mr-4":"_23-F1","mr-5":"_rZgPI","mr-6":"_3A7KF","mr-7":"_2AJnj","mr-8":"_Gi7P4","mr-9":"_2zhVw","mr-10":"_1fURn","mr-11":"_9Pwrd","mr-12":"_3Y_ec","ml-0":"_3qQNM","ml-1":"_2MZ4b","ml-2":"_1M1qu","ml-3":"_2gT-z","ml-4":"_py_1a","ml-5":"_2w_Qv","ml-6":"_39-pZ","ml-7":"_2Ny6k","ml-8":"_Iw_t6","ml-9":"_1Oeyb","ml-10":"_32nFN","ml-11":"_f9Z2T","ml-12":"_1v_b4","mb-0":"_36YE-","mb-1":"_17p1K","mb-2":"_3qhnl","mb-3":"_10mU4","mb-4":"_2op15","mb-5":"_4csYA","mb-6":"_2AAlt","mb-7":"_1Gb9P","mb-8":"_VTOZd","mb-9":"_1sTrZ","mb-10":"_2i9js","mb-11":"_SlhQA","mb-12":"_3iNTL","pt-0":"_zQUKj","pt-1":"_30I2l","pt-2":"_peK6c","pt-3":"_1_tQo","pt-4":"_2Znqo","pt-5":"_23H7Y","pt-6":"_28OpO","pt-7":"_2w1Yc","pt-8":"_2kdr9","pt-9":"_3OmBg","pt-10":"_hl2sg","pt-11":"_3RyBi","pt-12":"_2xLsG","pr-0":"_3Lsa1","pr-1":"_qDXjQ","pr-2":"_1tIFl","pr-3":"_324I7","pr-4":"_2wwax","pr-5":"_O1uAw","pr-6":"_2kBJQ","pr-7":"_3cQAe","pr-8":"_1I0h5","pr-9":"_ipxjN","pr-10":"_3EvkI","pr-11":"_39XOR","pr-12":"_3Md5r","pl-0":"_1iIFV","pl-1":"_5az6_","pl-2":"_4bzV_","pl-3":"_1HeqZ","pl-4":"_2OUl2","pl-5":"_28YuU","pl-6":"_gmCF2","pl-7":"_2dm-y","pl-8":"_3isW7","pl-9":"_3WwMq","pl-10":"_VRMAX","pl-11":"_1THhH","pl-12":"_2vp-Z","pb-0":"_2GOqt","pb-1":"_vH5nK","pb-2":"_3w957","pb-3":"_W8a69","pb-4":"_1laJC","pb-5":"_3St8Y","pb-6":"_oDUhH","pb-7":"_3XfRG","pb-8":"_2sXp_","pb-9":"_3n7P5","pb-10":"_WO3OM","pb-11":"_1wbxO","pb-12":"_36TLb"};
+var styles$3 = {"h1":"_2TGE0","h2":"_Aylvo","h3":"_Vl8BK","h4":"_1Y4uE","body":"_2XMaV","caption":"_fcrmL","note":"_3p3FA","font-bold":"_26KrJ","font-semibold":"_3H8wI","font-medium":"_28rw-","font-regular":"_2gPGh","container":"_1pA9x","row":"_2NwDW","bg-white":"_1G--D","bg-primary":"_37M2I","bg-tranparent":"_35mKr","bg-background":"_2ixeh","col-1":"_3Mtkz","col-2":"_2pvKu","col-3":"_3OFM2","col-4":"_8OoRv","col-5":"_1BC09","col-6":"_V6Uaz","col-7":"_3R-up","col-8":"_1RFL_","col-9":"_2k-yC","col-10":"_2WQw-","col-11":"_10tsp","col-12":"_JGdcA","br-0":"_bCQwN","br-1":"_1hdBf","br-2":"_2Ln10","br-3":"_5QTZa","br-4":"_2rhBh","br-5":"_15xBj","br-6":"_14kb5","br-7":"_19Qbm","br-8":"_1BQda","br-9":"_1PUO6","br-10":"_1oEo0","br-11":"_2Chmu","br-12":"_rX__V","mt-0":"_3TOOm","mt-1":"_3HIEa","mt-2":"_1nfBk","mt-3":"_adW7p","mt-4":"_12n1Y","mt-5":"_17MgJ","mt-6":"_3Hlj3","mt-7":"_3d0nr","mt-8":"_2rsba","mt-9":"_3LYUW","mt-10":"_FUHlj","mt-11":"_3FGKv","mt-12":"_1uXku","mr-0":"_a61GE","mr-1":"_3EvmB","mr-2":"_gdfxS","mr-3":"_2R_5W","mr-4":"_23-F1","mr-5":"_rZgPI","mr-6":"_3A7KF","mr-7":"_2AJnj","mr-8":"_Gi7P4","mr-9":"_2zhVw","mr-10":"_1fURn","mr-11":"_9Pwrd","mr-12":"_3Y_ec","ml-0":"_3qQNM","ml-1":"_2MZ4b","ml-2":"_1M1qu","ml-3":"_2gT-z","ml-4":"_py_1a","ml-5":"_2w_Qv","ml-6":"_39-pZ","ml-7":"_2Ny6k","ml-8":"_Iw_t6","ml-9":"_1Oeyb","ml-10":"_32nFN","ml-11":"_f9Z2T","ml-12":"_1v_b4","mb-0":"_36YE-","mb-1":"_17p1K","mb-2":"_3qhnl","mb-3":"_10mU4","mb-4":"_2op15","mb-5":"_4csYA","mb-6":"_2AAlt","mb-7":"_1Gb9P","mb-8":"_VTOZd","mb-9":"_1sTrZ","mb-10":"_2i9js","mb-11":"_SlhQA","mb-12":"_3iNTL","pt-0":"_zQUKj","pt-1":"_30I2l","pt-2":"_peK6c","pt-3":"_1_tQo","pt-4":"_2Znqo","pt-5":"_23H7Y","pt-6":"_28OpO","pt-7":"_2w1Yc","pt-8":"_2kdr9","pt-9":"_3OmBg","pt-10":"_hl2sg","pt-11":"_3RyBi","pt-12":"_2xLsG","pr-0":"_3Lsa1","pr-1":"_qDXjQ","pr-2":"_1tIFl","pr-3":"_324I7","pr-4":"_2wwax","pr-5":"_O1uAw","pr-6":"_2kBJQ","pr-7":"_3cQAe","pr-8":"_1I0h5","pr-9":"_ipxjN","pr-10":"_3EvkI","pr-11":"_39XOR","pr-12":"_3Md5r","pl-0":"_1iIFV","pl-1":"_5az6_","pl-2":"_4bzV_","pl-3":"_1HeqZ","pl-4":"_2OUl2","pl-5":"_28YuU","pl-6":"_gmCF2","pl-7":"_2dm-y","pl-8":"_3isW7","pl-9":"_3WwMq","pl-10":"_VRMAX","pl-11":"_1THhH","pl-12":"_2vp-Z","pb-0":"_2GOqt","pb-1":"_vH5nK","pb-2":"_3w957","pb-3":"_W8a69","pb-4":"_1laJC","pb-5":"_3St8Y","pb-6":"_oDUhH","pb-7":"_3XfRG","pb-8":"_2sXp_","pb-9":"_3n7P5","pb-10":"_WO3OM","pb-11":"_1wbxO","pb-12":"_36TLb"};
 
 var Row = function Row(_ref) {
   var mt = _ref.mt,
@@ -191,21 +223,117 @@ Label.defaultProps = {
   type: '1'
 };
 
-var styles$5 = {"h1":"_2jGMV","h2":"_1Rzgv","h3":"_3OyWy","h4":"_3NXlZ","body":"_K6SPz","caption":"_2snYP","note":"_1H8cN","font-bold":"_1MtHz","font-semibold":"_XutCa","font-medium":"_35yzi","font-regular":"_1mW1F","button-1":"_2vxEy"};
+var styles$5 = {"h1":"_2jGMV","h2":"_1Rzgv","h3":"_3OyWy","h4":"_3NXlZ","body":"_K6SPz","caption":"_2snYP","note":"_1H8cN","font-bold":"_1MtHz","font-semibold":"_XutCa","font-medium":"_35yzi","font-regular":"_1mW1F","btn-size-sm":"_z91fQ","btn-size-md":"_1r7Vm","btn-size-lg":"_1_jZD","btn-size-xl":"_L5rQ7","btn-bg-student":"_256uR","btn-bg-parent":"_WthLj","btn-type-primary":"_2yPNR","btn-type-default":"_1nr2L","btn-type-text":"_oHn3h","btn-type-link":"_3Cwcr"};
 
 var Button = function Button(_ref) {
   var children = _ref.children,
+    id = _ref.id,
+    className = _ref.className,
+    onPress = _ref.onPress,
+    isDisable = _ref.isDisable,
+    icons = _ref.icons,
     type = _ref.type,
-    id = _ref.id;
-  return React__default.createElement("div", {
+    system = _ref.system,
+    size = _ref.size,
+    width = _ref.width;
+  var MAP_ICON_SIZE = {
+    sm: 'xs',
+    md: 'sm',
+    lg: 'sm',
+    xl: 'md'
+  };
+  return React__default.createElement("button", {
     id: id,
-    className: styles$5["button-" + type]
-  }, children);
+    className: className + " " + styles$5["btn-bg-" + system] + " " + styles$5["btn-type-" + type] + " " + styles$5["btn-size-" + size],
+    onClick: onPress,
+    disabled: isDisable,
+    style: {
+      width: width
+    }
+  }, icons && icons[0] && React__default.createElement(Icon, {
+    color: 'white',
+    size: MAP_ICON_SIZE[size],
+    type: icons[0]
+  }), children, icons && icons[1] && React__default.createElement(Icon, {
+    color: 'white',
+    size: MAP_ICON_SIZE[size],
+    type: icons[1]
+  }));
 };
-Button.defaultProps = {
-  type: '1',
-  id: ''
+Button.defaultProp = {
+  id: '',
+  className: '',
+  onPress: function onPress() {},
+  type: 'default',
+  system: 'student',
+  size: 'lg',
+  icons: []
 };
 
-export { Button, Container, ExampleButton, Heading, Icon, Label, Row };
+var styles$6 = {"h1":"_2czJv","h2":"_3uOdg","h3":"_3KL3Z","h4":"_2hMPc","body":"_3i4Kp","caption":"_20r3G","note":"_h89nU","font-bold":"_23v7G","font-semibold":"_1tov-","font-medium":"_hc4hr","font-regular":"_2j9tc","clevai-popup":"_2drtx","clevai-lib-ui-popup-show":"_1yiL3","clevai-popup__hide":"_2dz8g","clevai-popup__wrapper":"_2uTmL"};
+
+function Popup(_ref) {
+  var children = _ref.children,
+    id = _ref.id,
+    isShow = _ref.isShow,
+    zIndex = _ref.zIndex,
+    closeOnDocumentClick = _ref.closeOnDocumentClick,
+    onClickClose = _ref.onClickClose;
+  var _React$useState = React__default.useState(false),
+    showDelay = _React$useState[0],
+    setShowDelay = _React$useState[1];
+  var timer = React__default.useRef(null);
+  React__default.useEffect(function () {
+    if (isShow) {
+      timer.current && clearTimeout(timer.current);
+      timer.current = null;
+      setShowDelay(true);
+    }
+    if (!isShow) {
+      timer.current = setTimeout(function () {
+        setShowDelay(false);
+      }, 300);
+    }
+  }, [isShow]);
+  if (!showDelay) {
+    return React__default.createElement("div", null);
+  }
+  var style = {
+    zIndex: zIndex || 1,
+    cursor: closeOnDocumentClick ? 'pointer' : 'default '
+  };
+  return React__default.createElement("div", {
+    className: styles$6['clevai-popup'] + " " + (!isShow ? styles$6['clevai-popup__hide'] : ''),
+    id: id,
+    style: style,
+    onClick: function onClick() {
+      return closeOnDocumentClick && onClickClose();
+    }
+  }, React__default.createElement("div", {
+    className: styles$6['clevai-popup__wrapper'],
+    onClick: function onClick(e) {
+      return e.stopPropagation();
+    }
+  }, React__default.createElement(React__default.Suspense, {
+    fallback: React__default.createElement("span", null)
+  }, children)));
+}
+
+var styles$7 = {"h1":"_1lW8U","h2":"_QEm8v","h3":"_3utfb","h4":"_LETKh","body":"_1bCV9","caption":"_1TOFS","note":"_3j1wC","font-bold":"_2agEa","font-semibold":"_n8eaf","font-medium":"_3A2Rk","font-regular":"_2pdxO","tooltip-container":"_2Kmw8","tooltip":"_2i8Ko","tooltip-bg-primary":"_KIV8I","tooltip-bg-secondary":"_2uMag","tooltip-bg-default":"_2MtrX","tooltip-position1-bottom":"_LDBMO","tooltip-position2-left":"_3_YSW","tooltip-position2-right":"_w-ukw","tooltip-position1-top":"_2WTF1","tooltip-position1-left":"_3wRLU","tooltip-position2-bottom":"_1jNkk","tooltip-position2-top":"_P_nbj","tooltip-position1-right":"_GBB28"};
+
+function Tooltip(_ref) {
+  var children = _ref.children,
+    tooltip = _ref.tooltip,
+    type = _ref.type,
+    position = _ref.position;
+  var position1 = position[0],
+    position2 = position[1];
+  return React__default.createElement("div", {
+    className: "" + styles$7['tooltip-container']
+  }, children, React__default.createElement("div", {
+    className: styles$7.tooltip + " " + styles$7["tooltip-bg-" + type] + " " + (position1 ? styles$7["tooltip-position1-" + position1] : '') + " " + (position2 ? styles$7["tooltip-position2-" + position2] : '')
+  }, tooltip));
+}
+
+export { Button, Container, ExampleButton, Heading, Icon, Label, Popup, Row, Tooltip };
 //# sourceMappingURL=index.modern.js.map

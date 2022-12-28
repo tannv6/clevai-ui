@@ -1,6 +1,8 @@
 import React from 'react';
 import CircleIcon from './CircleIcon';
 import FacebookIcon from './FacebookIcon';
+import ArrowLeftIcon from './ArrowLeftIcon';
+import ArrowRightIcon from './ArrowRightIcon';
 
 interface Props {
   size: string;
@@ -10,7 +12,9 @@ interface Props {
 
 const icons = {
   circle: CircleIcon,
-  fb: FacebookIcon
+  fb: FacebookIcon,
+  arrowLeft: ArrowLeftIcon,
+  arrowRight: ArrowRightIcon
 };
 
 const Icon = ({ size, color, type }: Props) => {

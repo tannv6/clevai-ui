@@ -6,6 +6,7 @@
 .display-inline {
   display: inline;
 }
+
 .align-center {
   text-align: center;
 }
@@ -14,6 +15,10 @@
 }
 .align-right {
   text-align: right;
+}
+
+.color-white {
+  color: $whiteColor;
 }
 .color-gray {
   color: $grayColor;

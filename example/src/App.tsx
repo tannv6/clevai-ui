@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Row, Heading, Container, Label, Button } from 'clevai-ui';
+import { Row, Heading, Container, Label, Button, Icon } from 'clevai-ui';
 import 'clevai-ui/dist/index.css';
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
           <Label type='2' ml={5}>
             Di-live
           </Label>
+          <Icon type='arrowLeft' size='sm' color='white' />
           <Label type='4' ml={2} mr={4}>
             Get
           </Label>
