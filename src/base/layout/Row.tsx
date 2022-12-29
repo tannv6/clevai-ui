@@ -14,6 +14,7 @@ interface Props {
   children: React.ReactNode;
   bg: string;
   br: number;
+  reversed?: boolean;
 }
 
 const Row = ({
@@ -28,12 +29,15 @@ const Row = ({
   col,
   children,
   bg,
-  br
+  br,
+  reversed
 }: Props) => {
   return (
     <div
       className={
-        styles[`row`] +
+        styles.row +
+        ' ' +
+        styles[`row-${reversed ? 'reversed' : ''}`] +
         ' ' +
         styles[`bg-${bg}`] +
         ' ' +
