@@ -1,31 +1,33 @@
 import React from 'react';
 import { Icon } from '../icon';
+import CircleLoading from '../loading/CircleLoading';
 import styles from './button.scss';
 
-interface Props {
+interface Props
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   children: React.ReactNode;
-  id: string;
-  className?: string;
-  isDisable?: boolean;
-  onPress?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   icons?: ('facebook' | 'circle')[];
   width?: string;
-  type: 'primary' | 'default' | 'text' | 'link';
-  system: 'student' | 'parent';
+  color: 'orange' | 'blue' | 'green' | 'crimson';
   size: 'sm' | 'md' | 'lg' | 'xl';
+  reversed?: boolean;
+  category: 'primary' | 'default' | 'text' | 'link';
+  loading?: boolean;
 }
 
 const Button = ({
   children,
-  id,
-  className,
-  onPress,
-  isDisable,
   icons,
-  type,
-  system,
+  color,
   size,
-  width
+  width,
+  reversed,
+  category,
+  loading,
+  ...props
 }: Props) => {
   const MAP_ICON_SIZE = {
     sm: 'xs',
@@ -33,19 +35,39 @@ const Button = ({
     lg: 'sm',
     xl: 'md'
   };
-
+  const MAP_LOADING = {
+    LOADING_WIDTH: {
+      sm: 16,
+      md: 20,
+      lg: 20,
+      xl: 24
+    },
+    BORDER_WIDTH: {
+      sm: 1.5,
+      md: 2,
+      lg: 2,
+      xl: 2.5
+    }
+  };
   return (
     <button
-      id={id}
-      className={`${className} ${styles[`btn-bg-${system}`]} ${
-        styles[`btn-type-${type}`]
-      } ${styles[`btn-size-${size}`]}`}
-      onClick={onPress}
-      disabled={isDisable}
+      {...props}
+      className={`${props.className || ''} ${
+        styles[`btn-bg-${color}${reversed ? '-reversed' : ''}`]
+      } ${styles[`btn-type-${category}${reversed ? '-reversed' : ''}`]} ${
+        styles[`btn-size-${size}`]
+      }`}
       style={{
         width: width
       }}
     >
+      {loading && (
+        <CircleLoading
+          border={MAP_LOADING.BORDER_WIDTH[size]}
+          width={MAP_LOADING.LOADING_WIDTH[size]}
+          color={['gray10Color', 'gray4Color']}
+        />
+      )}
       {icons && icons[0] && (
         <Icon color='white' size={MAP_ICON_SIZE[size]} type={icons[0]} />
       )}

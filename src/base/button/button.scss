@@ -47,36 +47,112 @@
   padding: 0 32px;
 }
 
-.btn-bg-student {
-  background: $primaryColor;
+.btn-bg-orange {
+  background: $orangeColor6;
+  &-reversed {
+    background: $whiteColor;
+    color: $orangeColor6;
+  }
 }
 
-.btn-bg-parent {
-  background: $secondaryColor;
+.btn-bg-blue {
+  background: $blueColor6;
+  &-reversed {
+    background: $whiteColor;
+    color: $blueColor6;
+  }
 }
+
+.btn-bg-green {
+  background: $greenColor6;
+  &-reversed {
+    background: $whiteColor;
+    color: $greenColor6;
+  }
+}
+
+.btn-bg-crimson {
+  background: $crimsonColor6;
+  &-reversed {
+    background: $whiteColor;
+    color: $crimsonColor6;
+  }
+}
+
 .btn-type-primary {
   color: $whiteColor;
   &:not(:disabled) {
-    &.btn-bg-student {
-      &:hover {
-        background: $primaryDark10Color;
-      }
-      &:active {
-        background: $primaryDark20Color;
-      }
+    &.btn-bg-orange:hover {
+      background: $orangeColor7;
     }
-    &.btn-bg-parent {
-      &:hover {
-        background: $secondaryDark10Color;
-      }
-      &:active {
-        background: $secondaryDark20Color;
-      }
+    &.btn-bg-orange:active {
+      background: $orangeColor8;
+    }
+    &.btn-bg-blue:hover {
+      background: $blueColor7;
+    }
+    &.btn-bg-blue:active {
+      background: $blueColor8;
+    }
+    &.btn-bg-green:hover {
+      background: $greenColor7;
+    }
+    &.btn-bg-green:active {
+      background: $greenColor8;
+    }
+    &.btn-bg-crimson:hover {
+      background: $crimsonColor7;
+    }
+    &.btn-bg-crimson:active {
+      background: $crimsonColor8;
     }
   }
   &:disabled {
     opacity: 0.4;
     cursor: not-allowed;
+  }
+  &-reversed {
+    &:not(:disabled) {
+      &.btn-bg-orange-reversed:hover {
+        background: $orangeColor1;
+      }
+      &.btn-bg-orange-reversed:active {
+        background: $orangeColor2;
+      }
+      &.btn-bg-blue-reversed:hover {
+        background: $blueColor1;
+      }
+      &.btn-bg-blue-reversed:active {
+        background: $blueColor2;
+      }
+      &.btn-bg-green-reversed:hover {
+        background: $greenColor1;
+      }
+      &.btn-bg-green-reversed:active {
+        background: $greenColor2;
+      }
+      &.btn-bg-crimson-reversed:hover {
+        background: $crimsonColor1;
+      }
+      &.btn-bg-crimson-reversed:active {
+        background: $crimsonColor2;
+      }
+    }
+    &:disabled {
+      cursor: not-allowed;
+      &.btn-bg-orange-reversed {
+        background: $orangeColor3;
+      }
+      &.btn-bg-blue-reversed {
+        background: $blueColor3;
+      }
+      &.btn-bg-green-reversed {
+        background: $greenColor3;
+      }
+      &.btn-bg-crimson-reversed {
+        background: $crimsonColor3;
+      }
+    }
   }
 }
 
@@ -84,31 +160,84 @@
   border: 1px solid $gray15Color;
   color: $gray70Color;
   background: $whiteColor;
-  &.btn-bg-student {
-    &:not(:disabled) {
-      &:hover {
-        color: $primaryColor;
-        border: 1px solid $primaryColor;
-      }
-      &:active {
-        background: $orangeColor1;
-      }
+  &:not(:disabled) {
+    &.btn-bg-orange:hover {
+      color: $orangeColor6;
+      border: 1px solid $orangeColor6;
     }
-  }
-  &.btn-bg-parent {
-    &:not(:disabled) {
-      &:hover {
-        color: $secondaryColor;
-        border: 1px solid $secondaryColor;
-      }
-      &:active {
-        background: $blueColor1;
-      }
+    &.btn-bg-orange:active {
+      background: $orangeColor1;
+    }
+    &.btn-bg-blue:hover {
+      color: $blueColor6;
+      border: 1px solid $blueColor6;
+    }
+    &.btn-bg-blue:active {
+      background: $blueColor1;
+    }
+    &.btn-bg-green:hover {
+      color: $greenColor6;
+      border: 1px solid $greenColor6;
+    }
+    &:active {
+      background: $greenColor1;
+    }
+    &.btn-bg-crimson:hover {
+      color: $crimsonColor6;
+      border: 1px solid $crimsonColor6;
+    }
+    &.btn-bg-crimson:active {
+      background: $crimsonColor1;
     }
   }
   &:disabled {
     opacity: 0.4;
     cursor: not-allowed;
+  }
+  &-reversed {
+    background: none;
+    border: 1px solid $whiteColor;
+    &:not(:hover) {
+      color: $whiteColor;
+    }
+    &:not(:disabled) {
+      &:hover {
+        background: $whiteColor;
+      }
+      &:active {
+        &.btn-bg-orange-reversed {
+          background: $orangeColor1;
+        }
+        &.btn-bg-blue-reversed {
+          background: $blueColor1;
+        }
+        &.btn-bg-green-reversed {
+          background: $greenColor1;
+        }
+        &.btn-bg-crimson-reversed {
+          background: $crimsonColor1;
+        }
+      }
+    }
+    &:disabled {
+      cursor: not-allowed;
+      &.btn-bg-orange-reversed {
+        border: 1px solid $orangeColor7;
+        color: $orangeColor7;
+      }
+      &.btn-bg-blue-reversed {
+        border: 1px solid $blueColor7;
+        color: $blueColor7;
+      }
+      &.btn-bg-green-reversed {
+        border: 1px solid $greenColor7;
+        color: $greenColor7;
+      }
+      &.btn-bg-crimson-reversed {
+        border: 1px solid $crimsonColor7;
+        color: $crimsonColor7;
+      }
+    }
   }
 }
 
@@ -127,9 +256,60 @@
     opacity: 0.4;
     cursor: not-allowed;
   }
+  &-reversed {
+    background: none;
+    color: $whiteColor;
+    &:not(:disabled) {
+      &:hover {
+        background: $whiteColor;
+        &.btn-bg-orange-reversed {
+          color: $orangeColor6;
+        }
+        &.btn-bg-blue-reversed {
+          color: $blueColor6;
+        }
+        &.btn-bg-green-reversed {
+          color: $greenColor6;
+        }
+        &.btn-bg-crimson-reversed {
+          color: $crimsonColor6;
+        }
+      }
+      &:active {
+        &.btn-bg-orange-reversed {
+          background: $orangeColor1;
+        }
+        &.btn-bg-blue-reversed {
+          background: $blueColor1;
+        }
+        &.btn-bg-green-reversed {
+          background: $greenColor1;
+        }
+        &.btn-bg-crimson-reversed {
+          background: $crimsonColor1;
+        }
+      }
+    }
+    &:disabled {
+      cursor: not-allowed;
+      &.btn-bg-orange-reversed {
+        color: $orangeColor7;
+      }
+      &.btn-bg-blue-reversed {
+        color: $blueColor7;
+      }
+      &.btn-bg-green-reversed {
+        color: $greenColor7;
+      }
+      &.btn-bg-crimson-reversed {
+        color: $crimsonColor7;
+      }
+    }
+  }
 }
 
-.btn-type-link {
+.btn-type-link,
+.btn-type-link-reversed {
   color: $linkColor;
   background: none;
   &:not(:disabled) {
