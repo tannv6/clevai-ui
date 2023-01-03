@@ -12,9 +12,10 @@ interface Props {
     children: React.ReactNode;
     bg: string;
     br: number;
+    reversed?: boolean;
 }
 declare const Row: {
-    ({ mt, mb, ml, mr, pt, pb, pl, pr, col, children, bg, br }: Props): JSX.Element;
+    ({ mt, mb, ml, mr, pt, pb, pl, pr, col, children, bg, br, reversed }: Props): JSX.Element;
     defaultProps: {
         mt: number;
         mb: number;

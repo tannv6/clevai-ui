@@ -379,6 +379,9 @@ a {
 ._2NwDW {
   box-sizing: border-box;
   overflow: hidden; }
+  ._D-Yw9 {
+    display: flex;
+    justify-content: flex-end; }
 
 ._1G--D {
   background: #fff; }
@@ -1106,6 +1109,95 @@ a {
   src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Bold.ttf") format("truetype");
   font-weight: 700; }
 
+._1fyTD {
+  font-size: 38px;
+  line-height: 46px; }
+
+._DHsM1 {
+  font-size: 30px;
+  line-height: 38px; }
+
+._M9wgr {
+  font-size: 24px;
+  line-height: 32px; }
+
+._2HebS {
+  font-size: 20px;
+  line-height: 28px; }
+
+._2QugS {
+  font-size: 16px;
+  line-height: 22px; }
+
+._b5L87 {
+  font-size: 14px;
+  line-height: 18px; }
+
+._1Cw7- {
+  font-size: 12px;
+  line-height: 16px; }
+
+._1Isxa {
+  font-family: 'Bold SF Compact Rounded', sans-serif; }
+
+._3I18L {
+  font-family: 'Semibold SF Compact Rounded', sans-serif; }
+
+._1xUw_ {
+  font-family: 'Medium SF Compact Rounded', sans-serif; }
+
+._jYOkI {
+  font-family: 'Regular SF Compact Rounded', sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  padding: 0px;
+  margin: 0px; }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: unset; }
+
+._3hXpB {
+  border-radius: 50%;
+  background: none;
+  animation: _15-Zn 1s linear infinite;
+  box-sizing: border-box;
+  border-style: solid; }
+
+@keyframes _15-Zn {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@font-face {
+  font-family: 'Regular SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Medium SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Medium.ttf") format("truetype");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Semibold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Semibold.ttf") format("truetype");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'Bold SF Compact Rounded';
+  src: url("https://r73troypb4obj.vcdn.cloud/web/fonts/SF-Compact-Rounded-Bold.ttf") format("truetype");
+  font-weight: 700; }
+
 ._2jGMV {
   font-size: 38px;
   line-height: 46px; }
@@ -1226,43 +1318,134 @@ a {
   border-radius: 8px;
   padding: 0 32px; }
 
-._256uR {
+._2Pwlx {
   background: #ff8c05; }
+  ._1-n9O {
+    background: #fff;
+    color: #ff8c05; }
 
-._WthLj {
+._3LGz_ {
   background: #1877f2; }
+  ._3CBV2 {
+    background: #fff;
+    color: #1877f2; }
+
+._wI5Hy {
+  background: #28b44f; }
+  ._2ybaQ {
+    background: #fff;
+    color: #28b44f; }
+
+._2Gql9 {
+  background: #ed1d31; }
+  ._LQnO8 {
+    background: #fff;
+    color: #ed1d31; }
 
 ._2yPNR {
   color: #fff; }
-  ._2yPNR:not(:disabled)._256uR:hover {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #ff8c05, #ff8c05); }
-  ._2yPNR:not(:disabled)._256uR:active {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #ff8c05, #ff8c05); }
-  ._2yPNR:not(:disabled)._WthLj:hover {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #1877f2, #1877f2); }
-  ._2yPNR:not(:disabled)._WthLj:active {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #1877f2, #1877f2); }
+  ._2yPNR:not(:disabled)._2Pwlx:hover {
+    background: #d17100; }
+  ._2yPNR:not(:disabled)._2Pwlx:active {
+    background: #9e5500; }
+  ._2yPNR:not(:disabled)._3LGz_:hover {
+    background: #0b5fcb; }
+  ._2yPNR:not(:disabled)._3LGz_:active {
+    background: #08489b; }
+  ._2yPNR:not(:disabled)._wI5Hy:hover {
+    background: #1f8a3c; }
+  ._2yPNR:not(:disabled)._wI5Hy:active {
+    background: #16602a; }
+  ._2yPNR:not(:disabled)._2Gql9:hover {
+    background: #bd0f21; }
+  ._2yPNR:not(:disabled)._2Gql9:active {
+    background: #840b17; }
   ._2yPNR:disabled {
     opacity: 0.4;
     cursor: not-allowed; }
+  ._QBZ2Q:not(:disabled)._1-n9O:hover {
+    background: #fff6eb; }
+  ._QBZ2Q:not(:disabled)._1-n9O:active {
+    background: #ffead1; }
+  ._QBZ2Q:not(:disabled)._3CBV2:hover {
+    background: #ecf4fe; }
+  ._QBZ2Q:not(:disabled)._3CBV2:active {
+    background: #cfe3fc; }
+  ._QBZ2Q:not(:disabled)._2ybaQ:hover {
+    background: #eefbf2; }
+  ._QBZ2Q:not(:disabled)._2ybaQ:active {
+    background: #b8efc7; }
+  ._QBZ2Q:not(:disabled)._LQnO8:hover {
+    background: #fdecee; }
+  ._QBZ2Q:not(:disabled)._LQnO8:active {
+    background: #ffd6da; }
+  ._QBZ2Q:disabled {
+    cursor: not-allowed; }
+    ._QBZ2Q:disabled._1-n9O {
+      background: #ffd39e; }
+    ._QBZ2Q:disabled._3CBV2 {
+      background: #a8ccfa; }
+    ._QBZ2Q:disabled._2ybaQ {
+      background: #8fe6a7; }
+    ._QBZ2Q:disabled._LQnO8 {
+      background: #ffc2c8; }
 
 ._1nr2L {
   border: 1px solid #d9dadb;
   color: #4d5358;
   background: #fff; }
-  ._1nr2L._256uR:not(:disabled):hover {
+  ._1nr2L:not(:disabled)._2Pwlx:hover {
     color: #ff8c05;
     border: 1px solid #ff8c05; }
-  ._1nr2L._256uR:not(:disabled):active {
+  ._1nr2L:not(:disabled)._2Pwlx:active {
     background: #fff6eb; }
-  ._1nr2L._WthLj:not(:disabled):hover {
+  ._1nr2L:not(:disabled)._3LGz_:hover {
     color: #1877f2;
     border: 1px solid #1877f2; }
-  ._1nr2L._WthLj:not(:disabled):active {
+  ._1nr2L:not(:disabled)._3LGz_:active {
     background: #ecf4fe; }
+  ._1nr2L:not(:disabled)._wI5Hy:hover {
+    color: #28b44f;
+    border: 1px solid #28b44f; }
+  ._1nr2L:not(:disabled):active {
+    background: #eefbf2; }
+  ._1nr2L:not(:disabled)._2Gql9:hover {
+    color: #ed1d31;
+    border: 1px solid #ed1d31; }
+  ._1nr2L:not(:disabled)._2Gql9:active {
+    background: #fdecee; }
   ._1nr2L:disabled {
     opacity: 0.4;
     cursor: not-allowed; }
+  ._HWTqQ {
+    background: none;
+    border: 1px solid #fff; }
+    ._HWTqQ:not(:hover) {
+      color: #fff; }
+    ._HWTqQ:not(:disabled):hover {
+      background: #fff; }
+    ._HWTqQ:not(:disabled):active._1-n9O {
+      background: #fff6eb; }
+    ._HWTqQ:not(:disabled):active._3CBV2 {
+      background: #ecf4fe; }
+    ._HWTqQ:not(:disabled):active._2ybaQ {
+      background: #eefbf2; }
+    ._HWTqQ:not(:disabled):active._LQnO8 {
+      background: #fdecee; }
+    ._HWTqQ:disabled {
+      cursor: not-allowed; }
+      ._HWTqQ:disabled._1-n9O {
+        border: 1px solid #d17100;
+        color: #d17100; }
+      ._HWTqQ:disabled._3CBV2 {
+        border: 1px solid #0b5fcb;
+        color: #0b5fcb; }
+      ._HWTqQ:disabled._2ybaQ {
+        border: 1px solid #1f8a3c;
+        color: #1f8a3c; }
+      ._HWTqQ:disabled._LQnO8 {
+        border: 1px solid #bd0f21;
+        color: #bd0f21; }
 
 ._oHn3h {
   color: #4d5358;
@@ -1274,15 +1457,50 @@ a {
   ._oHn3h:disabled {
     opacity: 0.4;
     cursor: not-allowed; }
+  ._4vukh {
+    background: none;
+    color: #fff; }
+    ._4vukh:not(:disabled):hover {
+      background: #fff; }
+      ._4vukh:not(:disabled):hover._1-n9O {
+        color: #ff8c05; }
+      ._4vukh:not(:disabled):hover._3CBV2 {
+        color: #1877f2; }
+      ._4vukh:not(:disabled):hover._2ybaQ {
+        color: #28b44f; }
+      ._4vukh:not(:disabled):hover._LQnO8 {
+        color: #ed1d31; }
+    ._4vukh:not(:disabled):active._1-n9O {
+      background: #fff6eb; }
+    ._4vukh:not(:disabled):active._3CBV2 {
+      background: #ecf4fe; }
+    ._4vukh:not(:disabled):active._2ybaQ {
+      background: #eefbf2; }
+    ._4vukh:not(:disabled):active._LQnO8 {
+      background: #fdecee; }
+    ._4vukh:disabled {
+      cursor: not-allowed; }
+      ._4vukh:disabled._1-n9O {
+        color: #d17100; }
+      ._4vukh:disabled._3CBV2 {
+        color: #0b5fcb; }
+      ._4vukh:disabled._2ybaQ {
+        color: #1f8a3c; }
+      ._4vukh:disabled._LQnO8 {
+        color: #bd0f21; }
 
-._3Cwcr {
+._3Cwcr,
+._yl0v4 {
   color: #0000ff;
   background: none; }
-  ._3Cwcr:not(:disabled):hover {
+  ._3Cwcr:not(:disabled):hover,
+  ._yl0v4:not(:disabled):hover {
     background: #f5f5f6; }
-  ._3Cwcr:not(:disabled):active {
+  ._3Cwcr:not(:disabled):active,
+  ._yl0v4:not(:disabled):active {
     background: #e6e7e8; }
-  ._3Cwcr:disabled {
+  ._3Cwcr:disabled,
+  ._yl0v4:disabled {
     opacity: 0.4;
     cursor: not-allowed; }
 

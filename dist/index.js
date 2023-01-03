@@ -161,7 +161,7 @@ Heading.defaultProps = {
   color: 'gray'
 };
 
-var styles$3 = {"h1":"_2TGE0","h2":"_Aylvo","h3":"_Vl8BK","h4":"_1Y4uE","body":"_2XMaV","caption":"_fcrmL","note":"_3p3FA","font-bold":"_26KrJ","font-semibold":"_3H8wI","font-medium":"_28rw-","font-regular":"_2gPGh","container":"_1pA9x","row":"_2NwDW","bg-white":"_1G--D","bg-primary":"_37M2I","bg-tranparent":"_35mKr","bg-background":"_2ixeh","col-1":"_3Mtkz","col-2":"_2pvKu","col-3":"_3OFM2","col-4":"_8OoRv","col-5":"_1BC09","col-6":"_V6Uaz","col-7":"_3R-up","col-8":"_1RFL_","col-9":"_2k-yC","col-10":"_2WQw-","col-11":"_10tsp","col-12":"_JGdcA","br-0":"_bCQwN","br-1":"_1hdBf","br-2":"_2Ln10","br-3":"_5QTZa","br-4":"_2rhBh","br-5":"_15xBj","br-6":"_14kb5","br-7":"_19Qbm","br-8":"_1BQda","br-9":"_1PUO6","br-10":"_1oEo0","br-11":"_2Chmu","br-12":"_rX__V","mt-0":"_3TOOm","mt-1":"_3HIEa","mt-2":"_1nfBk","mt-3":"_adW7p","mt-4":"_12n1Y","mt-5":"_17MgJ","mt-6":"_3Hlj3","mt-7":"_3d0nr","mt-8":"_2rsba","mt-9":"_3LYUW","mt-10":"_FUHlj","mt-11":"_3FGKv","mt-12":"_1uXku","mr-0":"_a61GE","mr-1":"_3EvmB","mr-2":"_gdfxS","mr-3":"_2R_5W","mr-4":"_23-F1","mr-5":"_rZgPI","mr-6":"_3A7KF","mr-7":"_2AJnj","mr-8":"_Gi7P4","mr-9":"_2zhVw","mr-10":"_1fURn","mr-11":"_9Pwrd","mr-12":"_3Y_ec","ml-0":"_3qQNM","ml-1":"_2MZ4b","ml-2":"_1M1qu","ml-3":"_2gT-z","ml-4":"_py_1a","ml-5":"_2w_Qv","ml-6":"_39-pZ","ml-7":"_2Ny6k","ml-8":"_Iw_t6","ml-9":"_1Oeyb","ml-10":"_32nFN","ml-11":"_f9Z2T","ml-12":"_1v_b4","mb-0":"_36YE-","mb-1":"_17p1K","mb-2":"_3qhnl","mb-3":"_10mU4","mb-4":"_2op15","mb-5":"_4csYA","mb-6":"_2AAlt","mb-7":"_1Gb9P","mb-8":"_VTOZd","mb-9":"_1sTrZ","mb-10":"_2i9js","mb-11":"_SlhQA","mb-12":"_3iNTL","pt-0":"_zQUKj","pt-1":"_30I2l","pt-2":"_peK6c","pt-3":"_1_tQo","pt-4":"_2Znqo","pt-5":"_23H7Y","pt-6":"_28OpO","pt-7":"_2w1Yc","pt-8":"_2kdr9","pt-9":"_3OmBg","pt-10":"_hl2sg","pt-11":"_3RyBi","pt-12":"_2xLsG","pr-0":"_3Lsa1","pr-1":"_qDXjQ","pr-2":"_1tIFl","pr-3":"_324I7","pr-4":"_2wwax","pr-5":"_O1uAw","pr-6":"_2kBJQ","pr-7":"_3cQAe","pr-8":"_1I0h5","pr-9":"_ipxjN","pr-10":"_3EvkI","pr-11":"_39XOR","pr-12":"_3Md5r","pl-0":"_1iIFV","pl-1":"_5az6_","pl-2":"_4bzV_","pl-3":"_1HeqZ","pl-4":"_2OUl2","pl-5":"_28YuU","pl-6":"_gmCF2","pl-7":"_2dm-y","pl-8":"_3isW7","pl-9":"_3WwMq","pl-10":"_VRMAX","pl-11":"_1THhH","pl-12":"_2vp-Z","pb-0":"_2GOqt","pb-1":"_vH5nK","pb-2":"_3w957","pb-3":"_W8a69","pb-4":"_1laJC","pb-5":"_3St8Y","pb-6":"_oDUhH","pb-7":"_3XfRG","pb-8":"_2sXp_","pb-9":"_3n7P5","pb-10":"_WO3OM","pb-11":"_1wbxO","pb-12":"_36TLb"};
+var styles$3 = {"h1":"_2TGE0","h2":"_Aylvo","h3":"_Vl8BK","h4":"_1Y4uE","body":"_2XMaV","caption":"_fcrmL","note":"_3p3FA","font-bold":"_26KrJ","font-semibold":"_3H8wI","font-medium":"_28rw-","font-regular":"_2gPGh","container":"_1pA9x","row":"_2NwDW","row-reversed":"_D-Yw9","bg-white":"_1G--D","bg-primary":"_37M2I","bg-tranparent":"_35mKr","bg-background":"_2ixeh","col-1":"_3Mtkz","col-2":"_2pvKu","col-3":"_3OFM2","col-4":"_8OoRv","col-5":"_1BC09","col-6":"_V6Uaz","col-7":"_3R-up","col-8":"_1RFL_","col-9":"_2k-yC","col-10":"_2WQw-","col-11":"_10tsp","col-12":"_JGdcA","br-0":"_bCQwN","br-1":"_1hdBf","br-2":"_2Ln10","br-3":"_5QTZa","br-4":"_2rhBh","br-5":"_15xBj","br-6":"_14kb5","br-7":"_19Qbm","br-8":"_1BQda","br-9":"_1PUO6","br-10":"_1oEo0","br-11":"_2Chmu","br-12":"_rX__V","mt-0":"_3TOOm","mt-1":"_3HIEa","mt-2":"_1nfBk","mt-3":"_adW7p","mt-4":"_12n1Y","mt-5":"_17MgJ","mt-6":"_3Hlj3","mt-7":"_3d0nr","mt-8":"_2rsba","mt-9":"_3LYUW","mt-10":"_FUHlj","mt-11":"_3FGKv","mt-12":"_1uXku","mr-0":"_a61GE","mr-1":"_3EvmB","mr-2":"_gdfxS","mr-3":"_2R_5W","mr-4":"_23-F1","mr-5":"_rZgPI","mr-6":"_3A7KF","mr-7":"_2AJnj","mr-8":"_Gi7P4","mr-9":"_2zhVw","mr-10":"_1fURn","mr-11":"_9Pwrd","mr-12":"_3Y_ec","ml-0":"_3qQNM","ml-1":"_2MZ4b","ml-2":"_1M1qu","ml-3":"_2gT-z","ml-4":"_py_1a","ml-5":"_2w_Qv","ml-6":"_39-pZ","ml-7":"_2Ny6k","ml-8":"_Iw_t6","ml-9":"_1Oeyb","ml-10":"_32nFN","ml-11":"_f9Z2T","ml-12":"_1v_b4","mb-0":"_36YE-","mb-1":"_17p1K","mb-2":"_3qhnl","mb-3":"_10mU4","mb-4":"_2op15","mb-5":"_4csYA","mb-6":"_2AAlt","mb-7":"_1Gb9P","mb-8":"_VTOZd","mb-9":"_1sTrZ","mb-10":"_2i9js","mb-11":"_SlhQA","mb-12":"_3iNTL","pt-0":"_zQUKj","pt-1":"_30I2l","pt-2":"_peK6c","pt-3":"_1_tQo","pt-4":"_2Znqo","pt-5":"_23H7Y","pt-6":"_28OpO","pt-7":"_2w1Yc","pt-8":"_2kdr9","pt-9":"_3OmBg","pt-10":"_hl2sg","pt-11":"_3RyBi","pt-12":"_2xLsG","pr-0":"_3Lsa1","pr-1":"_qDXjQ","pr-2":"_1tIFl","pr-3":"_324I7","pr-4":"_2wwax","pr-5":"_O1uAw","pr-6":"_2kBJQ","pr-7":"_3cQAe","pr-8":"_1I0h5","pr-9":"_ipxjN","pr-10":"_3EvkI","pr-11":"_39XOR","pr-12":"_3Md5r","pl-0":"_1iIFV","pl-1":"_5az6_","pl-2":"_4bzV_","pl-3":"_1HeqZ","pl-4":"_2OUl2","pl-5":"_28YuU","pl-6":"_gmCF2","pl-7":"_2dm-y","pl-8":"_3isW7","pl-9":"_3WwMq","pl-10":"_VRMAX","pl-11":"_1THhH","pl-12":"_2vp-Z","pb-0":"_2GOqt","pb-1":"_vH5nK","pb-2":"_3w957","pb-3":"_W8a69","pb-4":"_1laJC","pb-5":"_3St8Y","pb-6":"_oDUhH","pb-7":"_3XfRG","pb-8":"_2sXp_","pb-9":"_3n7P5","pb-10":"_WO3OM","pb-11":"_1wbxO","pb-12":"_36TLb"};
 
 var Row = function Row(_ref) {
   var mt = _ref.mt,
@@ -175,9 +175,10 @@ var Row = function Row(_ref) {
     col = _ref.col,
     children = _ref.children,
     bg = _ref.bg,
-    br = _ref.br;
+    br = _ref.br,
+    reversed = _ref.reversed;
   return React__default.createElement("div", {
-    className: styles$3["row"] + ' ' + styles$3["bg-" + bg] + ' ' + styles$3["br-" + br] + ' ' + styles$3["col-" + col] + ' ' + styles$3["mt-" + mt] + ' ' + styles$3["mr-" + mr] + ' ' + styles$3["mb-" + mb] + ' ' + styles$3["ml-" + ml] + ' ' + styles$3["pt-" + pt] + ' ' + styles$3["pr-" + pr] + ' ' + styles$3["pb-" + pb] + ' ' + styles$3["pl-" + pl]
+    className: styles$3.row + ' ' + styles$3["row-" + (reversed ? 'reversed' : '')] + ' ' + styles$3["bg-" + bg] + ' ' + styles$3["br-" + br] + ' ' + styles$3["col-" + col] + ' ' + styles$3["mt-" + mt] + ' ' + styles$3["mr-" + mr] + ' ' + styles$3["mb-" + mb] + ' ' + styles$3["ml-" + ml] + ' ' + styles$3["pt-" + pt] + ' ' + styles$3["pr-" + pr] + ' ' + styles$3["pb-" + pb] + ' ' + styles$3["pl-" + pl]
   }, children);
 };
 Row.defaultProps = {
@@ -226,34 +227,87 @@ Label.defaultProps = {
   type: '1'
 };
 
-var styles$5 = {"h1":"_2jGMV","h2":"_1Rzgv","h3":"_3OyWy","h4":"_3NXlZ","body":"_K6SPz","caption":"_2snYP","note":"_1H8cN","font-bold":"_1MtHz","font-semibold":"_XutCa","font-medium":"_35yzi","font-regular":"_1mW1F","btn-size-sm":"_z91fQ","btn-size-md":"_1r7Vm","btn-size-lg":"_1_jZD","btn-size-xl":"_L5rQ7","btn-bg-student":"_256uR","btn-bg-parent":"_WthLj","btn-type-primary":"_2yPNR","btn-type-default":"_1nr2L","btn-type-text":"_oHn3h","btn-type-link":"_3Cwcr"};
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
 
+var styles$5 = {"gray4Color":"#f5f5f6","gray10Color":"#d9dadb","h1":"_1fyTD","h2":"_DHsM1","h3":"_M9wgr","h4":"_2HebS","body":"_2QugS","caption":"_b5L87","note":"_1Cw7-","font-bold":"_1Isxa","font-semibold":"_3I18L","font-medium":"_1xUw_","font-regular":"_jYOkI","circle-loading":"_3hXpB","round":"_15-Zn"};
+
+function CircleLoading(_ref) {
+  var border = _ref.border,
+    width = _ref.width,
+    color = _ref.color;
+  return React__default.createElement("div", {
+    className: " " + styles$5["circle-loading"],
+    style: {
+      width: width,
+      height: width,
+      borderWidth: border,
+      borderTopColor: color && styles$5[color[0]],
+      borderBottomColor: color && styles$5[color[1]],
+      borderLeftColor: color && styles$5[color[1]],
+      borderRightColor: color && styles$5[color[1]]
+    }
+  });
+}
+CircleLoading.defaultProp = {
+  border: 2,
+  width: 20,
+  color: []
+};
+
+var styles$6 = {"h1":"_2jGMV","h2":"_1Rzgv","h3":"_3OyWy","h4":"_3NXlZ","body":"_K6SPz","caption":"_2snYP","note":"_1H8cN","font-bold":"_1MtHz","font-semibold":"_XutCa","font-medium":"_35yzi","font-regular":"_1mW1F","btn-size-sm":"_z91fQ","btn-size-md":"_1r7Vm","btn-size-lg":"_1_jZD","btn-size-xl":"_L5rQ7","btn-bg-orange":"_2Pwlx","btn-bg-orange-reversed":"_1-n9O","btn-bg-blue":"_3LGz_","btn-bg-blue-reversed":"_3CBV2","btn-bg-green":"_wI5Hy","btn-bg-green-reversed":"_2ybaQ","btn-bg-crimson":"_2Gql9","btn-bg-crimson-reversed":"_LQnO8","btn-type-primary":"_2yPNR","btn-type-primary-reversed":"_QBZ2Q","btn-type-default":"_1nr2L","btn-type-default-reversed":"_HWTqQ","btn-type-text":"_oHn3h","btn-type-text-reversed":"_4vukh","btn-type-link":"_3Cwcr","btn-type-link-reversed":"_yl0v4"};
+
+var _excluded = ["children", "icons", "color", "size", "width", "reversed", "category", "loading"];
 var Button = function Button(_ref) {
   var children = _ref.children,
-    id = _ref.id,
-    className = _ref.className,
-    onPress = _ref.onPress,
-    isDisable = _ref.isDisable,
     icons = _ref.icons,
-    type = _ref.type,
-    system = _ref.system,
+    color = _ref.color,
     size = _ref.size,
-    width = _ref.width;
+    width = _ref.width,
+    reversed = _ref.reversed,
+    category = _ref.category,
+    loading = _ref.loading,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded);
   var MAP_ICON_SIZE = {
     sm: 'xs',
     md: 'sm',
     lg: 'sm',
     xl: 'md'
   };
-  return React__default.createElement("button", {
-    id: id,
-    className: className + " " + styles$5["btn-bg-" + system] + " " + styles$5["btn-type-" + type] + " " + styles$5["btn-size-" + size],
-    onClick: onPress,
-    disabled: isDisable,
+  var MAP_LOADING = {
+    LOADING_WIDTH: {
+      sm: 16,
+      md: 20,
+      lg: 20,
+      xl: 24
+    },
+    BORDER_WIDTH: {
+      sm: 1.5,
+      md: 2,
+      lg: 2,
+      xl: 2.5
+    }
+  };
+  return React__default.createElement("button", Object.assign({}, props, {
+    className: (props.className || '') + " " + styles$6["btn-bg-" + color + (reversed ? '-reversed' : '')] + " " + styles$6["btn-type-" + category + (reversed ? '-reversed' : '')] + " " + styles$6["btn-size-" + size],
     style: {
       width: width
     }
-  }, icons && icons[0] && React__default.createElement(Icon, {
+  }), loading && React__default.createElement(CircleLoading, {
+    border: MAP_LOADING.BORDER_WIDTH[size],
+    width: MAP_LOADING.LOADING_WIDTH[size],
+    color: ['gray10Color', 'gray4Color']
+  }), icons && icons[0] && React__default.createElement(Icon, {
     color: 'white',
     size: MAP_ICON_SIZE[size],
     type: icons[0]
@@ -273,7 +327,7 @@ Button.defaultProp = {
   icons: []
 };
 
-var styles$6 = {"h1":"_2czJv","h2":"_3uOdg","h3":"_3KL3Z","h4":"_2hMPc","body":"_3i4Kp","caption":"_20r3G","note":"_h89nU","font-bold":"_23v7G","font-semibold":"_1tov-","font-medium":"_hc4hr","font-regular":"_2j9tc","clevai-popup":"_2drtx","clevai-lib-ui-popup-show":"_1yiL3","clevai-popup__hide":"_2dz8g","clevai-popup__wrapper":"_2uTmL"};
+var styles$7 = {"h1":"_2czJv","h2":"_3uOdg","h3":"_3KL3Z","h4":"_2hMPc","body":"_3i4Kp","caption":"_20r3G","note":"_h89nU","font-bold":"_23v7G","font-semibold":"_1tov-","font-medium":"_hc4hr","font-regular":"_2j9tc","clevai-popup":"_2drtx","clevai-lib-ui-popup-show":"_1yiL3","clevai-popup__hide":"_2dz8g","clevai-popup__wrapper":"_2uTmL"};
 
 function Popup(_ref) {
   var children = _ref.children,
@@ -306,14 +360,14 @@ function Popup(_ref) {
     cursor: closeOnDocumentClick ? 'pointer' : 'default '
   };
   return React__default.createElement("div", {
-    className: styles$6['clevai-popup'] + " " + (!isShow ? styles$6['clevai-popup__hide'] : ''),
+    className: styles$7['clevai-popup'] + " " + (!isShow ? styles$7['clevai-popup__hide'] : ''),
     id: id,
     style: style,
     onClick: function onClick() {
       return closeOnDocumentClick && onClickClose();
     }
   }, React__default.createElement("div", {
-    className: styles$6['clevai-popup__wrapper'],
+    className: styles$7['clevai-popup__wrapper'],
     onClick: function onClick(e) {
       return e.stopPropagation();
     }
@@ -322,7 +376,7 @@ function Popup(_ref) {
   }, children)));
 }
 
-var styles$7 = {"h1":"_1lW8U","h2":"_QEm8v","h3":"_3utfb","h4":"_LETKh","body":"_1bCV9","caption":"_1TOFS","note":"_3j1wC","font-bold":"_2agEa","font-semibold":"_n8eaf","font-medium":"_3A2Rk","font-regular":"_2pdxO","tooltip-container":"_2Kmw8","tooltip":"_2i8Ko","tooltip-bg-primary":"_KIV8I","tooltip-bg-secondary":"_2uMag","tooltip-bg-default":"_2MtrX","tooltip-position1-bottom":"_LDBMO","tooltip-position2-left":"_3_YSW","tooltip-position2-right":"_w-ukw","tooltip-position1-top":"_2WTF1","tooltip-position1-left":"_3wRLU","tooltip-position2-bottom":"_1jNkk","tooltip-position2-top":"_P_nbj","tooltip-position1-right":"_GBB28"};
+var styles$8 = {"h1":"_1lW8U","h2":"_QEm8v","h3":"_3utfb","h4":"_LETKh","body":"_1bCV9","caption":"_1TOFS","note":"_3j1wC","font-bold":"_2agEa","font-semibold":"_n8eaf","font-medium":"_3A2Rk","font-regular":"_2pdxO","tooltip-container":"_2Kmw8","tooltip":"_2i8Ko","tooltip-bg-primary":"_KIV8I","tooltip-bg-secondary":"_2uMag","tooltip-bg-default":"_2MtrX","tooltip-position1-bottom":"_LDBMO","tooltip-position2-left":"_3_YSW","tooltip-position2-right":"_w-ukw","tooltip-position1-top":"_2WTF1","tooltip-position1-left":"_3wRLU","tooltip-position2-bottom":"_1jNkk","tooltip-position2-top":"_P_nbj","tooltip-position1-right":"_GBB28"};
 
 function Tooltip(_ref) {
   var children = _ref.children,
@@ -332,13 +386,14 @@ function Tooltip(_ref) {
   var position1 = position[0],
     position2 = position[1];
   return React__default.createElement("div", {
-    className: "" + styles$7['tooltip-container']
+    className: "" + styles$8['tooltip-container']
   }, children, React__default.createElement("div", {
-    className: styles$7.tooltip + " " + styles$7["tooltip-bg-" + type] + " " + (position1 ? styles$7["tooltip-position1-" + position1] : '') + " " + (position2 ? styles$7["tooltip-position2-" + position2] : '')
+    className: styles$8.tooltip + " " + styles$8["tooltip-bg-" + type] + " " + (position1 ? styles$8["tooltip-position1-" + position1] : '') + " " + (position2 ? styles$8["tooltip-position2-" + position2] : '')
   }, tooltip));
 }
 
 exports.Button = Button;
+exports.CircleLoading = CircleLoading;
 exports.Container = Container;
 exports.ExampleButton = ExampleButton;
 exports.Heading = Heading;
