@@ -1,18 +1,16 @@
 import React from 'react';
-interface Props {
+interface Props extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     children: React.ReactNode;
-    id: string;
-    className?: string;
-    isDisable?: boolean;
-    onPress?: React.MouseEventHandler<HTMLButtonElement> | undefined;
     icons?: ('facebook' | 'circle')[];
     width?: string;
-    type: 'primary' | 'default' | 'text' | 'link';
-    system: 'student' | 'parent';
+    color: 'orange' | 'blue' | 'green' | 'crimson';
     size: 'sm' | 'md' | 'lg' | 'xl';
+    reversed?: boolean;
+    category: 'primary' | 'default' | 'text' | 'link';
+    loading?: boolean;
 }
 declare const Button: {
-    ({ children, id, className, onPress, isDisable, icons, type, system, size, width }: Props): JSX.Element;
+    ({ children, icons, color, size, width, reversed, category, loading, ...props }: Props): JSX.Element;
     defaultProp: {
         id: string;
         className: string;

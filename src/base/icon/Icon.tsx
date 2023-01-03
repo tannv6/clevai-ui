@@ -3,6 +3,7 @@ import CircleIcon from './CircleIcon';
 import FacebookIcon from './FacebookIcon';
 import ArrowLeftIcon from './ArrowLeftIcon';
 import ArrowRightIcon from './ArrowRightIcon';
+import CloseIcon from './CloseIcon';
 
 interface Props {
   size: string;
@@ -14,7 +15,8 @@ const icons = {
   circle: CircleIcon,
   fb: FacebookIcon,
   arrowLeft: ArrowLeftIcon,
-  arrowRight: ArrowRightIcon
+  arrowRight: ArrowRightIcon,
+  close: CloseIcon
 };
 
 const Icon = ({ size, color, type }: Props) => {

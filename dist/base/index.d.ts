@@ -5,3 +5,4 @@ export * from './other';
 export * from './button';
 export * from './popup';
 export * from './tooltip';
+export * from './loading';
