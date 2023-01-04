@@ -192,6 +192,9 @@ a {
 ._1MXMB {
   fill: #000810; }
 
+._3ZdhM {
+  fill: #4d5358; }
+
 ._7DIk1 {
   fill: #fff; }
 
@@ -373,6 +376,11 @@ a {
 
 ._1pA9x {
   width: 1298px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+._34tDh {
+  width: 100%;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -1254,7 +1262,7 @@ a {
   text-decoration: none;
   color: unset; }
 
-._z91fQ {
+button._z91fQ {
   font-size: 14px;
   line-height: 18px;
   font-family: 'Regular SF Compact Rounded', sans-serif;
@@ -1270,7 +1278,7 @@ a {
   border-radius: 6px;
   padding: 0 12px; }
 
-._1r7Vm {
+button._1r7Vm {
   font-size: 16px;
   line-height: 22px;
   font-family: 'Semibold SF Compact Rounded', sans-serif;
@@ -1286,7 +1294,7 @@ a {
   border-radius: 8px;
   padding: 0 20px; }
 
-._1_jZD {
+button._1_jZD {
   font-size: 16px;
   line-height: 22px;
   font-family: 'Semibold SF Compact Rounded', sans-serif;
@@ -1302,7 +1310,7 @@ a {
   border-radius: 8px;
   padding: 0 24px; }
 
-._L5rQ7 {
+button._L5rQ7 {
   font-size: 20px;
   line-height: 28px;
   font-family: 'Semibold SF Compact Rounded', sans-serif;
@@ -1318,189 +1326,189 @@ a {
   border-radius: 8px;
   padding: 0 32px; }
 
-._2Pwlx {
+button._2Pwlx {
   background: #ff8c05; }
-  ._1-n9O {
+  button._1-n9O {
     background: #fff;
     color: #ff8c05; }
 
-._3LGz_ {
+button._3LGz_ {
   background: #1877f2; }
-  ._3CBV2 {
+  button._3CBV2 {
     background: #fff;
     color: #1877f2; }
 
-._wI5Hy {
+button._wI5Hy {
   background: #28b44f; }
-  ._2ybaQ {
+  button._2ybaQ {
     background: #fff;
     color: #28b44f; }
 
-._2Gql9 {
+button._2Gql9 {
   background: #ed1d31; }
-  ._LQnO8 {
+  button._LQnO8 {
     background: #fff;
     color: #ed1d31; }
 
-._2yPNR {
+button._2yPNR {
   color: #fff; }
-  ._2yPNR:not(:disabled)._2Pwlx:hover {
+  button._2yPNR:not(:disabled)._2Pwlx:hover {
     background: #d17100; }
-  ._2yPNR:not(:disabled)._2Pwlx:active {
+  button._2yPNR:not(:disabled)._2Pwlx:active {
     background: #9e5500; }
-  ._2yPNR:not(:disabled)._3LGz_:hover {
+  button._2yPNR:not(:disabled)._3LGz_:hover {
     background: #0b5fcb; }
-  ._2yPNR:not(:disabled)._3LGz_:active {
+  button._2yPNR:not(:disabled)._3LGz_:active {
     background: #08489b; }
-  ._2yPNR:not(:disabled)._wI5Hy:hover {
+  button._2yPNR:not(:disabled)._wI5Hy:hover {
     background: #1f8a3c; }
-  ._2yPNR:not(:disabled)._wI5Hy:active {
+  button._2yPNR:not(:disabled)._wI5Hy:active {
     background: #16602a; }
-  ._2yPNR:not(:disabled)._2Gql9:hover {
+  button._2yPNR:not(:disabled)._2Gql9:hover {
     background: #bd0f21; }
-  ._2yPNR:not(:disabled)._2Gql9:active {
+  button._2yPNR:not(:disabled)._2Gql9:active {
     background: #840b17; }
-  ._2yPNR:disabled {
+  button._2yPNR:disabled {
     opacity: 0.4;
     cursor: not-allowed; }
-  ._QBZ2Q:not(:disabled)._1-n9O:hover {
+  button._QBZ2Q:not(:disabled)._1-n9O:hover {
     background: #fff6eb; }
-  ._QBZ2Q:not(:disabled)._1-n9O:active {
+  button._QBZ2Q:not(:disabled)._1-n9O:active {
     background: #ffead1; }
-  ._QBZ2Q:not(:disabled)._3CBV2:hover {
+  button._QBZ2Q:not(:disabled)._3CBV2:hover {
     background: #ecf4fe; }
-  ._QBZ2Q:not(:disabled)._3CBV2:active {
+  button._QBZ2Q:not(:disabled)._3CBV2:active {
     background: #cfe3fc; }
-  ._QBZ2Q:not(:disabled)._2ybaQ:hover {
+  button._QBZ2Q:not(:disabled)._2ybaQ:hover {
     background: #eefbf2; }
-  ._QBZ2Q:not(:disabled)._2ybaQ:active {
+  button._QBZ2Q:not(:disabled)._2ybaQ:active {
     background: #b8efc7; }
-  ._QBZ2Q:not(:disabled)._LQnO8:hover {
+  button._QBZ2Q:not(:disabled)._LQnO8:hover {
     background: #fdecee; }
-  ._QBZ2Q:not(:disabled)._LQnO8:active {
+  button._QBZ2Q:not(:disabled)._LQnO8:active {
     background: #ffd6da; }
-  ._QBZ2Q:disabled {
+  button._QBZ2Q:disabled {
     cursor: not-allowed; }
-    ._QBZ2Q:disabled._1-n9O {
+    button._QBZ2Q:disabled._1-n9O {
       background: #ffd39e; }
-    ._QBZ2Q:disabled._3CBV2 {
+    button._QBZ2Q:disabled._3CBV2 {
       background: #a8ccfa; }
-    ._QBZ2Q:disabled._2ybaQ {
+    button._QBZ2Q:disabled._2ybaQ {
       background: #8fe6a7; }
-    ._QBZ2Q:disabled._LQnO8 {
+    button._QBZ2Q:disabled._LQnO8 {
       background: #ffc2c8; }
 
-._1nr2L {
+button._1nr2L {
   border: 1px solid #d9dadb;
   color: #4d5358;
   background: #fff; }
-  ._1nr2L:not(:disabled)._2Pwlx:hover {
+  button._1nr2L:not(:disabled)._2Pwlx:hover {
     color: #ff8c05;
     border: 1px solid #ff8c05; }
-  ._1nr2L:not(:disabled)._2Pwlx:active {
+  button._1nr2L:not(:disabled)._2Pwlx:active {
     background: #fff6eb; }
-  ._1nr2L:not(:disabled)._3LGz_:hover {
+  button._1nr2L:not(:disabled)._3LGz_:hover {
     color: #1877f2;
     border: 1px solid #1877f2; }
-  ._1nr2L:not(:disabled)._3LGz_:active {
+  button._1nr2L:not(:disabled)._3LGz_:active {
     background: #ecf4fe; }
-  ._1nr2L:not(:disabled)._wI5Hy:hover {
+  button._1nr2L:not(:disabled)._wI5Hy:hover {
     color: #28b44f;
     border: 1px solid #28b44f; }
-  ._1nr2L:not(:disabled):active {
+  button._1nr2L:not(:disabled):active {
     background: #eefbf2; }
-  ._1nr2L:not(:disabled)._2Gql9:hover {
+  button._1nr2L:not(:disabled)._2Gql9:hover {
     color: #ed1d31;
     border: 1px solid #ed1d31; }
-  ._1nr2L:not(:disabled)._2Gql9:active {
+  button._1nr2L:not(:disabled)._2Gql9:active {
     background: #fdecee; }
-  ._1nr2L:disabled {
+  button._1nr2L:disabled {
     opacity: 0.4;
     cursor: not-allowed; }
-  ._HWTqQ {
+  button._HWTqQ {
     background: none;
     border: 1px solid #fff; }
-    ._HWTqQ:not(:hover) {
+    button._HWTqQ:not(:hover) {
       color: #fff; }
-    ._HWTqQ:not(:disabled):hover {
+    button._HWTqQ:not(:disabled):hover {
       background: #fff; }
-    ._HWTqQ:not(:disabled):active._1-n9O {
+    button._HWTqQ:not(:disabled):active._1-n9O {
       background: #fff6eb; }
-    ._HWTqQ:not(:disabled):active._3CBV2 {
+    button._HWTqQ:not(:disabled):active._3CBV2 {
       background: #ecf4fe; }
-    ._HWTqQ:not(:disabled):active._2ybaQ {
+    button._HWTqQ:not(:disabled):active._2ybaQ {
       background: #eefbf2; }
-    ._HWTqQ:not(:disabled):active._LQnO8 {
+    button._HWTqQ:not(:disabled):active._LQnO8 {
       background: #fdecee; }
-    ._HWTqQ:disabled {
+    button._HWTqQ:disabled {
       cursor: not-allowed; }
-      ._HWTqQ:disabled._1-n9O {
+      button._HWTqQ:disabled._1-n9O {
         border: 1px solid #d17100;
         color: #d17100; }
-      ._HWTqQ:disabled._3CBV2 {
+      button._HWTqQ:disabled._3CBV2 {
         border: 1px solid #0b5fcb;
         color: #0b5fcb; }
-      ._HWTqQ:disabled._2ybaQ {
+      button._HWTqQ:disabled._2ybaQ {
         border: 1px solid #1f8a3c;
         color: #1f8a3c; }
-      ._HWTqQ:disabled._LQnO8 {
+      button._HWTqQ:disabled._LQnO8 {
         border: 1px solid #bd0f21;
         color: #bd0f21; }
 
-._oHn3h {
+button._oHn3h {
   color: #4d5358;
   background: none; }
-  ._oHn3h:not(:disabled):hover {
+  button._oHn3h:not(:disabled):hover {
     background: #f5f5f6; }
-  ._oHn3h:not(:disabled):active {
+  button._oHn3h:not(:disabled):active {
     background: #e6e7e8; }
-  ._oHn3h:disabled {
+  button._oHn3h:disabled {
     opacity: 0.4;
     cursor: not-allowed; }
-  ._4vukh {
+  button._4vukh {
     background: none;
     color: #fff; }
-    ._4vukh:not(:disabled):hover {
+    button._4vukh:not(:disabled):hover {
       background: #fff; }
-      ._4vukh:not(:disabled):hover._1-n9O {
+      button._4vukh:not(:disabled):hover._1-n9O {
         color: #ff8c05; }
-      ._4vukh:not(:disabled):hover._3CBV2 {
+      button._4vukh:not(:disabled):hover._3CBV2 {
         color: #1877f2; }
-      ._4vukh:not(:disabled):hover._2ybaQ {
+      button._4vukh:not(:disabled):hover._2ybaQ {
         color: #28b44f; }
-      ._4vukh:not(:disabled):hover._LQnO8 {
+      button._4vukh:not(:disabled):hover._LQnO8 {
         color: #ed1d31; }
-    ._4vukh:not(:disabled):active._1-n9O {
+    button._4vukh:not(:disabled):active._1-n9O {
       background: #fff6eb; }
-    ._4vukh:not(:disabled):active._3CBV2 {
+    button._4vukh:not(:disabled):active._3CBV2 {
       background: #ecf4fe; }
-    ._4vukh:not(:disabled):active._2ybaQ {
+    button._4vukh:not(:disabled):active._2ybaQ {
       background: #eefbf2; }
-    ._4vukh:not(:disabled):active._LQnO8 {
+    button._4vukh:not(:disabled):active._LQnO8 {
       background: #fdecee; }
-    ._4vukh:disabled {
+    button._4vukh:disabled {
       cursor: not-allowed; }
-      ._4vukh:disabled._1-n9O {
+      button._4vukh:disabled._1-n9O {
         color: #d17100; }
-      ._4vukh:disabled._3CBV2 {
+      button._4vukh:disabled._3CBV2 {
         color: #0b5fcb; }
-      ._4vukh:disabled._2ybaQ {
+      button._4vukh:disabled._2ybaQ {
         color: #1f8a3c; }
-      ._4vukh:disabled._LQnO8 {
+      button._4vukh:disabled._LQnO8 {
         color: #bd0f21; }
 
-._3Cwcr,
-._yl0v4 {
+button._3Cwcr,
+button._yl0v4 {
   color: #0000ff;
   background: none; }
-  ._3Cwcr:not(:disabled):hover,
-  ._yl0v4:not(:disabled):hover {
+  button._3Cwcr:not(:disabled):hover,
+  button._yl0v4:not(:disabled):hover {
     background: #f5f5f6; }
-  ._3Cwcr:not(:disabled):active,
-  ._yl0v4:not(:disabled):active {
+  button._3Cwcr:not(:disabled):active,
+  button._yl0v4:not(:disabled):active {
     background: #e6e7e8; }
-  ._3Cwcr:disabled,
-  ._yl0v4:disabled {
+  button._3Cwcr:disabled,
+  button._yl0v4:disabled {
     opacity: 0.4;
     cursor: not-allowed; }
 
