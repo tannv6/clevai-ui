@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-.btn-size-sm {
+button.btn-size-sm {
   @include caption;
   @include font-regular;
   @include btn-flex;
@@ -19,7 +19,7 @@
   border-radius: 6px;
   padding: 0 12px;
 }
-.btn-size-md {
+button.btn-size-md {
   @include body;
   @include font-semibold;
   @include btn-flex;
@@ -28,7 +28,7 @@
   @include border-radius-8;
   padding: 0 20px;
 }
-.btn-size-lg {
+button.btn-size-lg {
   @include body;
   @include font-semibold;
   @include btn-flex;
@@ -37,7 +37,7 @@
   @include border-radius-8;
   padding: 0 24px;
 }
-.btn-size-xl {
+button.btn-size-xl {
   @include h4;
   @include font-semibold;
   @include btn-flex;
@@ -47,7 +47,7 @@
   padding: 0 32px;
 }
 
-.btn-bg-orange {
+button.btn-bg-orange {
   background: $orangeColor6;
   &-reversed {
     background: $whiteColor;
@@ -55,7 +55,7 @@
   }
 }
 
-.btn-bg-blue {
+button.btn-bg-blue {
   background: $blueColor6;
   &-reversed {
     background: $whiteColor;
@@ -63,7 +63,7 @@
   }
 }
 
-.btn-bg-green {
+button.btn-bg-green {
   background: $greenColor6;
   &-reversed {
     background: $whiteColor;
@@ -71,7 +71,7 @@
   }
 }
 
-.btn-bg-crimson {
+button.btn-bg-crimson {
   background: $crimsonColor6;
   &-reversed {
     background: $whiteColor;
@@ -79,7 +79,7 @@
   }
 }
 
-.btn-type-primary {
+button.btn-type-primary {
   color: $whiteColor;
   &:not(:disabled) {
     &.btn-bg-orange:hover {
@@ -156,7 +156,7 @@
   }
 }
 
-.btn-type-default {
+button.btn-type-default {
   border: 1px solid $gray15Color;
   color: $gray70Color;
   background: $whiteColor;
@@ -241,7 +241,7 @@
   }
 }
 
-.btn-type-text {
+button.btn-type-text {
   color: $gray70Color;
   background: none;
   &:not(:disabled) {
@@ -308,8 +308,8 @@
   }
 }
 
-.btn-type-link,
-.btn-type-link-reversed {
+button.btn-type-link,
+button.btn-type-link-reversed {
   color: $linkColor;
   background: none;
   &:not(:disabled) {
