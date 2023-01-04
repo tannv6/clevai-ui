@@ -11,7 +11,7 @@ const App = () => {
           <Label type='2' ml={5}>
             Di-live
           </Label>
-          <Icon type='arrowLeft' size='sm' color='white' />
+          <Icon type='book' size='sm' color='whi1te' fill={'red'} />
           <Label type='4' ml={2} mr={4}>
             Get
           </Label>
