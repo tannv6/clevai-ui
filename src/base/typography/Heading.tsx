@@ -9,6 +9,7 @@ interface Props {
   display: 'inline' | 'block';
   align: 'center' | 'left' | 'right';
   color: typeof COLOR_ARRAY[number];
+  fontWeight: string;
   id?: string;
 }
 
@@ -29,11 +30,12 @@ const Heading = ({
   display,
   align,
   color,
+  fontWeight,
   id
 }: Props) => {
   const className = `${styles[type]} ${styles['display-' + display]} ${
     styles['align-' + align]
-  } ${styles['font-' + font]}`;
+  } ${styles['font-' + font]} ${styles['font-weight' + fontWeight]}`;
   return React.createElement(
     MAP_TYPES_TO_TAGS[type] || 'p',
     { className, id, style: { color: styles[color] } },
