@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from './popup.scss';
 interface PopupProps {
   children: React.ReactNode;
-  zIndex: number;
-  isShow: boolean;
-  closeOnDocumentClick: boolean;
+  zIndex?: number;
+  isShow?: boolean;
+  closeOnDocumentClick?: boolean;
   onClickClose: Function;
-  id: string;
+  id?: string;
+  bg?: 'gray';
 }
 function Popup({
   children,
@@ -14,7 +15,8 @@ function Popup({
   isShow,
   zIndex,
   closeOnDocumentClick,
-  onClickClose
+  onClickClose,
+  bg
 }: PopupProps) {
   const [showDelay, setShowDelay] = React.useState(false);
 
@@ -34,7 +36,7 @@ function Popup({
   }, [isShow]);
 
   if (!showDelay) {
-    return <div />;
+    return <Fragment />;
   }
 
   const style: React.CSSProperties = {
@@ -46,7 +48,7 @@ function Popup({
     <div
       className={`${styles['clevai-popup']} ${
         !isShow ? styles['clevai-popup__hide'] : ''
-      }`}
+      } ${styles[`clevai-popup-bg-${bg || ''}`]}`}
       id={id}
       style={style}
       onClick={() => closeOnDocumentClick && onClickClose()}
@@ -62,3 +64,12 @@ function Popup({
 }
 
 export default Popup;
+
+Popup.defaultProp = {
+  id: '',
+  zIndex: 1,
+  isShow: true,
+  closeOnDocumentClick: false,
+  onClickClose: () => {},
+  bg: ''
+};
