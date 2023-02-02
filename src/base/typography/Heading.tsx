@@ -1,24 +1,25 @@
 import React from 'react';
+import { COLOR_ARRAY } from '..';
 import styles from './typography.scss';
 
 interface Props {
-  type: string;
-  font: string;
+  type: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'caption' | 'note';
+  font: 'bold' | 'semibold' | 'medium' | 'regular';
   children: React.ReactNode;
-  display: string;
-  align: string;
-  color: string;
+  display: 'inline' | 'block';
+  align: 'center' | 'left' | 'right';
+  color: typeof COLOR_ARRAY[number];
   id?: string;
 }
 
-const TYPES = {
+const MAP_TYPES_TO_TAGS = {
   h1: 'h1',
   h2: 'h2',
   h3: 'h3',
   h4: 'h4',
-  body: 'body',
-  caption: 'caption',
-  note: 'note'
+  body: 'p',
+  caption: 'p',
+  note: 'label'
 };
 
 const Heading = ({
@@ -31,65 +32,20 @@ const Heading = ({
   id
 }: Props) => {
   const className = `${styles[type]} ${styles['display-' + display]} ${
-    styles['color-' + color]
-  } ${styles['align-' + align]} ${styles['font-' + font]}`;
-  if (TYPES.h1 === type) {
-    return (
-      <h1 id={id} className={className}>
-        {children}
-      </h1>
-    );
-  }
-  if (TYPES.h2 === type) {
-    return (
-      <h2 id={id} className={className}>
-        {children}
-      </h2>
-    );
-  }
-  if (TYPES.h3 === type) {
-    return (
-      <h3 id={id} className={className}>
-        {children}
-      </h3>
-    );
-  }
-  if (TYPES.h4 === type) {
-    return (
-      <h4 id={id} className={className}>
-        {children}
-      </h4>
-    );
-  }
-  if (TYPES.body === type) {
-    return (
-      <p id={id} className={className}>
-        {children}
-      </p>
-    );
-  }
-  if (TYPES.caption === type) {
-    return (
-      <p id={id} className={className}>
-        {children}
-      </p>
-    );
-  }
-  if (TYPES.note === type) {
-    return (
-      <label id={id} className={className}>
-        {children}
-      </label>
-    );
-  }
-
-  return (
-    <p id={id} className={className}>
-      {children}
-    </p>
+    styles['align-' + align]
+  } ${styles['font-' + font]}`;
+  return React.createElement(
+    MAP_TYPES_TO_TAGS[type] || 'p',
+    { className, id, style: { color: styles[color] } },
+    children
   );
 };
 
-Heading.defaultProps = { display: 'block', align: 'left', color: 'gray' };
+Heading.defaultProps = {
+  display: 'block',
+  align: 'left',
+  color: 'gray',
+  font: 'regular'
+};
 
 export default Heading;
