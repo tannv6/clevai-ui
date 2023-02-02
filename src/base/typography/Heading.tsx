@@ -35,7 +35,7 @@ const Heading = ({
 }: Props) => {
   const className = `${styles[type]} ${styles['display-' + display]} ${
     styles['align-' + align]
-  } ${styles['font-' + font]} ${styles['font-weight' + fontWeight]}`;
+  } ${styles['font-' + font]} ${styles['font-weight-' + fontWeight]}`;
   return React.createElement(
     MAP_TYPES_TO_TAGS[type] || 'p',
     { className, id, style: { color: styles[color] } },
