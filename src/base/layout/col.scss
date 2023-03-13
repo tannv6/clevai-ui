@@ -1,0 +1,43 @@
+@import '../../base/css/common.scss';
+
+$orders: -1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+.col {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@each $grid in $grids {
+  .offset-#{$grid} {
+    margin-left: ($grid / 12) * 100%;
+  }
+}
+
+@each $order in $orders {
+  .order-#{$order} {
+    order: $order;
+  }
+}
+
+@each $grid in $grids {
+  .xl-#{$grid} {
+    width: ($grid / 12) * 100%;
+  }
+}
+
+@media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+  @each $grid in $grids {
+    .md-#{$grid} {
+      width: ($grid / 12) * 100%;
+    }
+  }
+}
+
+@media (max-width: $mobileWidthMax) {
+  @each $grid in $grids {
+    .sm-#{$grid} {
+      width: ($grid / 12) * 100%;
+    }
+  }
+}
