@@ -8,9 +8,9 @@ interface Props {
   ml: number;
   pt: number;
   pr: number;
-  gutterXs?: number;
-  gutterMd?: number;
-  gutterXl?: number;
+  gutterXs: [number, number];
+  gutterMd: [number, number];
+  gutterXl: [number, number];
   justify:
     | 'start'
     | 'end'
@@ -73,11 +73,17 @@ const Rows = ({
         ' ' +
         styles[`pl-${pl}`] +
         ' ' +
-        styles[`gutter-xs-${gutterXs}`] +
+        styles[`gutter-x-xs-${gutterXs[0]}`] +
         ' ' +
-        styles[`gutter-md-${gutterMd}`] +
+        styles[`gutter-x-md-${gutterMd[0]}`] +
         ' ' +
-        styles[`gutter-xl-${gutterXl}`] +
+        styles[`gutter-x-xl-${gutterXl[0]}`] +
+        ' ' +
+        styles[`gutter-y-xs-${gutterXs[1]}`] +
+        ' ' +
+        styles[`gutter-y-md-${gutterMd[1]}`] +
+        ' ' +
+        styles[`gutter-y-xl-${gutterXl[1]}`] +
         ' ' +
         styles[`justify-${justify}`] +
         ' ' +
@@ -97,9 +103,9 @@ Rows.defaultProps = {
   pt: 0,
   pb: 0,
   pr: 0,
-  gutterXs: 0,
-  gutterMd: 0,
-  gutterXl: 0,
+  gutterXs: [0, 0],
+  gutterMd: [0, 0],
+  gutterXl: [0, 0],
   pl: 0,
   bg: 'tranparent',
   justify: 'center',
