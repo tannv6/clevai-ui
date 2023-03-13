@@ -1,7 +1,7 @@
 @import '../../base/css/common.scss';
 
 $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-$gutters: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$gutters: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15;
 
 .container {
   width: 1298px;
@@ -80,24 +80,6 @@ $gutters: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 }
 
 
-@each $gutter in $gutters {
-  .gutter-xs-#{$gutter} {
-    @media (max-width: $mobileWidthMax) {
-      gap: $gutter * 2px;
-    }
-  }
-  .gutter-md-#{$gutter} {
-    @media (max-width: $tabletWidthMax) {
-      gap: $gutter * 2px;
-    }
-  }
-  .gutter-xl-#{$gutter} {
-    @media (min-width: $desktopWidthMin) {
-      gap: $gutter * 2px;
-    }
-  }
-}
-
 @each $level in $levels {
   .br-#{$level} {
     border-radius: $level * 2px;
@@ -151,3 +133,37 @@ $gutters: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
     padding-bottom: $level * 2px;
   }
 }
+
+@each $gutter in $gutters {
+  .gutter-xs-#{$gutter} {
+    @media (max-width: $mobileWidthMax) {
+      margin-left: -$gutter * 2px;
+      margin-right: -$gutter * 2px;
+      >* {
+        padding-left: $gutter * 2px;
+        padding-right: $gutter * 2px;
+      }
+      }
+    }
+  .gutter-md-#{$gutter} {
+    @media (max-width: 1024px) {
+      margin-left: - $gutter * 2px;
+      margin-right: -$gutter * 2px;
+      >* {
+        padding-left: $gutter * 2px;
+        padding-right: $gutter * 2px;
+      }
+    }
+  }
+  .gutter-xl-#{$gutter} {
+    @media (min-width: $desktopWidthMin) {
+      margin-left: - $gutter * 2px;
+      margin-right: -$gutter * 2px;
+      >* {
+        padding-left: $gutter * 2px;
+        padding-right: $gutter * 2px;
+      }
+    }
+  }
+}
+

@@ -49,7 +49,7 @@ const Rows = ({
   return (
     <div
       className={
-        styles.row +
+        styles.rows +
         ' ' +
         styles[`rows-${reversed ? 'reversed' : ''}`] +
         ' ' +
@@ -97,9 +97,9 @@ Rows.defaultProps = {
   pt: 0,
   pb: 0,
   pr: 0,
-  gutterXs: 1,
-  gutterMd: 1,
-  gutterXl: 1,
+  gutterXs: 0,
+  gutterMd: 0,
+  gutterXl: 0,
   pl: 0,
   bg: 'tranparent',
   justify: 'center',
