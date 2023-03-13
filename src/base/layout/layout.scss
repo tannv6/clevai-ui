@@ -1,6 +1,7 @@
 @import '../../base/css/common.scss';
 
-$levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+  20, 21, 22, 23, 24;
 $grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 
 .container {
@@ -21,6 +22,13 @@ $grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   &-reversed {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+.wrapper {
+  box-sizing: border-box;
+  &.display-inline {
+    display: inline-block;
   }
 }
 
@@ -51,49 +59,98 @@ $grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 }
 
 @each $level in $levels {
-  .mt-#{$level} {
-    margin-top: $level * 2px;
-  }
-}
-
-@each $level in $levels {
-  .mr-#{$level} {
-    margin-right: $level * 2px;
-  }
-}
-
-@each $level in $levels {
-  .ml-#{$level} {
-    margin-left: $level * 2px;
-  }
-}
-
-@each $level in $levels {
-  .mb-#{$level} {
-    margin-bottom: $level * 2px;
-  }
-}
-
-@each $level in $levels {
   .pt-#{$level} {
     padding-top: $level * 2px;
   }
-}
-
-@each $level in $levels {
-  .pr-#{$level} {
-    padding-right: $level * 2px;
+  .pb-#{$level} {
+    padding-bottom: $level * 2px;
   }
-}
-
-@each $level in $levels {
   .pl-#{$level} {
     padding-left: $level * 2px;
   }
-}
-
-@each $level in $levels {
-  .pb-#{$level} {
-    padding-bottom: $level * 2px;
+  .pr-#{$level} {
+    padding-right: $level * 2px;
+  }
+  .p-#{$level} {
+    padding: $level * 2px;
+  }
+  .mt-#{$level} {
+    margin-top: $level * 2px;
+  }
+  .mr-#{$level} {
+    margin-right: $level * 2px;
+  }
+  .ml-#{$level} {
+    margin-left: $level * 2px;
+  }
+  .mb-#{$level} {
+    margin-bottom: $level * 2px;
+  }
+  .m-#{$level} {
+    margin: $level * 2px;
+  }
+  @media (max-width: 1199px) {
+    .pt-t-#{$level} {
+      padding-top: $level * 2px;
+    }
+    .pb-t-#{$level} {
+      padding-bottom: $level * 2px;
+    }
+    .pl-t-#{$level} {
+      padding-left: $level * 2px;
+    }
+    .pr-t-#{$level} {
+      padding-right: $level * 2px;
+    }
+    .p-t-#{$level} {
+      padding: $level * 2px;
+    }
+    .mt-t-#{$level} {
+      margin-top: $level * 2px;
+    }
+    .mr-t-#{$level} {
+      margin-right: $level * 2px;
+    }
+    .ml-t-#{$level} {
+      margin-left: $level * 2px;
+    }
+    .mb-t-#{$level} {
+      margin-bottom: $level * 2px;
+    }
+    .m-t-#{$level} {
+      margin: $level * 2px;
+    }
+  }
+  @media (max-width: 767px) {
+    .pt-m-#{$level} {
+      padding-top: $level * 2px;
+    }
+    .pb-m-#{$level} {
+      padding-bottom: $level * 2px;
+    }
+    .pl-m-#{$level} {
+      padding-left: $level * 2px;
+    }
+    .pr-m-#{$level} {
+      padding-right: $level * 2px;
+    }
+    .p-m-#{$level} {
+      padding-right: $level * 2px;
+    }
+    .mt-m-#{$level} {
+      margin-top: $level * 2px;
+    }
+    .mr-m-#{$level} {
+      margin-right: $level * 2px;
+    }
+    .ml-m-#{$level} {
+      margin-left: $level * 2px;
+    }
+    .mb-m-#{$level} {
+      margin-bottom: $level * 2px;
+    }
+    .m-m-#{$level} {
+      margin: $level * 2px;
+    }
   }
 }
