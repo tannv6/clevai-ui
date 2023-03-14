@@ -1,22 +1,31 @@
 import React from 'react';
 import styles from './layout.scss';
-import color from '../typography/typography.scss';
-import { COLOR_ARRAY } from '..';
-const GRID_VALUE = [
-  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-  22, 23, 24
-] as const;
+import color from '../css/colors.scss';
+import { COLOR_ARRAY, GRID_VALUES } from '..';
+type TResponsive =
+  | (
+      | {
+          t?: typeof GRID_VALUES[number];
+          r?: typeof GRID_VALUES[number];
+          b?: typeof GRID_VALUES[number];
+          l?: typeof GRID_VALUES[number];
+        }
+      | typeof GRID_VALUES[number]
+    )[]
+  | typeof GRID_VALUES[number]
+  | {
+      t?: typeof GRID_VALUES[number];
+      r?: typeof GRID_VALUES[number];
+      b?: typeof GRID_VALUES[number];
+      l?: typeof GRID_VALUES[number];
+    };
 type Props = {
   children?: any;
   className?: string;
-  pd?:
-    | (typeof GRID_VALUE[number][] | typeof GRID_VALUE[number])[]
-    | typeof GRID_VALUE[number];
-  mg?:
-    | (typeof GRID_VALUE[number][] | typeof GRID_VALUE[number])[]
-    | typeof GRID_VALUE[number];
+  pd?: TResponsive;
+  mg?: TResponsive;
   bg?: typeof COLOR_ARRAY[number];
-  br?: typeof GRID_VALUE[number];
+  br?: typeof GRID_VALUES[number];
   w?: string | number;
   inline?: boolean;
 };
@@ -26,8 +35,8 @@ function Wrapper({ children, pd, bg, br, mg, w, className, inline }: Props) {
       className={`${className ? `${className} ` : ''}${styles.wrapper} ${
         inline ? styles['display-inline'] : ''
       } ${genClassName(pd, 'p')} ${genClassName(mg, 'm')} ${
-        styles[`br-${br}`]
-      }`}
+        br ? styles[`br-${br}`] : ''
+      }`.replace(/\s+/g, ' ')}
       style={{ background: color[bg || ''], width: w }}
     >
       {children}
@@ -38,49 +47,58 @@ function Wrapper({ children, pd, bg, br, mg, w, className, inline }: Props) {
 export default Wrapper;
 
 const getClassName = (
-  value: typeof GRID_VALUE[number][] | typeof GRID_VALUE[number],
-  type: string,
+  value: any,
+  type: 'xl-' | 'md-' | 'sm-',
   prop: string
 ) => {
-  return value
-    ? typeof value === 'number'
-      ? styles[`${prop}-${type || ''}${value}`]
-      : typeof value === 'object'
-      ? value.length === 1
-        ? styles[`${prop}-${type || ''}${value[0]}`]
-        : value.length === 2
-        ? `${styles[`${prop}-t-${type || ''}${value[0]}`]} ${
-            styles[`${prop}-r-${type || ''}${value[1]}`]
-          } ${styles[`${prop}-b-${type || ''}${value[0]}`]} ${
-            styles[`${prop}-l-${type || ''}${value[1]}`]
-          }`
-        : value.length === 3
-        ? `${styles[`${prop}-t-${type || ''}${value[0]}`]} ${
-            styles[`${prop}-r-${type || ''}${value[1]}`]
-          } ${styles[`${prop}-b-${type || ''}${value[2]}`]} ${
-            styles[`${prop}-l-${type || ''}${value[1]}`]
-          }`
-        : value.length === 4
-        ? `${styles[`${prop}-t-${type || ''}${value[0]}`]} ${
-            styles[`${prop}-r-${type || ''}${value[1]}`]
-          } ${styles[`${prop}-b-${type || ''}${value[2]}`]} ${
-            styles[`${prop}-l-${type || ''}${value[3]}`]
-          }`
-        : ''
-      : ''
-    : '';
+  let res = '';
+  if (typeof value === 'number') {
+    res += ` ${styles[`${prop}-${type || ''}${value}`]}`;
+  } else if (typeof value === 'object') {
+    if (value.t) {
+      res += ` ${styles[`${prop}t-${type || ''}${value.t}`]}`;
+    }
+    if (value.r) {
+      res += ` ${styles[`${prop}r-${type || ''}${value.r}`]}`;
+    }
+    if (value.b) {
+      res += ` ${styles[`${prop}b-${type || ''}${value.b}`]}`;
+    }
+    if (value.l) {
+      res += ` ${styles[`${prop}l-${type || ''}${value.l}`]}`;
+    }
+  }
+  return res;
 };
 
 const genClassName = (val: any, prop: 'p' | 'm') => {
   if (typeof val === 'number') {
     return `${styles[`${prop}-${val}`]}`;
   } else if (typeof val === 'object') {
-    const padDesktop = getClassName(val[0], '', prop);
-    const padTablet = getClassName(val[1], 't-', prop);
-    const padMobile = getClassName(val[2], 'm-', prop);
-    return `${padDesktop}${padTablet ? ` ${padTablet}` : ''}${
-      padMobile ? ` ${padMobile}` : ''
-    }`;
+    if (val?.length > 0) {
+      const padDesktop = getClassName(val[0], 'xl-', prop);
+      const padTablet = getClassName(val[1], 'md-', prop);
+      const padMobile = getClassName(val[2], 'sm-', prop);
+      return `${padMobile ? ` ${padMobile}` : ''}${
+        padTablet ? ` ${padTablet}` : ''
+      }${padDesktop}`;
+    } else {
+      let res = '';
+      if (val.t) {
+        res += ` ${styles[`${prop}t-${val.t}`]}`;
+      }
+      if (val.r) {
+        res += ` ${styles[`${prop}r-${val.r}`]}`;
+      }
+      if (val.b) {
+        res += ` ${styles[`${prop}b-${val.b}`]}`;
+      }
+      if (val.l) {
+        res += ` ${styles[`${prop}l-${val.l}`]}`;
+      }
+
+      return res;
+    }
   } else {
     return '';
   }

@@ -2,29 +2,24 @@ import React from 'react';
 import styles from './col.scss';
 
 interface Props {
-  offset?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  offset?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   order?: -1 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  span?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   xl?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   md?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   sm?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: React.ReactNode;
 }
-const Col = ({ offset, order, xl, md, sm, children }: Props) => {
+const Col = ({ offset, order, xl, md, sm, children, span }: Props) => {
   return (
     <div
-      className={
-        styles.col +
-        ' ' +
-        styles[`offset-${offset}`] +
-        ' ' +
-        styles[`order-${order}`] +
-        ' ' +
-        styles[`xl-${xl}`] +
-        ' ' +
-        styles[`md-${md}`] +
-        ' ' +
-        styles[`sm-${sm}`]
-      }
+      className={`${styles.col} ${offset ? styles[`offset-${offset}`] : ''} ${
+        span ? styles[`span-${span}`] : ''
+      } ${order ? styles[`order-${order}`] : ''} ${
+        !span && xl ? styles[`xl-${xl}`] : ''
+      } ${!span && md ? styles[`md-${md}`] : ''} ${
+        !span && sm ? styles[`sm-${sm}`] : ''
+      }`.replace(/\s+/g, ' ')}
     >
       {children}
     </div>
@@ -32,10 +27,9 @@ const Col = ({ offset, order, xl, md, sm, children }: Props) => {
 };
 
 Col.defaultProps = {
-  offset: 0,
-  xl: 4,
+  xl: 6,
   md: 6,
-  sm: 12
+  sm: 6
 };
 
 export default Col;

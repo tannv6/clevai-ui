@@ -8,7 +8,7 @@ interface Props
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   icons?: ('facebook' | 'circle')[];
   width?: string;
   color: 'orange' | 'blue' | 'green' | 'crimson';
