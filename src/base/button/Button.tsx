@@ -11,44 +11,24 @@ interface Props
   children?: React.ReactNode;
   icons?: ('facebook' | 'circle')[];
   width?: string;
-  color: 'orange' | 'blue' | 'green' | 'crimson';
-  size: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'orange' | 'blue' | 'green' | 'crimson';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   reversed?: boolean;
-  category: 'primary' | 'default' | 'text' | 'link';
+  category?: 'primary' | 'default' | 'text' | 'link';
   loading?: boolean;
 }
 
 const Button = ({
   children,
   icons,
-  color,
-  size,
+  color = 'orange',
+  size = 'md',
   width,
   reversed,
-  category,
+  category = 'primary',
   loading,
   ...props
 }: Props) => {
-  const MAP_ICON_SIZE = {
-    sm: 'xs',
-    md: 'sm',
-    lg: 'sm',
-    xl: 'md'
-  };
-  const MAP_LOADING = {
-    LOADING_WIDTH: {
-      sm: 16,
-      md: 20,
-      lg: 20,
-      xl: 24
-    },
-    BORDER_WIDTH: {
-      sm: 1.5,
-      md: 2,
-      lg: 2,
-      xl: 2.5
-    }
-  };
   return (
     <button
       {...props}
@@ -63,17 +43,17 @@ const Button = ({
     >
       {loading && (
         <CircleLoading
-          border={MAP_LOADING.BORDER_WIDTH[size]}
-          width={MAP_LOADING.LOADING_WIDTH[size]}
+          border={MAP_LOADING.BORDER_WIDTH[size || '']}
+          width={MAP_LOADING.LOADING_WIDTH[size || '']}
           color={['gray10Color', 'gray4Color']}
         />
       )}
       {icons && icons[0] && (
-        <Icon color='white' size={MAP_ICON_SIZE[size]} type={icons[0]} />
+        <Icon color='white' size={MAP_ICON_SIZE[size || '']} type={icons[0]} />
       )}
       {children}
       {icons && icons[1] && (
-        <Icon color='white' size={MAP_ICON_SIZE[size]} type={icons[1]} />
+        <Icon color='white' size={MAP_ICON_SIZE[size || '']} type={icons[1]} />
       )}
     </button>
   );
@@ -83,10 +63,31 @@ Button.defaultProp = {
   id: '',
   className: '',
   onPress: () => {},
-  type: 'default',
-  system: 'student',
   size: 'lg',
-  icons: []
+  icons: [],
+  color: 'orange',
+  category: 'primary'
 };
 
 export default Button;
+
+const MAP_ICON_SIZE = {
+  sm: 'xs',
+  md: 'sm',
+  lg: 'sm',
+  xl: 'md'
+};
+const MAP_LOADING = {
+  LOADING_WIDTH: {
+    sm: 16,
+    md: 20,
+    lg: 20,
+    xl: 24
+  },
+  BORDER_WIDTH: {
+    sm: 1.5,
+    md: 2,
+    lg: 2,
+    xl: 2.5
+  }
+};
