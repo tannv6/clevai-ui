@@ -9,14 +9,12 @@ import GiftIcon from './GiftIcon';
 import ChestnutIcon from './ChestnutIcon';
 import StarIcon from './StarIcon';
 import Close2Icon from './Close2Icon';
-
-interface Props {
-  size: string;
-  color: string;
-  type: string;
-  fill?: string;
-}
-
+import Education from './Education';
+import { COLOR_ARRAY } from '..';
+import colors from '../css/colors.scss';
+import Goal from './Goal';
+import Logout from './Logout';
+import Setting from './Setting';
 const icons = {
   circle: CircleIcon,
   fb: FacebookIcon,
@@ -27,12 +25,39 @@ const icons = {
   star: StarIcon,
   close2: Close2Icon,
   chestnut: ChestnutIcon,
-  book: BookIcon
+  book: BookIcon,
+  edu: Education,
+  goal: Goal,
+  logout: Logout,
+  setting: Setting
 };
+
+interface Props {
+  size: 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+  color?: string;
+  type:
+    | 'circle'
+    | 'fb'
+    | 'arrowLeft'
+    | 'arrowRight'
+    | 'close'
+    | 'gift'
+    | 'star'
+    | 'close2'
+    | 'chestnut'
+    | 'book'
+    | 'edu'
+    | 'goal'
+    | 'logout'
+    | 'setting';
+  fill?: typeof COLOR_ARRAY[number];
+}
 
 const Icon = ({ size, color, type, fill }: Props) => {
   const Element = icons[type] || icons.circle;
-  return <Element size={size} color={color} fill={fill} />;
+  return (
+    <Element size={size} color={color || ''} fill={colors[`${fill}`] || ''} />
+  );
 };
 
 Icon.defaultProp = {
