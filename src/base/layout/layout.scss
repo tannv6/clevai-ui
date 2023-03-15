@@ -1,7 +1,7 @@
 @import '../../base/css/common.scss';
 
-$levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-$grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+  20, 21, 22, 23, 24;
 
 .container {
   width: 1298px;
@@ -24,6 +24,81 @@ $grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   }
 }
 
+.rows {
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  &-reversed {
+    justify-content: flex-end;
+  }
+  @each $gutter in $levels {
+    &.gutter-x-#{$gutter} {
+      margin-left: -#{$gutter}px;
+      margin-right: -#{$gutter}px;
+      > * {
+        padding-left: #{$gutter}px;
+        padding-right: #{$gutter}px;
+      }
+    }
+    &.gutter-y-#{$gutter} {
+      row-gap: $gutter * 2px;
+    }
+    &.gutter-x-xl-#{$gutter} {
+      @media (min-width: $desktopWidthMin) {
+        margin-left: -#{$gutter}px;
+        margin-right: -#{$gutter}px;
+        > * {
+          padding-left: #{$gutter}px;
+          padding-right: #{$gutter}px;
+        }
+      }
+    }
+    &.gutter-x-md-#{$gutter} {
+      @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+        margin-left: -#{$gutter}px;
+        margin-right: -#{$gutter}px;
+        > * {
+          padding-left: #{$gutter}px;
+          padding-right: #{$gutter}px;
+        }
+      }
+    }
+    &.gutter-x-sm-#{$gutter} {
+      @media (max-width: $mobileWidthMax) {
+        margin-left: -#{$gutter}px;
+        margin-right: -#{$gutter}px;
+        > * {
+          padding-left: #{$gutter}px;
+          padding-right: #{$gutter}px;
+        }
+      }
+    }
+    &.gutter-y-xl-#{$gutter} {
+      @media (min-width: $desktopWidthMin) {
+        row-gap: $gutter * 2px;
+      }
+    }
+    &.gutter-y-md-#{$gutter} {
+      @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+        row-gap: $gutter * 2px;
+      }
+    }
+    &.gutter-y-sm-#{$gutter} {
+      @media (max-width: $mobileWidthMax) {
+        row-gap: $gutter * 2px;
+      }
+    }
+  }
+}
+.wrapper {
+  box-sizing: border-box;
+  height: 100%;
+  &.display-inline {
+    display: inline-block;
+  }
+}
+
 .bg-white {
   background: $whiteColor;
 }
@@ -37,11 +112,39 @@ $grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   background: $backgroundColor;
 }
 
-@each $grid in $grids {
-  .col-#{$grid} {
-    width: ($grid / 12) * 100%;
-    float: left;
-  }
+.justify-start {
+  justify-content: start;
+}
+.justify-end {
+  justify-content: end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+.align-stretch {
+  align-items: stretch;
+}
+.align-baseline {
+  align-items: baseline;
 }
 
 @each $level in $levels {
@@ -51,49 +154,130 @@ $grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 }
 
 @each $level in $levels {
-  .mt-#{$level} {
-    margin-top: $level * 2px;
-  }
-}
-
-@each $level in $levels {
-  .mr-#{$level} {
-    margin-right: $level * 2px;
-  }
-}
-
-@each $level in $levels {
-  .ml-#{$level} {
-    margin-left: $level * 2px;
-  }
-}
-
-@each $level in $levels {
-  .mb-#{$level} {
-    margin-bottom: $level * 2px;
-  }
-}
-
-@each $level in $levels {
   .pt-#{$level} {
     padding-top: $level * 2px;
   }
-}
-
-@each $level in $levels {
-  .pr-#{$level} {
-    padding-right: $level * 2px;
+  .pb-#{$level} {
+    padding-bottom: $level * 2px;
   }
-}
-
-@each $level in $levels {
   .pl-#{$level} {
     padding-left: $level * 2px;
   }
-}
-
-@each $level in $levels {
-  .pb-#{$level} {
-    padding-bottom: $level * 2px;
+  .pr-#{$level} {
+    padding-right: $level * 2px;
+  }
+  .p-#{$level} {
+    padding: $level * 2px;
+  }
+  .mt-#{$level} {
+    margin-top: $level * 2px;
+  }
+  .mr-#{$level} {
+    margin-right: $level * 2px;
+  }
+  .ml-#{$level} {
+    margin-left: $level * 2px;
+  }
+  .mb-#{$level} {
+    margin-bottom: $level * 2px;
+  }
+  .m-#{$level} {
+    margin: $level * 2px;
+  }
+  @media (min-width: $desktopWidthMin) {
+    .pt-xl-#{$level} {
+      padding-top: $level * 2px;
+    }
+    .pb-xl-#{$level} {
+      padding-bottom: $level * 2px;
+    }
+    .pl-xl-#{$level} {
+      padding-left: $level * 2px;
+    }
+    .pr-xl-#{$level} {
+      padding-right: $level * 2px;
+    }
+    .p-xl-#{$level} {
+      padding: $level * 2px;
+    }
+    .mt-xl-#{$level} {
+      margin-top: $level * 2px;
+    }
+    .mr-xl-#{$level} {
+      margin-right: $level * 2px;
+    }
+    .ml-xl-#{$level} {
+      margin-left: $level * 2px;
+    }
+    .mb-xl-#{$level} {
+      margin-bottom: $level * 2px;
+    }
+    .m-xl-#{$level} {
+      margin: $level * 2px;
+    }
+  }
+  @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+    .pt-md-#{$level} {
+      padding-top: $level * 2px;
+    }
+    .pb-md-#{$level} {
+      padding-bottom: $level * 2px;
+    }
+    .pl-md-#{$level} {
+      padding-left: $level * 2px;
+    }
+    .pr-md-#{$level} {
+      padding-right: $level * 2px;
+    }
+    .p-md-#{$level} {
+      padding: $level * 2px;
+    }
+    .mt-md-#{$level} {
+      margin-top: $level * 2px;
+    }
+    .mr-md-#{$level} {
+      margin-right: $level * 2px;
+    }
+    .ml-md-#{$level} {
+      margin-left: $level * 2px;
+    }
+    .mb-md-#{$level} {
+      margin-bottom: $level * 2px;
+    }
+    .m-md-#{$level} {
+      margin: $level * 2px;
+    }
+  }
+  @media (max-width: $mobileWidthMax) {
+    .pt-sm-#{$level} {
+      padding-top: $level * 2px;
+    }
+    .pb-sm-#{$level} {
+      padding-bottom: $level * 2px;
+    }
+    .pl-sm-#{$level} {
+      padding-left: $level * 2px;
+    }
+    .pr-sm-#{$level} {
+      padding-right: $level * 2px;
+    }
+    .p-sm-#{$level} {
+      padding: $level * 2px;
+    }
+    .mt-sm-#{$level} {
+      margin-top: $level * 2px;
+    }
+    .mr-sm-#{$level} {
+      margin-right: $level * 2px;
+    }
+    .ml-sm-#{$level} {
+      margin-left: $level * 2px;
+    }
+    .mb-sm-#{$level} {
+      margin-bottom: $level * 2px;
+    }
+    .m-sm-#{$level} {
+      margin: $level * 2px;
+    }
   }
 }

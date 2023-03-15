@@ -1,11 +1,12 @@
 import React from 'react';
 import { COLOR_ARRAY } from '..';
 import styles from './typography.scss';
+import colors from '../css/colors.scss';
 
 interface Props {
   type: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'caption' | 'note';
   font: 'bold' | 'semibold' | 'medium' | 'regular';
-  children: React.ReactNode;
+  children?: React.ReactNode;
   display: 'inline' | 'block';
   align: 'center' | 'left' | 'right';
   color: typeof COLOR_ARRAY[number];
@@ -36,7 +37,7 @@ const Heading = ({
   } ${styles['font-' + font]}`;
   return React.createElement(
     MAP_TYPES_TO_TAGS[type] || 'p',
-    { className, id, style: { color: styles[color] } },
+    { className, id, style: { color: colors[color] } },
     children
   );
 };

@@ -12,3 +12,8 @@
 @mixin border-radius-8 {
   border-radius: 8px;
 }
+
+$desktopWidthMin: 1200px;
+$tabletWidthMax: 1199px;
+$tabletWidthMin: 768px;
+$mobileWidthMax: 767px;

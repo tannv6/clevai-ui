@@ -192,6 +192,16 @@ $crimsonColor3: #ffc2c8;
 $crimsonColor2: #ffd6da;
 $crimsonColor1: #fdecee;
 
+$cornColor9: #4c3c01;
+$cornColor8: #7e6401;
+$cornColor7: #b08b02;
+$cornColor6: #e2b203;
+$cornColor5: #fcc603;
+$cornColor4: #fdd340;
+$cornColor3: #feedae;
+$cornColor2: #fff2cc;
+$cornColor1: #fffaeb;
+
 $grayColor: #000810;
 $gray85Color: #262d34;
 $gray70Color: #4d5358;
@@ -202,12 +212,166 @@ $gray15Color: #d9dadb;
 $gray10Color: #e6e7e8;
 $gray4Color: #f5f5f6;
 
-$otherJavaColor: #64dcc3;
-$otherBrightTurquoiseColor: #14d1fa;
-$otherElectricViolet: #c382ff;
-$otherRoyalBlueColor: #1890ff;
-$otherRedColor: #ff0000;
+$otherRedColor: #ff3b30;
+$otherBlazeOrange: #ff6600;
+$otherGold: #ffd700;
+$otherBrightTurquoise: #51cefa;
+$otherDeeppink: #ff1493;
+$otherElectricViolet: #7a73ff;
+$otherPurpleHeart: #722ed1;
+$otherRoyalBlue: #2b70c9;
+$otherDodgerBlue: #1877f2;
+$otherJava: #64dcc3;
+$otherLima: #2acb42;
+$otherInchWorm: #a0d911;
 
-$whiteColor: #fff;
+$whiteColor: #ffffff;
 
 $backgroundColor: #0008100a;
+
+:export {
+  white: $whiteColor;
+  gray: $grayColor;
+  primary: $primaryColor;
+
+  orange9: $orangeColor9;
+  orange8: $orangeColor8;
+  orange7: $orangeColor7;
+  orange6: $orangeColor6;
+  orange5: $orangeColor5;
+  orange4: $orangeColor4;
+  orange3: $orangeColor3;
+  orange2: $orangeColor2;
+  orange1: $orangeColor1;
+
+  blue9: $blueColor9;
+  blue8: $blueColor8;
+  blue7: $blueColor7;
+  blue6: $blueColor6;
+  blue5: $blueColor5;
+  blue4: $blueColor4;
+  blue3: $blueColor3;
+  blue2: $blueColor2;
+  blue1: $blueColor1;
+
+  green9: $greenColor9;
+  green8: $greenColor8;
+  green7: $greenColor7;
+  green6: $greenColor6;
+  green5: $greenColor5;
+  green4: $greenColor4;
+  green3: $greenColor3;
+  green2: $greenColor2;
+  green1: $greenColor1;
+
+  crimson9: $crimsonColor9;
+  crimson8: $crimsonColor8;
+  crimson7: $crimsonColor7;
+  crimson6: $crimsonColor6;
+  crimson5: $crimsonColor5;
+  crimson4: $crimsonColor4;
+  crimson3: $crimsonColor3;
+  crimson2: $crimsonColor2;
+  crimson1: $crimsonColor1;
+
+  corn9: $cornColor9;
+  corn8: $cornColor8;
+  corn7: $cornColor7;
+  corn6: $cornColor6;
+  corn5: $cornColor5;
+  corn4: $cornColor4;
+  corn3: $cornColor3;
+  corn2: $cornColor2;
+  corn1: $cornColor1;
+
+  gray: $grayColor;
+  gray85: $gray85Color;
+  gray70: $gray70Color;
+  gray60: $gray60Color;
+  gray45: $gray45Color;
+  gray30: $gray30Color;
+  gray15: $gray15Color;
+  gray10: $gray10Color;
+  gray4: $gray4Color;
+
+  otherRed: $otherRedColor;
+  otherBlazeOrange: $otherBlazeOrange;
+  otherGold: $otherGold;
+  otherBrightTurquoise: $otherBrightTurquoise;
+  otherDeeppink: $otherDeeppink;
+  otherElectricViolet: $otherElectricViolet;
+  otherPurpleHeart: $otherPurpleHeart;
+  otherRoyalBlue: $otherRoyalBlue;
+  otherDodgerBlue: $otherDodgerBlue;
+  otherJava: $otherJava;
+  otherLima: $otherLima;
+  otherInchWorm: $otherInchWorm;
+
+  successColor: $successColor;
+  warningColor: $warningColor;
+  errorColor: $errorColor;
+  informationColor: $informationColor;
+  linkColor: $linkColor;
+
+  orangeColor9: $orangeColor9;
+  orangeColor8: $orangeColor8;
+  orangeColor7: $orangeColor7;
+  orangeColor6: $orangeColor6;
+  orangeColor5: $orangeColor5;
+  orangeColor4: $orangeColor4;
+  orangeColor3: $orangeColor3;
+  orangeColor2: $orangeColor2;
+  orangeColor1: $orangeColor1;
+
+  blueColor9: $blueColor9;
+  blueColor8: $blueColor8;
+  blueColor7: $blueColor7;
+  blueColor6: $blueColor6;
+  blueColor5: $blueColor5;
+  blueColor4: $blueColor4;
+  blueColor3: $blueColor3;
+  blueColor2: $blueColor2;
+  blueColor1: $blueColor1;
+
+  greenColor9: $greenColor9;
+  greenColor8: $greenColor8;
+  greenColor7: $greenColor7;
+  greenColor6: $greenColor6;
+  greenColor5: $greenColor5;
+  greenColor4: $greenColor4;
+  greenColor3: $greenColor3;
+  greenColor2: $greenColor2;
+  greenColor1: $greenColor1;
+
+  crimsonColor9: $crimsonColor9;
+  crimsonColor8: $crimsonColor8;
+  crimsonColor7: $crimsonColor7;
+  crimsonColor6: $crimsonColor6;
+  crimsonColor5: $crimsonColor5;
+  crimsonColor4: $crimsonColor4;
+  crimsonColor3: $crimsonColor3;
+  crimsonColor2: $crimsonColor2;
+  crimsonColor1: $crimsonColor1;
+
+  cornColor9: $cornColor9;
+  cornColor8: $cornColor8;
+  cornColor7: $cornColor7;
+  cornColor6: $cornColor6;
+  cornColor5: $cornColor5;
+  cornColor4: $cornColor4;
+  cornColor3: $cornColor3;
+  cornColor2: $cornColor2;
+  cornColor1: $cornColor1;
+
+  grayColor: $grayColor;
+  gray85Color: $gray85Color;
+  gray70Color: $gray70Color;
+  gray60Color: $gray60Color;
+  gray45Color: $gray45Color;
+  gray30Color: $gray30Color;
+  gray15Color: $gray15Color;
+  gray10Color: $gray10Color;
+  gray4Color: $gray4Color;
+
+  otherRedColor: $otherRedColor;
+}
