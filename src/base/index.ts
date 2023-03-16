@@ -1,4 +1,5 @@
 export * from './icon';
+export * from './avatar';
 export * from './typography';
 export * from './layout';
 export * from './other';
