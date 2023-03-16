@@ -10,9 +10,12 @@ interface Props {
   src: string;
 }
 
-const Avatar = ({ size, shape, src }: Props) => {
+const Avatar = ({ size, shape, src, ...props }: Props) => {
   return (
-    <div className={styles[`img-${size}`] + ' ' + styles[`${shape}`]}>
+    <div
+      {...props}
+      className={styles[`img-${size}`] + ' ' + styles[`${shape}`]}
+    >
       <img
         className={styles[`img-${src ? 'avatar' : 'default'}`]}
         src={src ? src : DEFAULT_IMG}
