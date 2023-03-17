@@ -75,6 +75,14 @@ function ProgressBar({
       Math.PI * (MAP_SIZE_CIRCLE[w].width - MAP_SIZE_CIRCLE[w].thickness);
     const strokeDashoffset =
       val <= 100 ? (strokeDasharray * val) / 100 : strokeDasharray;
+    const MAP_ICON_SIZE = {
+      xxl: 'xl' as const,
+      xl: 'xl' as const,
+      lg: 'xl' as const,
+      md: 'xl' as const,
+      sm: 'lg' as const,
+      xs: 'md' as const
+    };
     return (
       <div
         className={`${progressStyles['progress-circle']} ${
@@ -107,13 +115,22 @@ function ProgressBar({
           />
         </svg>
         <div
-          className={`${progressStyles.icon}`}
+          className={`${progressStyles['icon-wrap']}`}
           style={{
-            top: 30,
-            left: 30
+            transform: `rotate(${rotate - 90}deg)`
           }}
         >
-          <Icon type={circleIcon} size='xl' fill={bg} />
+          <div
+            className={progressStyles.icon}
+            style={{
+              transform: `translateX(-50%) translateY(calc(-50% + ${
+                MAP_SIZE_CIRCLE[w].thickness / 2
+              }px)) rotate(-${rotate - 90}deg)`,
+              top: 0
+            }}
+          >
+            <Icon type={circleIcon} size={MAP_ICON_SIZE[w]} fill={bg} />
+          </div>
         </div>
         <div
           className={`${progressStyles['circle-thumbnail']}`}
