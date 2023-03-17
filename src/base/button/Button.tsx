@@ -1,7 +1,8 @@
 import React from 'react';
-import { Icon } from '../icon';
 import CircleLoading from '../loading/CircleLoading';
 import styles from './button.scss';
+// eslint-disable-next-line no-unused-vars
+import { Icon, TIcon } from '../icon';
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -9,7 +10,7 @@ interface Props
     HTMLButtonElement
   > {
   children?: React.ReactNode;
-  icons?: ('facebook' | 'circle')[];
+  icons?: TIcon[];
   width?: string;
   color?: 'orange' | 'blue' | 'green' | 'crimson';
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -72,10 +73,10 @@ Button.defaultProp = {
 export default Button;
 
 const MAP_ICON_SIZE = {
-  sm: 'xs',
-  md: 'sm',
-  lg: 'sm',
-  xl: 'md'
+  sm: 'xs' as const,
+  md: 'sm' as const,
+  lg: 'sm' as const,
+  xl: 'md' as const
 };
 const MAP_LOADING = {
   LOADING_WIDTH: {

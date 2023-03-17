@@ -32,24 +32,26 @@ const icons = {
   setting: Setting
 };
 
+export type TIcon =
+  | 'circle'
+  | 'fb'
+  | 'arrowLeft'
+  | 'arrowRight'
+  | 'close'
+  | 'gift'
+  | 'star'
+  | 'close2'
+  | 'chestnut'
+  | 'book'
+  | 'edu'
+  | 'goal'
+  | 'logout'
+  | 'setting';
+
 interface Props {
   size: 'xl' | 'lg' | 'md' | 'sm' | 'xs';
   color?: string;
-  type:
-    | 'circle'
-    | 'fb'
-    | 'arrowLeft'
-    | 'arrowRight'
-    | 'close'
-    | 'gift'
-    | 'star'
-    | 'close2'
-    | 'chestnut'
-    | 'book'
-    | 'edu'
-    | 'goal'
-    | 'logout'
-    | 'setting';
+  type: TIcon;
   fill?: typeof COLOR_ARRAY[number];
 }
 

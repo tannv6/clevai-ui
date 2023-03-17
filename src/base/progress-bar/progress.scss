@@ -1,0 +1,192 @@
+@import '../css/common.scss';
+.progress {
+  height: 12px;
+  width: 100%;
+  position: relative;
+  .wrapper {
+    background: $gray4Color;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    .progress-completed {
+      height: 100%;
+      border-radius: 12px;
+    }
+    .dots {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      .dot {
+        height: 100%;
+        border-radius: 2px;
+        overflow: hidden;
+        background-clip: content-box;
+      }
+      > :not(:first-child) {
+        margin-left: 2px;
+      }
+    }
+  }
+  .number {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 10px);
+    @include font-regular;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 7px 10px;
+    background: #ffffff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: $gray85Color;
+    width: 46px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: '';
+      position: inherit;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top: 4px solid $whiteColor;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+    }
+  }
+}
+.progress-circle {
+  position: relative;
+  &.progress-circle-xxl {
+    width: 280px;
+    height: 280px;
+    circle {
+      stroke-width: 28px;
+      cx: 140px;
+      cy: 140px;
+      r: 126px;
+    }
+    .circle-thumbnail {
+      @include font-semibold;
+      font-size: 38px;
+      line-height: 46px;
+      width: 208px;
+      height: 208px;
+    }
+  }
+  &.progress-circle-xl {
+    width: 240px;
+    height: 240px;
+    circle {
+      stroke-width: 24px;
+      cx: 120px;
+      cy: 120px;
+      r: 108px;
+    }
+    .circle-thumbnail {
+      @include font-medium;
+      font-size: 38px;
+      line-height: 46px;
+      width: 176px;
+      height: 176px;
+    }
+  }
+  &.progress-circle-lg {
+    width: 200px;
+    height: 200px;
+    circle {
+      stroke-width: 20px;
+      cx: 100px;
+      cy: 100px;
+      r: 90;
+    }
+    .circle-thumbnail {
+      @include font-medium;
+      font-size: 30px;
+      line-height: 38px;
+      width: 152px;
+      height: 152px;
+    }
+  }
+  &.progress-circle-md {
+    width: 160px;
+    height: 160px;
+    circle {
+      stroke-width: 16px;
+      cx: 80px;
+      cy: 80px;
+      r: 72px;
+    }
+    .circle-thumbnail {
+      @include font-medium;
+      font-size: 24px;
+      line-height: 32px;
+      width: 120px;
+      height: 120px;
+    }
+  }
+  &.progress-circle-sm {
+    width: 100px;
+    height: 100px;
+    circle {
+      stroke-width: 10px;
+      cx: 50px;
+      cy: 50px;
+      r: 45px;
+    }
+    .circle-thumbnail {
+      @include font-medium;
+      font-size: 16px;
+      line-height: 22px;
+      width: 76px;
+      height: 76px;
+    }
+  }
+  &.progress-circle-xs {
+    width: 64px;
+    height: 64px;
+    circle {
+      stroke-width: 6px;
+      cx: 32px;
+      cy: 32px;
+      r: 29px;
+    }
+    .circle-thumbnail {
+      @include font-medium;
+      font-size: 14px;
+      line-height: 18px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .svg-circle {
+    width: inherit;
+    height: inherit;
+    circle {
+      stroke-linecap: round;
+      fill: none;
+      transition: all 0.1s linear;
+    }
+  }
+  .icon {
+    position: absolute;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+  .circle-thumbnail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .thumbnail-image {
+      width: 64%;
+    }
+  }
+}
