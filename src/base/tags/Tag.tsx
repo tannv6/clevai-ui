@@ -7,7 +7,6 @@ type TSize = 48 | 40 | 32 | 24;
 type Props = {
   dot?: boolean;
   type?: 'filled' | 'outline' | 'text';
-  title: string;
   color?: typeof COLOR_ARRAY[number];
   size?:
     | TSize
@@ -16,14 +15,15 @@ type Props = {
         md: TSize;
         sm: TSize;
       };
+  children?: React.ReactNode;
 };
 
 function Tag({
-  title = 'Title',
   size = 32,
   color = 'orange6',
   type = 'filled',
-  dot
+  dot,
+  children
 }: Props) {
   return (
     <div
@@ -50,7 +50,7 @@ function Tag({
           color: type === 'filled' ? '#fff' : colors[color]
         }}
       >
-        {title}
+        {children}
       </div>
     </div>
   );

@@ -35,7 +35,7 @@ $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
     &.gutter-x-#{$gutter} {
       margin-left: -#{$gutter}px;
       margin-right: -#{$gutter}px;
-      > * {
+      .col {
         padding-left: #{$gutter}px;
         padding-right: #{$gutter}px;
       }
@@ -47,7 +47,7 @@ $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
       @media (min-width: $desktopWidthMin) {
         margin-left: -#{$gutter}px;
         margin-right: -#{$gutter}px;
-        > * {
+        .col {
           padding-left: #{$gutter}px;
           padding-right: #{$gutter}px;
         }
@@ -57,7 +57,7 @@ $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
       @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
         margin-left: -#{$gutter}px;
         margin-right: -#{$gutter}px;
-        > * {
+        .col {
           padding-left: #{$gutter}px;
           padding-right: #{$gutter}px;
         }
@@ -67,7 +67,7 @@ $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
       @media (max-width: $mobileWidthMax) {
         margin-left: -#{$gutter}px;
         margin-right: -#{$gutter}px;
-        > * {
+        .col {
           padding-left: #{$gutter}px;
           padding-right: #{$gutter}px;
         }
@@ -92,7 +92,6 @@ $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
 }
 .wrapper {
   box-sizing: border-box;
-  height: 100%;
   &.display-inline {
     display: inline-block;
   }
@@ -277,6 +276,54 @@ $levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
     }
     .m-sm-#{$level} {
       margin: $level * 2px;
+    }
+  }
+}
+
+$orders: -1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$grids: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+.col {
+  box-sizing: border-box;
+  overflow: hidden;
+  > * {
+    height: 100%;
+  }
+}
+
+@each $grid in $grids {
+  .offset-#{$grid} {
+    margin-left: ($grid / 12) * 100%;
+  }
+}
+
+@each $order in $orders {
+  .order-#{$order} {
+    order: $order;
+  }
+}
+
+@each $grid in $grids {
+  .xl-#{$grid} {
+    width: ($grid / 12) * 100%;
+  }
+  .span-#{$grid} {
+    width: ($grid / 12) * 100%;
+  }
+}
+
+@media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+  @each $grid in $grids {
+    .md-#{$grid} {
+      width: ($grid / 12) * 100%;
+    }
+  }
+}
+
+@media (max-width: $mobileWidthMax) {
+  @each $grid in $grids {
+    .sm-#{$grid} {
+      width: ($grid / 12) * 100%;
     }
   }
 }

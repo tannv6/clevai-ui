@@ -18,7 +18,7 @@ type TResponsive =
 interface Props {
   mg?: TResponsive;
   pd?: TResponsive;
-  gutters:
+  gutters?:
     | typeof GRID_VALUES[number]
     | {
         xl: typeof GRID_VALUES[number];
