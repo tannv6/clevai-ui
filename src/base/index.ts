@@ -10,6 +10,7 @@ export * from './popup';
 export * from './tooltip';
 export * from './loading';
 export * from './progress';
+export * from './tags';
 
 export const COLOR_ARRAY = [
   'white',
