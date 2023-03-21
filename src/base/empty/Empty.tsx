@@ -5,7 +5,7 @@ import styles from './empty.scss';
 import { Row } from '../layout';
 
 const DEFAULT_EMPTY_IMG =
-  'http://localhost:3000/clevai-ui_default-empty-icon.svg';
+  'https://r73troypb4obj.vcdn.cloud/picture/images/clevai-ui_default-empty-icon.svg';
 
 interface Props {
   src?: string;
