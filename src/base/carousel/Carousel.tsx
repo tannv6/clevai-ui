@@ -1,13 +1,15 @@
+/* eslint-disable dot-notation */
 import React, { useState } from 'react';
 import { COLOR_ARRAY } from '../index';
+import styles from './carousel.scss';
 
 interface Props {
   color?: typeof COLOR_ARRAY[number];
   dotColor?: typeof COLOR_ARRAY[number];
-  childrens: ChildNode[];
+  children: any;
 }
 
-const Carousel = ({ color, dotColor, childrens }: Props) => {
+const Carousel = ({ color, children }: Props) => {
   const [sliderActive, setSliderActive] = useState(0);
   const iconNext = (
     <svg
@@ -47,7 +49,7 @@ const Carousel = ({ color, dotColor, childrens }: Props) => {
   );
   const handleNextStep = () => {
     setTimeout(() => {}, 1000);
-    if (sliderActive + 1 === childrens?.length) {
+    if (sliderActive + 1 === children?.length) {
       setSliderActive(0);
     } else {
       setTimeout(() => {
@@ -57,58 +59,55 @@ const Carousel = ({ color, dotColor, childrens }: Props) => {
   };
   const handleBackStep = () => {
     if (sliderActive === 0) {
-      setSliderActive(childrens?.length - 1);
+      setSliderActive(children?.length - 1);
     } else {
       setSliderActive(sliderActive - 1);
     }
   };
   return (
-    <div className='container'>
-      <div className='carousel__container'>
-        <div className='carousel__sliders'>
-          {childrens?.map((slider, index) => {
-            return (
-              <div
-                key={index}
-                className='carousel__slider'
-                style={{
-                  left: `${(index - sliderActive) * 100}%`
-                }}
-              >
-                {childrens[index]}
-              </div>
-            );
-          })}
-        </div>
-        <div className='carousel__dot__container'>
-          {childrens?.map((slider, index) => (
+    <div className={`${styles['carousel__container']}`}>
+      <div className={`${styles.carousel__sliders}`}>
+        {React.Children?.map(children, (slide, index) => {
+          return (
             <div
               key={index}
-              className={`carousel__dot ${
-                index === sliderActive ? 'active ' : ''
-              } ${dotColor}`}
+              className={`${styles['carousel__slider']}`}
+              style={{
+                left: `${(index - sliderActive) * 100}%`
+              }}
+            >
+              {slide}
+            </div>
+          );
+        })}
+      </div>
+      <div className={`${styles['carousel__dot__container']}`}>
+        {React.Children?.map(children, (_slide, index) => {
+          return (
+            <div
+              key={index}
+              className={`${
+                styles[
+                  `carousel__dot${index === sliderActive ? '-active' : ''}`
+                ]
+              }`}
             />
-          ))}
-        </div>
-        <div className='carousel__next' onClick={handleNextStep}>
-          {iconNext}
-        </div>
-        <div className='carousel__back' onClick={handleBackStep}>
-          {iconBack}
-        </div>
+          );
+        })}
+      </div>
+      <div className={`${styles['carousel__next']}`} onClick={handleNextStep}>
+        {iconNext}
+      </div>
+      <div className={`${styles['carousel__back']}`} onClick={handleBackStep}>
+        {iconBack}
       </div>
     </div>
   );
 };
 
 Carousel.defaultProp = {
-  id: '',
-  className: '',
-  onPress: () => {},
-  size: 'lg',
-  icons: [],
-  color: 'orange',
-  category: 'primary'
+  color: 'gray4Color',
+  dotColor: 'gray4Color'
 };
 
 export default Carousel;

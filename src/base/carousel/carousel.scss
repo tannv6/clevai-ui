@@ -26,6 +26,8 @@
    transform: translateX(-50%);
    display: flex;
    bottom: 16px;
+   width: 100px;
+   height: 8px;
 }
 .carousel__dot {
    width: 8px;
@@ -33,14 +35,21 @@
    border-radius: 4px;
    margin: 0 6px;
    cursor: pointer;
+   background: #8C9093;
+   &-active {
+     background: #FF8C05;
+     width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin: 0 6px;
+    cursor: pointer;
+   }
 }
-.grayColor {
+
+.gray4Color {
    background: #8C9093;
 }
 
-.carousel__dot.active {
-   background: #FF8C05;
-}
 .carousel__next {
    position: absolute;
    top: 50%;
