@@ -2,7 +2,11 @@ import React from 'react';
 import CircleIcon from './CircleIcon';
 import FacebookIcon from './FacebookIcon';
 import ArrowLeftIcon from './ArrowLeftIcon';
+import ArrowLeftIconV2 from './ArrowLeftIconV2';
+import ArrowLeftIconV3 from './ArrowLeftIconV3';
 import ArrowRightIcon from './ArrowRightIcon';
+import ArrowRightIconV2 from './ArrowRightIconV2';
+import ArrowRightIconV3 from './ArrowRightIconV3';
 import CloseIcon from './CloseIcon';
 import BookIcon from './BookIcon';
 import GiftIcon from './GiftIcon';
@@ -19,7 +23,11 @@ const icons = {
   circle: CircleIcon,
   fb: FacebookIcon,
   arrowLeft: ArrowLeftIcon,
+  arrowLeftV2: ArrowLeftIconV2,
+  arrowLeftV3: ArrowLeftIconV3,
   arrowRight: ArrowRightIcon,
+  arrowRightV2: ArrowRightIconV2,
+  arrowRightV3: ArrowRightIconV3,
   close: CloseIcon,
   gift: GiftIcon,
   star: StarIcon,
@@ -36,7 +44,11 @@ export type TIcon =
   | 'circle'
   | 'fb'
   | 'arrowLeft'
+  | 'arrowLeftV2'
+  | 'arrowLeftV3'
   | 'arrowRight'
+  | 'arrowRightV2'
+  | 'arrowRightV3'
   | 'close'
   | 'gift'
   | 'star'

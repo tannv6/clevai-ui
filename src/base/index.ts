@@ -1,5 +1,7 @@
 export * from './icon';
 export * from './avatar';
+export * from './table';
+export * from './pagination';
 export * from './radio';
 export * from './empty';
 export * from './typography';

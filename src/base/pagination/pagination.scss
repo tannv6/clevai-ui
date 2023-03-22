@@ -1,0 +1,76 @@
+@import '../../base/css/common.scss';
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &.circle {
+      border-radius: 50%;
+    }
+
+    &.square {
+      border-radius: 8px;
+    }
+
+    &:hover {
+      background-color: $gray4Color;
+    }
+
+    &.disabled {
+      background-color: transparent;
+      pointer-events: none;
+    }
+  }
+
+  .pagesWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .page {
+      @include caption;
+      @include font-medium;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $grayColor;
+      margin-right: 6px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $gray4Color;
+      }
+
+      &.circle {
+        border-radius: 50%;
+      }
+
+      &.square {
+        border-radius: 8px;
+      }
+
+      &.active {
+        background-color: $primaryColor;
+        color: $whiteColor;
+        pointer-events: none;
+      }
+
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+  }
+}
