@@ -7,7 +7,7 @@ interface Props {
   fill: string;
 }
 
-const BookIcon = ({ size, color, fill }: Props) => {
+const Close2Icon = ({ size, color, fill }: Props) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -23,4 +23,4 @@ const BookIcon = ({ size, color, fill }: Props) => {
   );
 };
 
-export default BookIcon;
+export default Close2Icon;

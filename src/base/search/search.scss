@@ -1,0 +1,70 @@
+@import '../../base/css/common.scss';
+
+$sizes: 56, 48, 40, 32;
+
+.searchWrap {
+  width: 100%;
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $gray15Color;
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-right: 12px;
+    margin-bottom: 8px;
+    overflow: hidden;
+
+    @each $size in $sizes {
+      &.search-#{$size} {
+        height: ($size - 2) * 1px;
+      }
+    }
+
+    &.disabled,
+    &.disabled > input {
+      background-color: $gray15Color;
+      pointer-events: none;
+    }
+
+    &.error {
+      border-color: $errorColor;
+    }
+
+    input {
+      flex: 1;
+      height: 100%;
+      border: none;
+      outline: none;
+      margin-left: 8px;
+      @include font-regular;
+
+      &.bigFontSize {
+        @include body;
+      }
+
+      &.smallFontSize {
+        @include caption;
+      }
+
+      &::placeholder {
+        color: #bfbfbf;
+      }
+    }
+
+    .closeIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+
+      &.showCloseIcon {
+        opacity: 1;
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+  }
+}

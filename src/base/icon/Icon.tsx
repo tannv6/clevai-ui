@@ -19,6 +19,7 @@ import colors from '../css/colors.scss';
 import Goal from './Goal';
 import Logout from './Logout';
 import Setting from './Setting';
+import SearchIcon from './SearchIcon';
 const icons = {
   circle: CircleIcon,
   fb: FacebookIcon,
@@ -37,7 +38,8 @@ const icons = {
   edu: Education,
   goal: Goal,
   logout: Logout,
-  setting: Setting
+  setting: Setting,
+  search: SearchIcon
 };
 
 export type TIcon =
@@ -58,7 +60,8 @@ export type TIcon =
   | 'edu'
   | 'goal'
   | 'logout'
-  | 'setting';
+  | 'setting'
+  | 'search';
 
 interface Props {
   size: 'xl' | 'lg' | 'md' | 'sm' | 'xs';

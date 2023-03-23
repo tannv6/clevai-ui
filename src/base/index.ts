@@ -1,6 +1,7 @@
 export * from './icon';
 export * from './avatar';
 export * from './table';
+export * from './search';
 export * from './pagination';
 export * from './radio';
 export * from './empty';
@@ -19,6 +20,11 @@ export const COLOR_ARRAY = [
   'white',
   'gray',
   'primary',
+  'successColor',
+  'warningColor',
+  'errorColor',
+  'informationColor',
+  'linkColor',
   'orangeColor9',
   'orangeColor8',
   'orangeColor7',
