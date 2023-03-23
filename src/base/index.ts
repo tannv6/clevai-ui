@@ -6,6 +6,7 @@ export * from './button';
 export * from './popup';
 export * from './tooltip';
 export * from './loading';
+export * from './input';
 
 export const COLOR_ARRAY = [
   'white',

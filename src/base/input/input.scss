@@ -1,0 +1,31 @@
+@import '../../base/css/common.scss';
+
+.input-container {
+  border: 1px solid #D9DADB;
+  border-radius: 4px;
+  padding: 0px 16px;
+  box-sizing: border-box;
+  width: 343px;
+
+    
+}
+.xs {
+  height: 32px;
+  @include font-regular;
+}
+.sm {
+  height: 40px;
+}
+.md {
+  height: 48px;
+}
+.lg {
+  height: 56px;
+}
+
+:focus-visible {
+  outline: none;
+}
+::placeholder {
+  color: #BFBFBF;
+}
