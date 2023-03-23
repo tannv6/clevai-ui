@@ -1,4 +1,9 @@
 export * from './icon';
+export * from './avatar';
+export * from './table';
+export * from './pagination';
+export * from './radio';
+export * from './empty';
 export * from './typography';
 export * from './layout';
 export * from './other';
@@ -7,6 +12,9 @@ export * from './popup';
 export * from './tooltip';
 export * from './loading';
 export * from './input';
+export * from './progress';
+export * from './tags';
+export * from './tabs';
 
 export const COLOR_ARRAY = [
   'white',

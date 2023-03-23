@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOR_ARRAY, GRID_VALUES } from '..';
+import { COLOR_ARRAY, generateGridClassName, GRID_VALUES } from '..';
 import styles from './layout.scss';
 import color from '../css/colors.scss';
 type TResponsive =
@@ -18,7 +18,7 @@ type TResponsive =
 interface Props {
   mg?: TResponsive;
   pd?: TResponsive;
-  gutters:
+  gutters?:
     | typeof GRID_VALUES[number]
     | {
         xl: typeof GRID_VALUES[number];
@@ -61,14 +61,14 @@ const Rows = ({
   return (
     <div
       style={{ background: color[bg || ''] }}
-      className={`${styles.rows} ${reversed ? styles[`rows-reversed`] : ''} ${
-        bg ? styles[`bg-${bg}`] : ''
-      } ${br ? styles[`br-${br}`] : ''} ${genClassName(pd, 'p')} ${genClassName(
-        mg,
-        'm'
-      )} ${genGutters(gutters)} ${
-        justify ? styles[`justify-${justify}`] : ''
-      } ${align ? styles[`align-${align}`] : ''}`.replace(/\s+/g, ' ')}
+      className={`${styles.rows} ${reversed ? styles[`rows-reversed`] : ''} 
+      ${bg ? styles[`bg-${bg}`] : ''} 
+      ${br ? styles[`br-${br}`] : ''} 
+      ${generateGridClassName(pd, 'p', styles)} 
+      ${generateGridClassName(mg, 'm', styles)} 
+      ${genGutters(gutters)} 
+      ${justify ? styles[`justify-${justify}`] : ''} 
+      ${align ? styles[`align-${align}`] : ''}`.replace(/\s+/g, ' ')}
     >
       {children}
     </div>
@@ -113,60 +113,3 @@ const genGutters = (gutters: any) => {
 };
 
 export default Rows;
-
-const getClassName = (
-  value: any,
-  type: 'xl-' | 'md-' | 'sm-',
-  prop: string
-) => {
-  let res = '';
-  if (typeof value === 'number') {
-    res += ` ${styles[`${prop}-${type || ''}${value}`]}`;
-  } else if (typeof value === 'object') {
-    if (value.t) {
-      res += ` ${styles[`${prop}t-${type || ''}${value.t}`]}`;
-    }
-    if (value.r) {
-      res += ` ${styles[`${prop}r-${type || ''}${value.r}`]}`;
-    }
-    if (value.b) {
-      res += ` ${styles[`${prop}b-${type || ''}${value.b}`]}`;
-    }
-    if (value.l) {
-      res += ` ${styles[`${prop}l-${type || ''}${value.l}`]}`;
-    }
-  }
-  return res;
-};
-
-const genClassName = (val: any, prop: 'p' | 'm') => {
-  if (typeof val === 'number') {
-    return `${styles[`${prop}-${val}`]}`;
-  } else if (typeof val === 'object') {
-    if (val?.length > 0) {
-      const padDesktop = getClassName(val[0], 'xl-', prop);
-      const padTablet = getClassName(val[1], 'md-', prop);
-      const padMobile = getClassName(val[2], 'sm-', prop);
-      return `${padDesktop}${padTablet ? ` ${padTablet}` : ''}${
-        padMobile ? ` ${padMobile}` : ''
-      }`;
-    } else {
-      let res = '';
-      if (val.t) {
-        res += ` ${styles[`${prop}t-${val.t}`]}`;
-      }
-      if (val.r) {
-        res += ` ${styles[`${prop}r-${val.r}`]}`;
-      }
-      if (val.b) {
-        res += ` ${styles[`${prop}b-${val.b}`]}`;
-      }
-      if (val.l) {
-        res += ` ${styles[`${prop}l-${val.l}`]}`;
-      }
-      return res;
-    }
-  } else {
-    return '';
-  }
-};

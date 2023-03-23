@@ -29,17 +29,139 @@
 
 @mixin font-bold {
   font-family: 'Bold SF Compact Rounded', sans-serif;
+  font-weight: 700;
 }
 @mixin font-semibold {
   font-family: 'Semibold SF Compact Rounded', sans-serif;
+  font-weight: 600;
 }
 @mixin font-medium {
   font-family: 'Medium SF Compact Rounded', sans-serif;
+  font-weight: 500;
 }
 @mixin font-regular {
   font-family: 'Regular SF Compact Rounded', sans-serif;
+  font-weight: 400;
 }
 
+@mixin font-h1-bold {
+  @include font-bold;
+  @include h1;
+}
+@mixin font-h1-semibold {
+  @include font-semibold;
+  @include h1;
+}
+@mixin font-h1-medium {
+  @include font-medium;
+  @include h1;
+}
+@mixin font-h1-regular {
+  @include font-regular;
+  @include h1;
+}
+
+@mixin font-h2-bold {
+  @include font-bold;
+  @include h2;
+}
+@mixin font-h2-semibold {
+  @include font-semibold;
+  @include h2;
+}
+@mixin font-h2-medium {
+  @include font-medium;
+  @include h2;
+}
+@mixin font-h2-regular {
+  @include font-regular;
+  @include h2;
+}
+
+@mixin font-h3-bold {
+  @include font-bold;
+  @include h3;
+}
+@mixin font-h3-semibold {
+  @include font-semibold;
+  @include h3;
+}
+@mixin font-h3-medium {
+  @include font-medium;
+  @include h3;
+}
+@mixin font-h3-regular {
+  @include font-regular;
+  @include h3;
+}
+
+@mixin font-h4-bold {
+  @include font-bold;
+  @include h4;
+}
+@mixin font-h4-semibold {
+  @include font-semibold;
+  @include h4;
+}
+@mixin font-h4-medium {
+  @include font-medium;
+  @include h4;
+}
+@mixin font-h4-regular {
+  @include font-regular;
+  @include h4;
+}
+
+@mixin font-body-bold {
+  @include font-bold;
+  @include body;
+}
+@mixin font-body-semibold {
+  @include font-semibold;
+  @include body;
+}
+@mixin font-body-medium {
+  @include font-medium;
+  @include body;
+}
+@mixin font-body-regular {
+  @include font-regular;
+  @include body;
+}
+
+@mixin font-caption-bold {
+  @include font-bold;
+  @include caption;
+}
+@mixin font-caption-semibold {
+  @include font-semibold;
+  @include caption;
+}
+@mixin font-caption-medium {
+  @include font-medium;
+  @include caption;
+}
+@mixin font-caption-regular {
+  @include font-regular;
+  @include caption;
+}
+
+@mixin font-note-bold {
+  @include font-bold;
+  @include note;
+}
+@mixin font-note-semibold {
+  @include font-semibold;
+  @include note;
+}
+@mixin font-note-medium {
+  @include font-medium;
+  @include note;
+}
+@mixin font-note-regular {
+  @include font-regular;
+  @include note;
+}
 .h1 {
   @include h1;
 }
@@ -63,18 +185,14 @@
 }
 
 .font-bold {
-  font-family: 'Bold SF Compact Rounded', sans-serif;
-  font-weight: 700;
+  @include font-bold;
 }
 .font-semibold {
-  font-family: 'Semibold SF Compact Rounded', sans-serif;
-  font-weight: 600;
+  @include font-semibold;
 }
 .font-medium {
-  font-family: 'Medium SF Compact Rounded', sans-serif;
-  font-weight: 500;
+  @include font-medium;
 }
 .font-regular {
-  font-family: 'Regular SF Compact Rounded', sans-serif;
-  font-weight: 400;
+  @include font-regular;
 }
