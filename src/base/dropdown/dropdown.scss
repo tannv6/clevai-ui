@@ -1,0 +1,205 @@
+@import '../css//common.scss';
+.dropdownGroup {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  position: relative;
+  align-items: center;
+  align-content: center;
+  .label {
+    color: #262d34;
+    @include font-body-semibold;
+    .required {
+      color: $errorColor;
+      margin-left: 2px;
+    }
+  }
+  .container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    .main {
+      border: 1px solid $gray15Color;
+      border-radius: 4px;
+      display: flex;
+      width: 100%;
+      min-height: 40px;
+      align-items: center;
+      background-color: $whiteColor;
+      justify-content: space-between;
+      cursor: pointer;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+      padding: 0 8px 0 16px;
+      gap: 8px;
+      &Error {
+        border: 1px solid $errorColor;
+      }
+      .selectedList {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        padding: 6px 0 6px 0;
+        gap: 4px;
+        @include font-caption-medium;
+        .selected {
+          background-color: $gray4Color;
+          border-radius: 4px;
+          padding: 2px 4px 2px 8px;
+          gap: 4px;
+          position: relative;
+          font-size: 85%;
+          display: flex;
+          align-items: center;
+          border: 1px solid $gray10Color;
+          border-radius: 2px;
+          align-items: center;
+          .deleteIcon {
+            display: block;
+            width: 16px;
+            height: 16px;
+            &:hover {
+              background-color: $gray15Color;
+            }
+          }
+        }
+        .placeholder {
+          color: $gray45Color;
+        }
+      }
+      .singleSearch {
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        @include font-body-regular;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        background: none;
+        pointer-events: none;
+        width: 100%;
+        color: #27272a;
+        &::placeholder {
+          color: $gray45Color;
+        }
+        &Selected {
+          &::placeholder {
+            color: #27272a;
+          }
+        }
+      }
+    }
+    .listWrapper {
+      position: absolute;
+      width: 100%;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 0 0 16px;
+      margin-top: 4px;
+      background-color: $whiteColor;
+      z-index: 3;
+      overflow: hidden;
+      animation: drop-show 0.1s ease;
+      transform-origin: top;
+      .searchMulti {
+        padding: 12px 16px;
+        border-bottom: 1px solid $gray10Color;
+        display: flex;
+        align-items: center;
+        input {
+          margin: 0;
+          outline: none;
+          @include font-body-regular;
+          cursor: pointer;
+          padding: 0 32px 0 0;
+          width: 100%;
+          box-sizing: border-box;
+          border: 2px solid $blueColor5;
+          border-radius: 4px;
+          width: 100%;
+        }
+        svg {
+          position: absolute;
+          right: 16px;
+          cursor: pointer;
+        }
+      }
+      .list {
+        width: 100%;
+        max-height: 300px;
+        overflow: auto;
+        .element {
+          padding: 0 16px;
+          cursor: default;
+          .optionLabel {
+            padding: 12px 0;
+            border-bottom: 1px solid $gray10Color;
+            @include font-body-regular;
+            color: $gray85Color;
+          }
+          &:hover {
+            background-color: $orangeColor1;
+            .optionLabel {
+              color: $orangeColor6;
+            }
+          }
+        }
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+          width: 6px;
+          background-color: $gray45Color;
+          border-radius: 3px;
+        }
+      }
+      @keyframes drop-show {
+        0% {
+          transform: scaleY(0.8);
+          opacity: 0;
+        }
+        100% {
+          transform: scaleY(1);
+          opacity: 1;
+        }
+      }
+    }
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+  .errorMessage {
+    color: $errorColor;
+    @include font-note-regular;
+  }
+  &Inline {
+    .label {
+      width: 100px;
+    }
+    .container {
+      width: calc(100% - 104px);
+    }
+    .errorMessage {
+      width: 100%;
+      margin-left: 104px;
+    }
+  }
+  &Disabled {
+    .container {
+      .main {
+        background-color: $gray10Color;
+        border: 1px solid $gray15Color;
+        cursor: default;
+      }
+    }
+  }
+}
