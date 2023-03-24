@@ -2,50 +2,57 @@ import React, { useRef, useEffect } from 'react';
 import styles from './radio.scss';
 import { Heading } from '../typography';
 
-interface Props {
-  value: any;
-  checked: any;
-  setChecked: (value: any) => void;
-  size: 16 | 24;
+type ValueType = string | number;
+
+interface Props
+  extends React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
+  value: ValueType;
+  checkedRadio: ValueType;
+  onRadioChange: (value: ValueType) => void;
+  size: 16 | 20 | 24;
   label?: string;
   disabled?: boolean;
 }
 
 const Radio = ({
   value,
-  checked,
-  setChecked,
+  checkedRadio,
+  onRadioChange,
   size,
   label,
   disabled,
   ...props
 }: Props) => {
-  const inputRef = useRef<HTMLInputElement>(null);
-  const radioDivRef = useRef<HTMLLabelElement>(null);
+  const radioLabelRef = useRef<HTMLLabelElement>(null);
 
   useEffect(() => {
     if (disabled) {
-      radioDivRef.current?.classList.add(styles.disabled);
+      const parentRef = radioLabelRef.current?.parentElement;
+      radioLabelRef.current?.classList.add(styles.disabled);
+      parentRef?.classList.add(styles.disabled);
     }
   }, []);
 
   useEffect(() => {
-    if (checked === value) {
-      radioDivRef.current?.classList.add(styles.checked);
+    if (checkedRadio === value) {
+      radioLabelRef.current?.classList.add(styles.checked);
     } else {
-      radioDivRef.current?.classList.remove(styles.checked);
+      radioLabelRef.current?.classList.remove(styles.checked);
     }
-  }, [checked]);
+  }, [checkedRadio]);
 
   return (
     <div className={styles.radioWrap}>
-      <div {...props} className={styles[`radio-${size}`]}>
-        <label ref={radioDivRef} className={styles.radio}>
+      <div className={styles[`radio-${size}`]}>
+        <label ref={radioLabelRef} className={styles.radio}>
           <input
-            ref={inputRef}
+            {...props}
             type='radio'
-            onChange={() => setChecked(value)}
-            checked={checked === value}
+            onChange={() => onRadioChange(value)}
+            checked={checkedRadio === value}
           />
           <span className={styles.checkmark}></span>
         </label>
@@ -62,7 +69,6 @@ const Radio = ({
 };
 
 Radio.defaultProps = {
-  size: 20,
   label: '',
   disabled: false
 };

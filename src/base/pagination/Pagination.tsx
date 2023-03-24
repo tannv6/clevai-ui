@@ -19,8 +19,7 @@ const Pagination = ({
   limit,
   pageType,
   onChangePage,
-  className,
-  ...props
+  className
 }: Props) => {
   const count = Math.ceil(total / limit);
   const pages = Array.from(Array(count).keys()).map((value) => value + 1);
@@ -34,11 +33,13 @@ const Pagination = ({
         tempPages = [1, 2, 3, 4, 5, 6, '...'];
       }
       if (current >= 6) {
-        const sliced = pages.slice(current - 5, current + 1);
-        if (current + 1 === count) {
-          tempPages = ['...', ...sliced];
-        } else {
+        if (current >= 6 && current + 1 < count) {
+          const sliced = pages.slice(current - 4, current + 1);
           tempPages = ['...', ...sliced, '...'];
+        }
+        if (current + 1 === count) {
+          const sliced = pages.slice(current - 5, current + 1);
+          tempPages = ['...', ...sliced];
         }
       }
       if (current === count) {
@@ -57,10 +58,7 @@ const Pagination = ({
   }, [current]);
 
   return (
-    <div
-      {...props}
-      className={`${styles.pagination} ${className ? className : ''}`}
-    >
+    <div className={`${styles.pagination} ${className ? className : ''}`}>
       <div
         className={`${styles.btn} ${current === 1 ? styles.disabled : ''} ${
           styles[`${pageType}`]
@@ -90,10 +88,10 @@ const Pagination = ({
         />
       </div>
       <div className={styles.pagesWrap}>
-        {arrOfPages.map((page: any) => {
+        {arrOfPages.map((page: any, index) => {
           return (
             <div
-              key={page}
+              key={index}
               onClick={() => {
                 onChangePage(page);
               }}

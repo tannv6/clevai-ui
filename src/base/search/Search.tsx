@@ -3,10 +3,14 @@ import { Icon } from '../icon';
 import { Heading } from '../typography';
 import styles from './search.scss';
 
-interface Props {
+interface Props
+  extends React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   size: 56 | 48 | 40 | 32;
   value: string;
-  setValue: (value: string) => void;
+  onChangeValue: (value: string) => void;
   placeholder?: string;
   error?: boolean;
   errorMessage?: string;
@@ -16,14 +20,15 @@ interface Props {
 const Search = ({
   size,
   value,
-  setValue,
+  onChangeValue,
   placeholder,
   disabled,
   error,
-  errorMessage
+  errorMessage,
+  ...props
 }: Props) => {
   const handleClearSearchValue = () => {
-    setValue('');
+    onChangeValue('');
   };
   return (
     <div className={styles.searchWrap}>
@@ -38,6 +43,7 @@ const Search = ({
           fill={value ? 'gray85Color' : 'gray30Color'}
         />
         <input
+          {...props}
           className={
             size === 56 || size === 48
               ? styles.bigFontSize
@@ -46,7 +52,7 @@ const Search = ({
           type='text'
           placeholder={placeholder}
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => onChangeValue(e.target.value)}
         />
         <div
           className={`${styles.closeIcon} ${value ? styles.showCloseIcon : ''}`}
