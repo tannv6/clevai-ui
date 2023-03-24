@@ -15,6 +15,7 @@ export * from './loading';
 export * from './progress';
 export * from './tags';
 export * from './tabs';
+export * from './dropdown';
 
 export const COLOR_ARRAY = [
   'white',
