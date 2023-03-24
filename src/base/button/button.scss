@@ -110,6 +110,7 @@ button.btn-type-primary {
   &:disabled {
     opacity: 0.4;
     pointer-events: none;
+    user-select: none;
   }
   &-reversed {
     &:not(:disabled) {
@@ -140,6 +141,8 @@ button.btn-type-primary {
     }
     &:disabled {
       pointer-events: none;
+      user-select: none;
+
       &.btn-bg-orange-reversed {
         background: $orangeColor3;
       }
@@ -193,6 +196,7 @@ button.btn-type-default {
   &:disabled {
     opacity: 0.4;
     pointer-events: none;
+    user-select: none;
   }
   &-reversed {
     background: none;
@@ -221,6 +225,8 @@ button.btn-type-default {
     }
     &:disabled {
       pointer-events: none;
+      user-select: none;
+
       &.btn-bg-orange-reversed {
         border: 1px solid $orangeColor7;
         color: $orangeColor7;
@@ -255,6 +261,7 @@ button.btn-type-text {
   &:disabled {
     opacity: 0.4;
     pointer-events: none;
+    user-select: none;
   }
   &-reversed {
     background: none;
@@ -292,6 +299,8 @@ button.btn-type-text {
     }
     &:disabled {
       pointer-events: none;
+      user-select: none;
+
       &.btn-bg-orange-reversed {
         color: $orangeColor7;
       }
@@ -323,5 +332,6 @@ button.btn-type-link-reversed {
   &:disabled {
     opacity: 0.4;
     pointer-events: none;
+    user-select: none;
   }
 }

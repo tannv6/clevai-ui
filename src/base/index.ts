@@ -4,6 +4,7 @@ export * from './table';
 export * from './search';
 export * from './pagination';
 export * from './radio';
+export * from './checkbox';
 export * from './empty';
 export * from './typography';
 export * from './layout';

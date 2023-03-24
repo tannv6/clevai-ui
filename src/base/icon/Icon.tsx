@@ -20,6 +20,8 @@ import Goal from './Goal';
 import Logout from './Logout';
 import Setting from './Setting';
 import SearchIcon from './SearchIcon';
+import TickIcon from './TickIcon';
+import MultiCheckboxIcon from './MultiCheckboxIcon';
 const icons = {
   circle: CircleIcon,
   fb: FacebookIcon,
@@ -39,7 +41,9 @@ const icons = {
   goal: Goal,
   logout: Logout,
   setting: Setting,
-  search: SearchIcon
+  search: SearchIcon,
+  tick: TickIcon,
+  multiCheckbox: MultiCheckboxIcon
 };
 
 export type TIcon =
@@ -61,7 +65,9 @@ export type TIcon =
   | 'goal'
   | 'logout'
   | 'setting'
-  | 'search';
+  | 'search'
+  | 'tick'
+  | 'multiCheckbox';
 
 interface Props {
   size: 'xl' | 'lg' | 'md' | 'sm' | 'xs';
