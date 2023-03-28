@@ -75,10 +75,10 @@ const getTagClassName = (
       className += `${tagStyles[`tag-size-xl-${size.xl}`]} `;
     }
     if (size.md) {
-      className += `${tagStyles[`tag-size-xl-${size.xl}`]} `;
+      className += `${tagStyles[`tag-size-md-${size.md}`]} `;
     }
     if (size.sm) {
-      className += `${tagStyles[`tag-size-xl-${size.xl}`]} `;
+      className += `${tagStyles[`tag-size-sm-${size.sm}`]} `;
     }
     return className;
   }
