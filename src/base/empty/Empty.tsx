@@ -11,13 +11,13 @@ interface Props {
   src?: string;
   title: string;
   message: string;
-  cta: string;
-  bgc: string;
+  btnText: string;
+  bgColor: string;
 }
 
-const Empty = ({ src, title, message, cta, bgc }: Props) => {
+const Empty = ({ src, title, message, btnText, bgColor }: Props) => {
   return (
-    <div style={{ backgroundColor: bgc }} className={styles.emptyWrap}>
+    <div style={{ backgroundColor: bgColor }} className={styles.emptyWrap}>
       <div className={styles.imgWrap}>
         <img src={src ? src : DEFAULT_EMPTY_IMG} alt='Illustration' />
       </div>
@@ -32,7 +32,7 @@ const Empty = ({ src, title, message, cta, bgc }: Props) => {
         </Row>
         <Row mt={14}>
           <Button category='default' size='xl'>
-            {cta}
+            {btnText}
           </Button>
         </Row>
       </div>
@@ -41,7 +41,7 @@ const Empty = ({ src, title, message, cta, bgc }: Props) => {
 };
 
 Empty.defaultProps = {
-  bgc: '#fff'
+  bgColor: '#fff'
 };
 
 export default Empty;

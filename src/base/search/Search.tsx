@@ -12,7 +12,6 @@ interface Props
   value: string;
   onChangeValue: (value: string) => void;
   placeholder?: string;
-  error?: boolean;
   errorMessage?: string;
   disabled?: boolean;
 }
@@ -23,7 +22,6 @@ const Search = ({
   onChangeValue,
   placeholder,
   disabled,
-  error,
   errorMessage,
   ...props
 }: Props) => {
@@ -35,7 +33,7 @@ const Search = ({
       <div
         className={`${styles.search} ${styles[`search-${size}`]} ${
           disabled ? styles.disabled : ''
-        } ${error ? styles.error : ''}`}
+        } ${errorMessage ? styles.error : ''}`}
       >
         <Icon
           type='search'
@@ -61,7 +59,7 @@ const Search = ({
           <Icon type='close' size={'sm'} fill='gray30Color' />
         </div>
       </div>
-      {error && errorMessage && (
+      {errorMessage && (
         <Heading type='note' font='regular' color='errorColor'>
           {errorMessage}
         </Heading>
@@ -72,7 +70,6 @@ const Search = ({
 
 Search.defaultProps = {
   placeholder: 'Search...',
-  size: 56,
   disabled: false,
   error: false
 };

@@ -26,7 +26,6 @@ const Avatar = ({ size, shape, src, ...props }: Props) => {
 };
 
 Avatar.defaultProps = {
-  size: 52,
   shape: 'circle',
   src: ''
 };

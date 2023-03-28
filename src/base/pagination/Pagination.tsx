@@ -8,7 +8,6 @@ interface Props {
   limit: number;
   onChangePage: (value: number) => void;
   pageType?: 'square' | 'circle';
-  className?: string;
 }
 
 type TempPages = (string | number)[];
@@ -18,8 +17,7 @@ const Pagination = ({
   current,
   limit,
   pageType,
-  onChangePage,
-  className
+  onChangePage
 }: Props) => {
   const count = Math.ceil(total / limit);
   const pages = Array.from(Array(count).keys()).map((value) => value + 1);
@@ -58,7 +56,7 @@ const Pagination = ({
   }, [current]);
 
   return (
-    <div className={`${styles.pagination} ${className ? className : ''}`}>
+    <div className={`${styles.pagination}`}>
       <div
         className={`${styles.btn} ${current === 1 ? styles.disabled : ''} ${
           styles[`${pageType}`]
