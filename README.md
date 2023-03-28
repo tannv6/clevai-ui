@@ -12,29 +12,20 @@ npm install --save clevai-ui
 
 ## Usage
 
-```tsx
-import React, { Component } from 'react';
-
-import MyComponent from 'clevai-ui';
-import 'clevai-ui/dist/index.css';
-
-class Example extends Component {
-  render() {
-    return <MyComponent />;
-  }
-}
-```
+### _Avatar Component_
 
 ```tsx
 import React from 'react';
 
-import { Avartar } from 'clevai-ui';
+import { Avatar } from 'clevai-ui';
 import 'clevai-ui/dist/index.css';
 
 const App = () => {
   return <Avatar size={18} src={''} shape={'circle'} />;
 };
 ```
+
+### _Empty Component_
 
 ```tsx
 import React from 'react';
@@ -54,6 +45,8 @@ const App = () => {
   );
 };
 ```
+
+### _Pagination Component_
 
 ```tsx
 import React, { useState } from 'react';
@@ -76,6 +69,8 @@ const App = () => {
 };
 ```
 
+### _Search Component_
+
 ```tsx
 import React, { useState } from 'react';
 
@@ -97,6 +92,8 @@ const App = () => {
   );
 };
 ```
+
+### _Checkbox Component_
 
 ```tsx
 import React, { useState } from 'react';
@@ -153,6 +150,8 @@ const App = () => {
 };
 ```
 
+### _Radio Component_
+
 ```tsx
 import React from 'react';
 
@@ -191,6 +190,205 @@ const App = () => {
     </div>
   );
 };
+```
+
+### _Dropdown Component_
+
+```tsx
+import React, { useState } from 'react';
+
+import 'clevai-ui/dist/index.css';
+import { Wrapper, Dropdown, Rows, Col } from 'clevai-ui';
+const OPTIONS = [
+  { id: 0, label: 'Select 1' },
+  { id: 1, label: 'Select 2' },
+  { id: 2, label: 'Select 3' },
+  { id: 3, label: 'Select 4' },
+  { id: 4, label: 'Select 5' },
+  { id: 5, label: 'Select 6' },
+  { id: 6, label: 'Select 7' },
+  { id: 7, label: 'Select 8' },
+  { id: 8, label: 'Select 9' },
+  { id: 9, label: 'Select 10' }
+];
+const App = () => {
+  const initValue = {};
+  // this value must have right type
+  // when single select this value must be an object
+  // when multi select this value must be an array like []
+  const [values, setValue] = useState(initValue);
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setValue(value);
+  };
+  const handleSearch = (e) => {
+    //** do something */
+  };
+  return (
+    <>
+      <Wrapper pd={4} bg='white'>
+        <Rows gutters={[8, 8]}>
+          <Col span={4}>
+            <Dropdown
+              label={'Label'}
+              value={values}
+              options={OPTIONS}
+              onSearch={handleSearch}
+              onChange={handleChange}
+              // disabled //boolean
+              // error='' // string
+              // inline   // boolean
+              // multi    // boolean
+              // placeholder='' // string
+              // required // boolean
+            />
+          </Col>
+        </Rows>
+      </Wrapper>
+    </>
+  );
+};
+
+export default App;
+```
+
+### _Tag Component_
+
+```tsx
+import 'clevai-ui/dist/index.css';
+import { Tag } from 'clevai-ui';
+const App = () => {
+  return (
+    <>
+      <Tag color={'blue6'} dot size={{ xl: 48, md: 32, sm: 24 }} type='filled'>
+        Dilive
+      </Tag>
+      <Tag color={'blue6'} dot size={24} type='filled'>
+        Dilive
+      </Tag>
+    </>
+  );
+};
+
+export default App;
+```
+
+### _Tabs Component_
+
+```tsx
+import React, { useState } from 'react';
+
+import 'clevai-ui/dist/index.css';
+import { Tab, Tabs } from 'clevai-ui';
+const App = () => {
+  const [value, setValue] = useState(null);
+  const handleChange = (e: any, value: any) => {
+    setValue(value);
+  };
+  return (
+    <>
+      <Tabs onChange={handleChange} gutters={6} value={value}>
+        <Tab size='md' icon='book'>
+          Tab1
+        </Tab>
+        <Tab size='md' icon='book'>
+          Tab2
+        </Tab>
+        <Tab size='md' icon='book'>
+          Tab3
+        </Tab>
+      </Tabs>
+    </>
+  );
+};
+
+export default App;
+```
+
+### _ProgressBar Component_
+
+```tsx
+import React from 'react';
+
+import 'clevai-ui/dist/index.css';
+import { ProgressBar, ProgressCircle, ProgressDotedBar } from 'clevai-ui';
+const App = () => {
+  return (
+    <>
+      <ProgressBar
+        bg='otherRed'
+        data={{
+          val: 30
+        }}
+      />
+      <ProgressCircle
+        data={{
+          val: 30,
+          w: 'md',
+          rotate: 225,
+          isReverse: false,
+          text: 'Text',
+          img: 'https://r73troypb4obj.vcdn.cloud/picture/L4%20icon/2.svg',
+          bg: 'blue6',
+          icon: 'star'
+        }}
+      />
+      <ProgressDotedBar
+        data={{
+          max: 10,
+          val: 2
+        }}
+      />
+    </>
+  );
+};
+
+export default App;
+```
+
+### _Row & Col Component_
+
+```tsx
+import React, { useState } from 'react';
+
+import 'clevai-ui/dist/index.css';
+import { Wrapper, Dropdown, Rows, Col, Heading } from 'clevai-ui';
+
+const COLS = [
+  {
+    col: 4 as const
+  },
+  {
+    col: 4 as const
+  },
+  {
+    col: 4 as const
+  },
+  {
+    col: 8 as const
+  }
+];
+const App = () => {
+  return (
+    <>
+      <Wrapper pd={4} bg='white'>
+        <Rows gutters={[8, 8]}>
+          {COLS.map((e, i) => {
+            return (
+              <Col span={e.col} key={i}>
+                <Wrapper bg='blue6' br={4} pd={4}>
+                  <Heading type={'body'}>Col-{e.col}</Heading>
+                </Wrapper>
+              </Col>
+            );
+          })}
+        </Rows>
+      </Wrapper>
+    </>
+  );
+};
+
+export default App;
 ```
 
 ## License
