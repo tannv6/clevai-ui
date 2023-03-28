@@ -19,42 +19,44 @@ function Tab({ icon, children, size, selected, ...props }: Props) {
     sm: 'sm'
   };
   return (
-    <div
-      className={`${tabsStyle.tab} ${tabsStyle[`tab-size-${size}`]}`}
-      style={{
-        backgroundColor: isSelected
-          ? colors.primary
-          : isHover
-          ? colors.gray4
-          : colors.white
-      }}
-      onClick={(props as any).onClick}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-    >
-      {icon ? (
-        <Icon
-          size={mapSizeIcon[size || '']}
-          type={icon}
-          fill={isSelected ? 'white' : isHover ? 'gray70' : 'gray60'}
-        />
-      ) : (
-        ''
-      )}
-      {children && (
-        <div
-          className={`${tabsStyle.label} ${tabsStyle[size || '']}`}
-          style={{
-            color: isSelected
-              ? colors.white
-              : isHover
-              ? colors.gray70
-              : colors.gray60
-          }}
-        >
-          {children}
-        </div>
-      )}
+    <div className={tabsStyle.tabWrapper}>
+      <div
+        className={`${tabsStyle.tab} ${tabsStyle[`tab-size-${size}`]}`}
+        style={{
+          backgroundColor: isSelected
+            ? colors.primary
+            : isHover
+            ? colors.gray4
+            : colors.white
+        }}
+        onClick={(props as any).onClick}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
+        {icon ? (
+          <Icon
+            size={mapSizeIcon[size || '']}
+            type={icon}
+            fill={isSelected ? 'white' : isHover ? 'gray70' : 'gray60'}
+          />
+        ) : (
+          ''
+        )}
+        {children && (
+          <div
+            className={`${tabsStyle.label} ${tabsStyle[size || '']}`}
+            style={{
+              color: isSelected
+                ? colors.white
+                : isHover
+                ? colors.gray70
+                : colors.gray60
+            }}
+          >
+            {children}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

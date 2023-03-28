@@ -2,9 +2,6 @@
 .tabs {
   display: flex;
   width: 100%;
-  @media (max-width: $mobileWidthMax) {
-    justify-content: space-between;
-  }
   .tab {
     display: flex;
     align-items: center;
@@ -12,6 +9,8 @@
     border-radius: 8px;
     gap: 8px;
     cursor: pointer;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .tab-size-md {
     height: 38px;
@@ -20,7 +19,6 @@
       @include font-body-semibold;
     }
     @media (max-width: $mobileWidthMax) {
-      flex-direction: column;
       height: unset;
     }
   }
@@ -33,6 +31,47 @@
     @media (max-width: $mobileWidthMax) {
       flex-direction: column;
       height: unset;
+    }
+  }
+
+  @each $gutter in $levels {
+    &.gutter-#{$gutter} {
+      margin-left: -#{$gutter}px;
+      margin-right: -#{$gutter}px;
+      .tabWrapper {
+        padding-left: #{$gutter}px;
+        padding-right: #{$gutter}px;
+      }
+    }
+    &.gutter-xl-#{$gutter} {
+      @media (min-width: $desktopWidthMin) {
+        margin-left: -#{$gutter}px;
+        margin-right: -#{$gutter}px;
+        .tabWrapper {
+          padding-left: #{$gutter}px;
+          padding-right: #{$gutter}px;
+        }
+      }
+    }
+    &.gutter-md-#{$gutter} {
+      @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+        margin-left: -#{$gutter}px;
+        margin-right: -#{$gutter}px;
+        .tabWrapper {
+          padding-left: #{$gutter}px;
+          padding-right: #{$gutter}px;
+        }
+      }
+    }
+    &.gutter-sm-#{$gutter} {
+      @media (max-width: $mobileWidthMax) {
+        margin-left: -#{$gutter}px;
+        margin-right: -#{$gutter}px;
+        .tabWrapper {
+          padding-left: #{$gutter}px;
+          padding-right: #{$gutter}px;
+        }
+      }
     }
   }
 }
