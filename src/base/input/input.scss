@@ -3,14 +3,22 @@
 .input-wrapper {
   position: relative;
   width: 343px;
+  
 }
 .input-icon {
   position: absolute;
-  top: 18px;
   left: 16px;
+  &.xs {
+    top: 7px;
+  }
   &.sm {
     top: 10px;
-    left: 16px;
+  }
+  &.md {
+    top: 14px;
+  }
+  &.lg {
+    top: 18px;
   }
 }
 .input-clear {
@@ -18,6 +26,18 @@
   top: 14px;
   right: 16px;
   cursor: pointer;
+  &.xs {
+    top: 7px;
+  }
+  &.sm {
+    top: 10px;
+  }
+  &.md {
+    top: 14px;
+  }
+  &.lg {
+    top: 18px;
+  }
 }
 .input-container {
   position: relative;
@@ -26,6 +46,9 @@
   padding: 0px 16px;
   box-sizing: border-box;
   width: 343px;
+  &.error {
+    border: 1px solid #ED1D31;
+  }
 
 }
 .icon {
@@ -53,5 +76,9 @@
 }
 ::placeholder {
   color: #BFBFBF;
-  margin-left: 44px;
+}
+.textError {
+  color: #ED1D31;
+  @include font-note-regular;
+  margin-top: 8px;
 }

@@ -93,6 +93,31 @@ const App = () => {
 };
 ```
 
+### _Input Component_
+
+```tsx
+import React, { useState } from 'react';
+
+import { Input } from 'clevai-ui';
+import 'clevai-ui/dist/index.css';
+
+const App = () => {
+  const [value, setValue] = useState('');
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+  return (
+    <Input
+      size='xs'
+      icon
+      placeholder='Label'
+      onChange={onChange}
+      value={value}
+    />
+  );
+};
+```
+
 ### _Checkbox Component_
 
 ```tsx
