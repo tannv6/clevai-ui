@@ -13,6 +13,7 @@ export * from './button';
 export * from './popup';
 export * from './tooltip';
 export * from './loading';
+export * from './input';
 export * from './progress';
 export * from './tags';
 export * from './tabs';
