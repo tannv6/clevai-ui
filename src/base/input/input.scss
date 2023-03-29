@@ -1,26 +1,51 @@
 @import '../../base/css/common.scss';
 
+.input-wrapper {
+  position: relative;
+  width: 343px;
+}
+.input-icon {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  &.sm {
+    top: 10px;
+    left: 16px;
+  }
+}
+.input-clear {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  cursor: pointer;
+}
 .input-container {
+  position: relative;
   border: 1px solid #D9DADB;
   border-radius: 4px;
   padding: 0px 16px;
   box-sizing: border-box;
   width: 343px;
 
-    
+}
+.icon {
+  padding-left: 44px;
 }
 .xs {
   height: 32px;
-  @include font-regular;
+  @include font-caption-regular;
 }
 .sm {
   height: 40px;
+  @include font-caption-regular;
 }
 .md {
   height: 48px;
+  @include font-body-regular;
 }
 .lg {
   height: 56px;
+  @include font-body-regular;
 }
 
 :focus-visible {
@@ -28,4 +53,5 @@
 }
 ::placeholder {
   color: #BFBFBF;
+  margin-left: 44px;
 }
