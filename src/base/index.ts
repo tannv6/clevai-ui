@@ -7,6 +7,7 @@ export * from './carousel';
 export * from './popup';
 export * from './tooltip';
 export * from './loading';
+export * from './carousel';
 
 export const COLOR_ARRAY = [
   'white',

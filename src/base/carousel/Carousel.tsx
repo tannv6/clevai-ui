@@ -2,14 +2,15 @@
 import React, { useState } from 'react';
 import { COLOR_ARRAY } from '../index';
 import styles from './carousel.scss';
+import colors from '../css/colors.scss';
 
 interface Props {
   color?: typeof COLOR_ARRAY[number];
-  dotColor?: typeof COLOR_ARRAY[number];
   children: any;
+  infinit?: boolean;
 }
 
-const Carousel = ({ color, children }: Props) => {
+const Carousel = ({ color, children, infinit }: Props) => {
   const [sliderActive, setSliderActive] = useState(0);
   const iconNext = (
     <svg
@@ -19,10 +20,10 @@ const Carousel = ({ color, children }: Props) => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <rect width='36' height='36' rx='18' fill={color} />
+      <rect width='36' height='36' rx='18' fill={colors['white']} />
       <path
         d='M15.5 23L20.5 18L15.5 13'
-        stroke='white'
+        stroke={colors[color || '']}
         strokeWidth='1.67'
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -37,35 +38,94 @@ const Carousel = ({ color, children }: Props) => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <rect width='36' height='36' rx='18' fill={color} />
+      <rect width='36' height='36' rx='18' fill={colors['white']} />
       <path
         d='M20.5 23L15.5 18L20.5 13'
-        stroke='white'
+        stroke={colors[color || '']}
         strokeWidth='1.67'
         strokeLinecap='round'
         strokeLinejoin='round'
       />
     </svg>
   );
-  const handleNextStep = () => {
-    setTimeout(() => {}, 1000);
+  const handleNextStep = (isInfiniti?: boolean) => {
     if (sliderActive + 1 === children?.length) {
-      setSliderActive(0);
+      isInfiniti && setSliderActive(0);
     } else {
       setTimeout(() => {
         setSliderActive(sliderActive + 1);
       }, 1);
     }
   };
-  const handleBackStep = () => {
+
+  const handleBackStep = (isInfiniti?: boolean) => {
     if (sliderActive === 0) {
-      setSliderActive(children?.length - 1);
+      isInfiniti && setSliderActive(children?.length - 1);
     } else {
       setSliderActive(sliderActive - 1);
     }
   };
+
+  const isHolding = React.useRef(false);
+  const [translate, setTranslate] = useState(0);
+  const [clientX, setClientX] = useState<any>(null);
+
+  useTransition(
+    (clientXPrev: any) => {
+      if (clientX && clientXPrev) {
+        setTranslate(translate - (clientXPrev - clientX));
+      }
+    },
+    [clientX]
+  );
+
+  const handleMouseMove = (e: any) => {
+    if (isHolding.current) {
+      setClientX(e.pageX);
+    }
+  };
+
+  const handleTouchMove = (e: any) => {
+    if (isHolding.current) {
+      setClientX(e.touches[0].pageX);
+    }
+  };
+
+  const handleMouseUp = () => {
+    isHolding.current = false;
+    if (translate > 100) {
+      handleBackStep();
+    } else if (translate < -100) {
+      handleNextStep();
+    }
+    setTranslate(0);
+    setClientX(null);
+  };
+
+  const handleMouseDown = () => {
+    isHolding.current = true;
+  };
+
+  React.useEffect(() => {
+    const handleWindowMouseUp = () => {
+      handleMouseUp();
+    };
+    window.addEventListener('mouseup', handleWindowMouseUp);
+    return () => {
+      window.removeEventListener('mouseup', handleWindowMouseUp);
+    };
+  }, []);
+
   return (
-    <div className={`${styles['carousel__container']}`}>
+    <div
+      className={`${styles['carousel__container']}`}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onTouchStart={handleMouseDown}
+      onTouchEnd={handleMouseUp}
+      onTouchMove={handleTouchMove}
+    >
       <div className={`${styles.carousel__sliders}`}>
         {React.Children?.map(children, (slide, index) => {
           return (
@@ -73,7 +133,8 @@ const Carousel = ({ color, children }: Props) => {
               key={index}
               className={`${styles['carousel__slider']}`}
               style={{
-                left: `${(index - sliderActive) * 100}%`
+                left: `calc(${(index - sliderActive) * 100}% + ${translate}px)`,
+                transition: isHolding.current ? 'unset' : undefined
               }}
             >
               {slide}
@@ -85,29 +146,49 @@ const Carousel = ({ color, children }: Props) => {
         {React.Children?.map(children, (_slide, index) => {
           return (
             <div
+              style={{
+                backgroundColor:
+                  index === sliderActive ? colors[color || ''] : '#8c9093'
+              }}
               key={index}
-              className={`${
-                styles[
-                  `carousel__dot${index === sliderActive ? '-active' : ''}`
-                ]
-              }`}
+              className={`${styles[`carousel__dot`]}`}
             />
           );
         })}
       </div>
-      <div className={`${styles['carousel__next']}`} onClick={handleNextStep}>
-        {iconNext}
-      </div>
-      <div className={`${styles['carousel__back']}`} onClick={handleBackStep}>
-        {iconBack}
-      </div>
+      {(sliderActive < children?.length - 1 || infinit) && (
+        <div
+          className={`${styles['carousel__next']}`}
+          onClick={() => handleNextStep(infinit)}
+        >
+          {iconNext}
+        </div>
+      )}
+      {(sliderActive > 0 || infinit) && (
+        <div
+          className={`${styles['carousel__back']}`}
+          onClick={() => handleBackStep(infinit)}
+        >
+          {iconBack}
+        </div>
+      )}
     </div>
   );
 };
 
-Carousel.defaultProp = {
-  color: 'gray4Color',
-  dotColor: 'gray4Color'
+Carousel.defaultProps = {
+  color: 'primary'
 };
 
 export default Carousel;
+
+export const useTransition = (callback: any, deps: any) => {
+  const args = React.useRef();
+  React.useEffect(() => {
+    if (args && args.current !== null) {
+      // eslint-disable-next-line standard/no-callback-literal
+      callback(...(args.current || []));
+    }
+    args.current = deps;
+  }, [...deps]);
+};
