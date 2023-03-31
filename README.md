@@ -416,6 +416,36 @@ const App = () => {
 export default App;
 ```
 
+### _Carousel Component_
+
+```tsx
+import React from 'react';
+
+import 'clevai-ui/dist/index.css';
+import { Wrapper, Carousel, Rows, Col } from 'clevai-ui';
+
+const App = () => {
+  return (
+    <>
+      <Wrapper pd={4} bg='blue4'>
+        <Carousel h={300}>
+          <Wrapper>
+            <Rows justify='center'>
+              <Col span={6}>Col-6</Col>
+            </Rows>
+          </Wrapper>
+          <img src='https://www.w3schools.com/bootstrap/la.jpg' alt='' />
+          <img src='https://www.w3schools.com/bootstrap/chicago.jpg' alt='' />
+          <img src='https://www.w3schools.com/bootstrap/ny.jpg' alt='' />
+        </Carousel>
+      </Wrapper>
+    </>
+  );
+};
+
+export default App;
+```
+
 ## License
 
 MIT © [](https://github.com/)
