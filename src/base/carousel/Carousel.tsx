@@ -8,9 +8,17 @@ interface Props {
   color?: typeof COLOR_ARRAY[number];
   children: any;
   infinit?: boolean;
+  h?:
+    | number
+    | string
+    | {
+        xl?: number | string;
+        md?: number | string;
+        sm?: number | string;
+      };
 }
 
-const Carousel = ({ color, children, infinit }: Props) => {
+const Carousel = ({ color, children, infinit, h }: Props) => {
   const [sliderActive, setSliderActive] = useState(0);
   const iconNext = (
     <svg
@@ -125,6 +133,13 @@ const Carousel = ({ color, children, infinit }: Props) => {
       onTouchStart={handleMouseDown}
       onTouchEnd={handleMouseUp}
       onTouchMove={handleTouchMove}
+      style={
+        {
+          '--hxl': genHeight('xl', h) || '100px',
+          '--hmd': genHeight('md', h) || '100px',
+          '--hsm': genHeight('sm', h) || '100px'
+        } as any
+      }
     >
       <div className={`${styles.carousel__sliders}`}>
         {React.Children?.map(children, (slide, index) => {
@@ -182,7 +197,7 @@ Carousel.defaultProps = {
 
 export default Carousel;
 
-export const useTransition = (callback: any, deps: any) => {
+const useTransition = (callback: any, deps: any) => {
   const args = React.useRef();
   React.useEffect(() => {
     if (args && args.current !== null) {
@@ -191,4 +206,39 @@ export const useTransition = (callback: any, deps: any) => {
     }
     args.current = deps;
   }, [...deps]);
+};
+
+const genHeight = (
+  screenSize: 'xl' | 'md' | 'sm',
+  height?:
+    | number
+    | string
+    | {
+        xl?: number | string;
+        md?: number | string;
+        sm?: number | string;
+      }
+) => {
+  if (typeof height === 'object' && !Array.isArray(height)) {
+    if (screenSize === 'xl') {
+      return genHeightValue(height.xl);
+    } else if (screenSize === 'md') {
+      return genHeightValue(height.md || height.xl);
+    } else if (screenSize === 'sm') {
+      return genHeightValue(height.sm || height.md || height.xl);
+    }
+  } else if (typeof height === 'number' || typeof height === 'string') {
+    return genHeightValue(height);
+  }
+  return '';
+};
+
+const genHeightValue = (height?: number | string) => {
+  if (typeof height === 'number') {
+    return `${height}px`;
+  }
+  if (typeof height === 'string') {
+    return height;
+  }
+  return '';
 };
