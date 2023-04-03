@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './icon.scss';
+import styles from '../icon.scss';
 
 interface Props {
   size: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './icon.scss';
+import styles from '../icon.scss';
 
 interface Props {
   size: string;
@@ -7,7 +7,7 @@ interface Props {
   fill: string;
 }
 
-const GiftIcon = ({ size, color, fill }: Props) => {
+function GiftIcon({ size, color, fill }: Props) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -21,6 +21,6 @@ const GiftIcon = ({ size, color, fill }: Props) => {
       />
     </svg>
   );
-};
+}
 
 export default GiftIcon;

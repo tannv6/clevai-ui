@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './icon.scss';
+import styles from '../icon.scss';
 
 interface Props {
   size: string;
@@ -7,7 +7,7 @@ interface Props {
   fill: string;
 }
 
-const ArrowRightIcon = ({ size, color, fill }: Props) => {
+function ArrowRightIcon({ size, color, fill }: Props) {
   return (
     <svg
       width='8'
@@ -24,6 +24,6 @@ const ArrowRightIcon = ({ size, color, fill }: Props) => {
       />
     </svg>
   );
-};
+}
 
 export default ArrowRightIcon;

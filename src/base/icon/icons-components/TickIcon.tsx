@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './icon.scss';
+import styles from '../icon.scss';
 
 interface Props {
   size: string;
@@ -7,7 +7,7 @@ interface Props {
   fill: string;
 }
 
-const TickIcon = ({ size, color, fill }: Props) => {
+function TickIcon({ size, color, fill }: Props) {
   return (
     <svg
       viewBox='0 0 14 14'
@@ -21,6 +21,6 @@ const TickIcon = ({ size, color, fill }: Props) => {
       />
     </svg>
   );
-};
+}
 
 export default TickIcon;
