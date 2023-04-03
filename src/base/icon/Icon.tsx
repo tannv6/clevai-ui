@@ -6,14 +6,13 @@ import colors from '../css/colors.scss';
 
 interface Props {
   size: 'xl' | 'lg' | 'md' | 'sm' | 'xs';
-  color?: string;
   type: TIcon;
   fill?: typeof COLOR_ARRAY[number];
 }
 
-const Icon = ({ size, color, type, fill }: Props) => {
+const Icon = ({ size, type, fill }: Props) => {
   const Element = icons[type] || icons.circle;
-  return <Element size={size} color={color || ''} fill={colors[fill || '']} />;
+  return <Element size={size} fill={colors[fill || '']} />;
 };
 
 Icon.defaultProps = {
