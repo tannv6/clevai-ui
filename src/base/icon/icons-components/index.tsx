@@ -63,7 +63,7 @@ import LessionLineIcon from './LessionLineIcon';
 import LessionFillIcon from './LessionFillIcon';
 import PlayLineIcon from './PlayLineIcon';
 import PlayFillIcon from './PlayFillIcon';
-import QuestionMarkLineIcon from './questionMarkLineIcon';
+import QuestionMarkLineIcon from './QuestionMarkLineIcon';
 import QuestionMarkFillIcon from './QuestionMarkFillIcon';
 import SignalLineIcon from './SignalLineIcon';
 import SignalFillIcon from './SignalFillIcon';
@@ -89,6 +89,14 @@ export const icons = {
   arrowLeftV6: (props: any) => <ArrowIconV6 {...props} rotate={270} />,
   arrowLeftV7: (props: any) => <ArrowIconV7 {...props} rotate={90} />,
   arrowLeftV8: (props: any) => <ArrowIconV8 {...props} rotate={90} />,
+  arrowBottom: (props: any) => <ArrowIcon {...props} rotate={270} />,
+  arrowBottomV2: (props: any) => <ArrowIconV2 {...props} rotate={270} />,
+  arrowBottomV3: (props: any) => <ArrowIconV3 {...props} rotate={270} />,
+  arrowBottomV4: (props: any) => <ArrowIconV4 {...props} rotate={90} />,
+  arrowBottomV5: (props: any) => <ArrowIconV5 {...props} rotate={180} />,
+  arrowBottomV6: (props: any) => <ArrowIconV6 {...props} rotate={180} />,
+  arrowBottomV7: ArrowIconV7,
+  arrowBottomV8: ArrowIconV8,
   arrowRight: (props: any) => <ArrowIcon {...props} rotate={180} />,
   arrowRightV2: (props: any) => <ArrowIconV2 {...props} rotate={180} />,
   arrowRightV3: (props: any) => <ArrowIconV3 {...props} rotate={180} />,
@@ -97,6 +105,14 @@ export const icons = {
   arrowRightV6: (props: any) => <ArrowIconV6 {...props} rotate={90} />,
   arrowRightV7: (props: any) => <ArrowIconV7 {...props} rotate={270} />,
   arrowRightV8: (props: any) => <ArrowIconV8 {...props} rotate={270} />,
+  arrowTop: (props: any) => <ArrowIcon {...props} rotate={90} />,
+  arrowTopV2: (props: any) => <ArrowIconV2 {...props} rotate={90} />,
+  arrowTopV3: (props: any) => <ArrowIconV3 {...props} rotate={90} />,
+  arrowTopV4: (props: any) => <ArrowIconV4 {...props} rotate={270} />,
+  arrowTopV5: ArrowIconV5,
+  arrowTopV6: ArrowIconV6,
+  arrowTopV7: (props: any) => <ArrowIconV7 {...props} rotate={180} />,
+  arrowTopV8: (props: any) => <ArrowIconV8 {...props} rotate={180} />,
   close: CloseIcon,
   gift: GiftIcon,
   giftFill: GiftFillIcon,
