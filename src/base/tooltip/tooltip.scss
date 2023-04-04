@@ -2,6 +2,10 @@
 .tooltip-container {
   position: relative;
   cursor: default;
+  display: inline-block;
+  &:hover {
+    z-index: 1;
+  }
   .tooltip {
     position: absolute;
     visibility: hidden;

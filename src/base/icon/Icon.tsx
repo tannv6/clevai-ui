@@ -13,7 +13,10 @@ interface Props {
 const Icon = ({ size, type, fill }: Props) => {
   const Element = icons[type] || icons.circle;
   return (
-    <Element className={getIconClassName(size)} fill={colors[fill || '']} />
+    <Element
+      className={`${styles.icon} ${getIconClassName(size)}`}
+      fill={colors[fill || '']}
+    />
   );
 };
 
