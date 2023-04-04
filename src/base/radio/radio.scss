@@ -5,7 +5,47 @@ $sizes: 16, 20, 24;
 .radioWrap {
   display: flex;
   align-items: center;
-
+  .radio-content {
+    &:hover {
+      background-color: $orangeColor1;
+    }
+    &.disabled:hover {
+      background-color: transparent;
+    }
+    .radio {
+      position: relative;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $gray30Color;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.checked {
+        border-color: $primaryColor;
+      }
+      &:hover {
+        background-color: $orangeColor1;
+        border-color: $primaryColor;
+      }
+      &.disabled {
+        border-color: $gray15Color;
+        background-color: $gray10Color;
+        pointer-events: none;
+      }
+      .checkmark {
+        background-color: $primaryColor;
+        border-radius: 50%;
+        display: none;
+      }
+      input {
+        display: none;
+      }
+      input:checked + .checkmark {
+        display: inline-block;
+      }
+    }
+  }
   @each $size in $sizes {
     .radio-#{$size} {
       display: flex;
@@ -16,53 +56,72 @@ $sizes: 16, 20, 24;
       background-color: transparent;
       border-radius: 50%;
       margin-left: 20px;
-
-      &:hover {
-        background-color: $orangeColor1;
-      }
-
-      &.disabled:hover {
-        background-color: transparent;
-      }
-
       .radio {
-        position: relative;
         width: ($size - 5.33) * 1px;
         height: ($size - 5.33) * 1px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: $gray30Color;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &.checked {
-          border-color: $primaryColor;
-        }
-
-        &:hover {
-          background-color: $orangeColor1;
-          border-color: $primaryColor;
-        }
-        &.disabled {
-          border-color: $gray15Color;
-          background-color: $gray10Color;
-          pointer-events: none;
-        }
-
         .checkmark {
           width: ($size / 2) * 1px;
           height: ($size / 2) * 1px;
-          background-color: $primaryColor;
-          border-radius: 50%;
-          display: none;
         }
-        input {
-          display: none;
+      }
+    }
+    @media (min-width: $desktopWidthMin) {
+      .radio-xl-#{$size} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $size * 1px;
+        height: $size * 1px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-left: 20px;
+        .radio {
+          width: ($size - 5.33) * 1px;
+          height: ($size - 5.33) * 1px;
+          .checkmark {
+            width: ($size / 2) * 1px;
+            height: ($size / 2) * 1px;
+          }
         }
-
-        input:checked + .checkmark {
-          display: inline-block;
+      }
+    }
+    @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+      .radio-md-#{$size} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $size * 1px;
+        height: $size * 1px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-left: 20px;
+        .radio {
+          width: ($size - 5.33) * 1px;
+          height: ($size - 5.33) * 1px;
+          .checkmark {
+            width: ($size / 2) * 1px;
+            height: ($size / 2) * 1px;
+          }
+        }
+      }
+    }
+    @media (max-width: $mobileWidthMax) {
+      .radio-sm-#{$size} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $size * 1px;
+        height: $size * 1px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-left: 20px;
+        .radio {
+          width: ($size - 5.33) * 1px;
+          height: ($size - 5.33) * 1px;
+          .checkmark {
+            width: ($size / 2) * 1px;
+            height: ($size / 2) * 1px;
+          }
         }
       }
     }

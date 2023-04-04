@@ -57,108 +57,152 @@
     }
   }
 }
+
+$progressCircleSizes: 280, 240, 200, 160, 100, 64;
+
+$mapThumbnailWidth: (
+  280: 208,
+  240: 176,
+  200: 152,
+  160: 120,
+  100: 76,
+  64: 48
+);
+
+$mapFont: (
+  280: 208,
+  240: 176,
+  200: 152,
+  160: 120,
+  100: 76,
+  64: 48
+);
+
+@mixin getFont($size) {
+  @if $size==280 {
+    @include font-h1-semibold;
+  } @else if $size==240 {
+    @include font-h1-medium;
+  } @else if $size==200 {
+    @include font-h2-medium;
+  } @else if $size==160 {
+    @include font-h3-medium;
+  } @else if $size==100 {
+    @include font-body-medium;
+  } @else if $size==64 {
+    @include font-caption-medium;
+  }
+}
+
 .progress-circle {
   position: relative;
-  &.progress-circle-xxl {
-    width: 280px;
-    height: 280px;
-    circle {
-      stroke-width: 28px;
-      cx: 140px;
-      cy: 140px;
-      r: 126px;
+  @each $size in $progressCircleSizes {
+    &.progress-circle-#{$size} {
+      width: $size * 1px;
+      height: $size * 1px;
+      circle {
+        stroke-width: $size / 10;
+        cx: $size / 2;
+        cy: $size / 2;
+        r: $size / 2 - $size / 20;
+      }
+      .circle-thumbnail {
+        @include getFont($size);
+        width: map-get($map: $mapThumbnailWidth, $key: $size) * 1px;
+        height: map-get($map: $mapThumbnailWidth, $key: $size) * 1px;
+      }
+      $strokeDashArray: 3.14159 * ($size - $size / 10);
+      .circle1 {
+        stroke-dasharray: $strokeDashArray;
+        stroke-dashoffset: 0;
+      }
+      .circle2 {
+        stroke-dasharray: $strokeDashArray;
+        stroke-dashoffset: calc(#{$strokeDashArray} * (var(--val)));
+      }
     }
-    .circle-thumbnail {
-      @include font-semibold;
-      font-size: 38px;
-      line-height: 46px;
-      width: 208px;
-      height: 208px;
+    @media (min-width: $desktopWidthMin) {
+      &.progress-circle-xl-#{$size} {
+        width: $size * 1px;
+        height: $size * 1px;
+        circle {
+          stroke-width: $size / 10;
+          cx: $size / 2;
+          cy: $size / 2;
+          r: $size / 2 - $size / 20;
+        }
+        .circle-thumbnail {
+          @include getFont($size);
+          width: map-get($map: $mapThumbnailWidth, $key: $size) * 1px;
+          height: map-get($map: $mapThumbnailWidth, $key: $size) * 1px;
+        }
+        $strokeDashArray: 3.14159 * ($size - $size / 10);
+        .circle1 {
+          stroke-dasharray: $strokeDashArray;
+          stroke-dashoffset: 0;
+        }
+        .circle2 {
+          stroke-dasharray: $strokeDashArray;
+          stroke-dashoffset: calc(#{$strokeDashArray} * (var(--val)));
+        }
+      }
     }
-  }
-  &.progress-circle-xl {
-    width: 240px;
-    height: 240px;
-    circle {
-      stroke-width: 24px;
-      cx: 120px;
-      cy: 120px;
-      r: 108px;
+    @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+      &.progress-circle-md-#{$size} {
+        width: $size * 1px;
+        height: $size * 1px;
+        circle {
+          stroke-width: $size / 10;
+          cx: $size / 2;
+          cy: $size / 2;
+          r: $size / 2 - $size / 20;
+        }
+        .circle-thumbnail {
+          @include getFont($size);
+          width: map-get($map: $mapThumbnailWidth, $key: $size) * 1px;
+          height: map-get($map: $mapThumbnailWidth, $key: $size) * 1px;
+        }
+        $strokeDashArray: 3.14159 * ($size - $size / 10);
+        .circle1 {
+          stroke-dasharray: $strokeDashArray;
+          stroke-dashoffset: 0;
+        }
+        .circle2 {
+          stroke-dasharray: $strokeDashArray;
+          stroke-dashoffset: calc(#{$strokeDashArray} * (var(--val)));
+        }
+      }
     }
-    .circle-thumbnail {
-      @include font-medium;
-      font-size: 38px;
-      line-height: 46px;
-      width: 176px;
-      height: 176px;
+    @media (max-width: $mobileWidthMax) {
+      &.progress-circle-sm-#{$size} {
+        width: $size * 1px;
+        height: $size * 1px;
+        circle {
+          stroke-width: $size / 10;
+          cx: $size / 2;
+          cy: $size / 2;
+          r: $size / 2 - $size / 20;
+        }
+        .circle-thumbnail {
+          @include getFont($size);
+          width: map-get($map: $mapThumbnailWidth, $key: $size) * 1px;
+          height: map-get($map: $mapThumbnailWidth, $key: $size) * 1px;
+        }
+        $strokeDashArray: 3.14159 * ($size - $size / 10);
+        .circle1 {
+          stroke-dasharray: $strokeDashArray;
+          stroke-dashoffset: 0;
+        }
+        .circle2 {
+          stroke-dasharray: $strokeDashArray;
+          stroke-dashoffset: calc(#{$strokeDashArray} * (var(--val)));
+        }
+      }
     }
-  }
-  &.progress-circle-lg {
-    width: 200px;
-    height: 200px;
-    circle {
-      stroke-width: 20px;
-      cx: 100px;
-      cy: 100px;
-      r: 90;
-    }
-    .circle-thumbnail {
-      @include font-medium;
-      font-size: 30px;
-      line-height: 38px;
-      width: 152px;
-      height: 152px;
-    }
-  }
-  &.progress-circle-md {
-    width: 160px;
-    height: 160px;
-    circle {
-      stroke-width: 16px;
-      cx: 80px;
-      cy: 80px;
-      r: 72px;
-    }
-    .circle-thumbnail {
-      @include font-medium;
-      font-size: 24px;
-      line-height: 32px;
-      width: 120px;
-      height: 120px;
-    }
-  }
-  &.progress-circle-sm {
-    width: 100px;
-    height: 100px;
-    circle {
-      stroke-width: 10px;
-      cx: 50px;
-      cy: 50px;
-      r: 45px;
-    }
-    .circle-thumbnail {
-      @include font-medium;
-      font-size: 16px;
-      line-height: 22px;
-      width: 76px;
-      height: 76px;
-    }
-  }
-  &.progress-circle-xs {
-    width: 64px;
-    height: 64px;
-    circle {
-      stroke-width: 6px;
-      cx: 32px;
-      cy: 32px;
-      r: 29px;
-    }
-    .circle-thumbnail {
-      @include font-medium;
-      font-size: 14px;
-      line-height: 18px;
-      width: 48px;
-      height: 48px;
+    .icon {
+      transform: translateX(-50%)
+        translateY(calc(-50% + #{$size / 10}px))
+        rotate(var(--rotate));
     }
   }
   .svg-circle {
@@ -180,6 +224,7 @@
     .icon {
       position: absolute;
       left: 50%;
+      top: 0;
     }
   }
   .circle-thumbnail {
@@ -192,6 +237,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
     .thumbnail-image {
       width: 64%;
     }

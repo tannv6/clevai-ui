@@ -140,3 +140,22 @@ export const GRID_VALUES = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
   22, 23, 24
 ] as const;
+
+type ISize =
+  | number
+  | {
+      xl: number;
+      md: number;
+      sm: number;
+    };
+
+export const genSizeClass = (size: ISize, prefix: string, styles: any) => {
+  if (typeof size === 'object' && !Array.isArray(size)) {
+    return `${styles[`${prefix}-xl-${size.xl}`]} 
+    ${styles[`${prefix}-md-${size.md}`]} 
+    ${styles[`${prefix}-sm-${size.sm}`]}`;
+  } else if (typeof size === 'number') {
+    return styles[`${prefix}-${size}`];
+  }
+  return '';
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import progressStyles from './progress.scss';
 import colors from '../css/colors.scss';
 // eslint-disable-next-line no-unused-vars
@@ -9,10 +9,18 @@ type Props = {
   bg?: typeof COLOR_ARRAY[number];
   data: {
     val: number;
-    w: 'xxl' | 'xl' | 'md' | 'lg' | 'sm' | 'xs';
+    size:
+      | 280
+      | 240
+      | 200
+      | 160
+      | 100
+      | 64
+      | (280 | 240 | 200 | 160 | 100 | 64)[];
     rotate: number;
     isReverse: boolean;
     text?: string;
+    textColor?: typeof COLOR_ARRAY[number];
     img?: string;
     bg?: typeof COLOR_ARRAY[number];
     icon: TIcon;
@@ -21,41 +29,51 @@ type Props = {
 
 function ProgressCircle({ bg = 'orange6', data }: Props) {
   const {
-    w,
+    size,
     val,
     rotate,
     isReverse,
     text,
     img,
     bg: circleBg,
-    icon: circleIcon
+    icon: circleIcon,
+    textColor
   } = data;
-  const MAP_SIZE_CIRCLE = {
-    xxl: { width: 280, thickness: 28 },
-    xl: { width: 240, thickness: 24 },
-    lg: { width: 200, thickness: 20 },
-    md: { width: 160, thickness: 16 },
-    sm: { width: 100, thickness: 10 },
-    xs: { width: 64, thickness: 6 }
-  };
-  const strokeDasharray =
-    Math.PI * (MAP_SIZE_CIRCLE[w].width - MAP_SIZE_CIRCLE[w].thickness);
-  const strokeDashoffset =
-    val <= 100 ? (strokeDasharray * val) / 100 : strokeDasharray;
+
   const MAP_ICON_SIZE = {
-    xxl: 'xl' as const,
-    xl: 'xl' as const,
-    lg: 'xl' as const,
-    md: 'xl' as const,
-    sm: 'lg' as const,
-    xs: 'md' as const
+    280: 'xl' as const,
+    240: 'xl' as const,
+    200: 'xl' as const,
+    160: 'xl' as const,
+    100: 'lg' as const,
+    64: 'md' as const
   };
+
+  const process = val >= 100 ? 100 : val || 0;
+
+  const iconSize = useMemo(() => {
+    if (typeof size === 'number') {
+      return MAP_ICON_SIZE[size];
+    } else if (Array.isArray(size)) {
+      return [
+        MAP_ICON_SIZE[size[0]],
+        MAP_ICON_SIZE[size[1]],
+        MAP_ICON_SIZE[size[2]]
+      ];
+    }
+    return undefined;
+  }, [size]);
 
   return (
     <div
-      className={`${progressStyles['progress-circle']} ${
-        progressStyles[`progress-circle-${w}`]
-      }`}
+      className={`${progressStyles['progress-circle']} ${getProgressClassName(
+        size
+      )}`}
+      style={
+        {
+          '--val': process / 100 + (isReverse ? 1 : 0)
+        } as any
+      }
     >
       <svg
         className={progressStyles['svg-circle']}
@@ -66,19 +84,15 @@ function ProgressCircle({ bg = 'orange6', data }: Props) {
         }}
       >
         <circle
+          className={progressStyles.circle1}
           style={{
-            stroke: colors.orange1,
-            strokeDasharray,
-            strokeDashoffset: 0
+            stroke: colors.orange1
           }}
         />
         <circle
+          className={progressStyles.circle2}
           style={{
-            stroke: colors[bg],
-            strokeDasharray,
-            strokeDashoffset: isReverse
-              ? strokeDashoffset
-              : strokeDashoffset + strokeDasharray
+            stroke: colors[bg]
           }}
         />
       </svg>
@@ -90,14 +104,13 @@ function ProgressCircle({ bg = 'orange6', data }: Props) {
       >
         <div
           className={progressStyles.icon}
-          style={{
-            transform: `translateX(-50%) translateY(calc(-50% + ${
-              MAP_SIZE_CIRCLE[w].thickness / 2
-            }px)) rotate(${-(rotate - 90)}deg)`,
-            top: 0
-          }}
+          style={
+            {
+              '--rotate': `${-(rotate - 90)}deg`
+            } as any
+          }
         >
-          <Icon type={circleIcon} size={MAP_ICON_SIZE[w]} fill={bg} />
+          <Icon type={circleIcon} size={iconSize} fill={bg} />
         </div>
       </div>
       <div
@@ -111,7 +124,20 @@ function ProgressCircle({ bg = 'orange6', data }: Props) {
             alt=''
           />
         ) : (
-          text || ''
+          ''
+        )}
+        {text ? (
+          <span
+            style={{
+              position: 'absolute',
+              color: colors[textColor || 'gray85']
+            }}
+            className=''
+          >
+            {text}
+          </span>
+        ) : (
+          ''
         )}
       </div>
     </div>
@@ -119,3 +145,26 @@ function ProgressCircle({ bg = 'orange6', data }: Props) {
 }
 
 export default ProgressCircle;
+
+const getProgressClassName = (
+  size: 280 | 240 | 200 | 160 | 100 | 64 | (280 | 240 | 200 | 160 | 100 | 64)[]
+) => {
+  if (typeof size === 'number') {
+    return progressStyles[`progress-circle-${size}`];
+  } else if (Array.isArray(size)) {
+    let cls = '';
+    if (size[0]) {
+      cls += progressStyles[`progress-circle-xl-${size[0]}`] + ' ';
+    }
+    if (size[1]) {
+      cls += progressStyles[`progress-circle-md-${size[1] || size[0]}`] + ' ';
+    }
+    if (size[2]) {
+      cls +=
+        progressStyles[`progress-circle-sm-${size[2] || size[1] || size[0]}`] +
+        ' ';
+    }
+    return cls;
+  }
+  return '';
+};

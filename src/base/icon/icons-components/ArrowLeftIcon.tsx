@@ -1,17 +1,16 @@
 import React from 'react';
-import styles from '../icon.scss';
 
 interface Props {
-  size: string;
+  className: string;
   fill: string;
 }
 
-function ArrowLeftIcon({ size, fill }: Props) {
+function ArrowLeftIcon({ className, fill }: Props) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 8 14'
-      className={styles[size]}
+      className={className}
     >
       <path
         fillRule='evenodd'

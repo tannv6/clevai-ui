@@ -2,8 +2,19 @@ import React, { useRef, useEffect } from 'react';
 import { Icon } from '../icon';
 import { Heading } from '../typography';
 import styles from './checkbox.scss';
+import { genSizeClass } from '..';
 
 type ValueType = string | number;
+
+type TSize =
+  | 16
+  | 20
+  | 24
+  | {
+      xl: 16 | 20 | 24;
+      md: 16 | 20 | 24;
+      sm: 16 | 20 | 24;
+    };
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -14,7 +25,7 @@ interface Props
   value: ValueType;
   checkedCheckboxArr: ValueType[];
   onCheckboxChange: (value: ValueType) => void;
-  size: 16 | 20 | 24;
+  outerSize: TSize;
   label?: string;
   disabled?: boolean;
 }
@@ -23,7 +34,7 @@ const Checkbox = ({
   type,
   value,
   checkedCheckboxArr,
-  size,
+  outerSize,
   onCheckboxChange,
   label,
   disabled,
@@ -49,7 +60,13 @@ const Checkbox = ({
 
   return (
     <div className={styles.checkboxWrap}>
-      <div className={styles[`checkbox-${size}`]}>
+      <div
+        className={`${styles['checkbox-content']} ${genSizeClass(
+          outerSize,
+          'checkbox',
+          styles
+        )}`}
+      >
         <label ref={checkboxLabelRef} className={styles.checkbox}>
           <input
             {...props}

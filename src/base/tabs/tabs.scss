@@ -2,35 +2,122 @@
 .tabs {
   display: flex;
   width: 100%;
-  .tab {
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
+  justify-content: space-between;
+  .tabWrapper {
     border-radius: 8px;
-    gap: 8px;
     cursor: pointer;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .tab-size-md {
-    height: 38px;
-    padding: 8px 24px;
-    .label {
-      @include font-body-semibold;
-    }
-    @media (max-width: $mobileWidthMax) {
-      height: unset;
-    }
-  }
-  .tab-size-sm {
-    height: 34px;
-    padding: 8px 24px;
-    .label {
-      @include font-caption-semibold;
-    }
-    @media (max-width: $mobileWidthMax) {
-      flex-direction: column;
-      height: unset;
+    .tab {
+      display: flex;
+      align-items: center;
+      margin: 0 24px;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      &.column-xl {
+        flex-direction: column;
+        height: unset;
+      }
+      @media (max-width: $tabletWidthMax) {
+        &.column-md {
+          flex-direction: column;
+          height: unset;
+        }
+      }
+      @media (max-width: $mobileWidthMax) {
+        &.column-sm {
+          flex-direction: column;
+          height: unset;
+        }
+      }
+      .label {
+        &.hidden-xl {
+          display: none;
+        }
+        @media (max-width: $tabletWidthMax) {
+          &.hidden-md {
+            display: none;
+          }
+        }
+        @media (max-width: $mobileWidthMax) {
+          &.hidden-sm {
+            display: none;
+          }
+        }
+      }
+
+      &.md {
+        height: 38px;
+        padding: 8px 0;
+        margin: 0 24px;
+        .label {
+          @include font-body-semibold;
+        }
+      }
+      &.sm {
+        height: 34px;
+        padding: 8px 0;
+        margin: 0 24px;
+        .label {
+          @include font-caption-semibold;
+        }
+      }
+
+      @media (min-width: $desktopWidthMin) {
+        &.desktop-md {
+          height: 34px;
+          padding: 8px 0;
+          margin: 0 24px;
+          .label {
+            @include font-caption-semibold;
+          }
+        }
+        &.desktop-sm {
+          height: 34px;
+          padding: 8px 0;
+          margin: 0 24px;
+          .label {
+            @include font-caption-semibold;
+          }
+        }
+      }
+
+      @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+        &.tablet-md {
+          height: 34px;
+          padding: 8px 0;
+          margin: 0 24px;
+          .label {
+            @include font-caption-semibold;
+          }
+        }
+        &.tablet-sm {
+          height: 34px;
+          padding: 8px 0;
+          margin: 0 24px;
+          .label {
+            @include font-caption-semibold;
+          }
+        }
+      }
+
+      @media (max-width: $mobileWidthMax) {
+        &.mobile-md {
+          height: 34px;
+          padding: 8px 0;
+          margin: 0 24px;
+          .label {
+            @include font-caption-semibold;
+          }
+        }
+        &.mobile-sm {
+          height: 34px;
+          padding: 8px 0;
+          margin: 0 24px;
+          .label {
+            @include font-caption-semibold;
+          }
+        }
+      }
     }
   }
 
@@ -38,7 +125,7 @@
     &.gutter-#{$gutter} {
       margin-left: -#{$gutter}px;
       margin-right: -#{$gutter}px;
-      .tabWrapper {
+      .tabContainer {
         padding-left: #{$gutter}px;
         padding-right: #{$gutter}px;
       }
@@ -47,7 +134,7 @@
       @media (min-width: $desktopWidthMin) {
         margin-left: -#{$gutter}px;
         margin-right: -#{$gutter}px;
-        .tabWrapper {
+        .tabContainer {
           padding-left: #{$gutter}px;
           padding-right: #{$gutter}px;
         }
@@ -57,7 +144,7 @@
       @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
         margin-left: -#{$gutter}px;
         margin-right: -#{$gutter}px;
-        .tabWrapper {
+        .tabContainer {
           padding-left: #{$gutter}px;
           padding-right: #{$gutter}px;
         }
@@ -67,7 +154,7 @@
       @media (max-width: $mobileWidthMax) {
         margin-left: -#{$gutter}px;
         margin-right: -#{$gutter}px;
-        .tabWrapper {
+        .tabContainer {
           padding-left: #{$gutter}px;
           padding-right: #{$gutter}px;
         }

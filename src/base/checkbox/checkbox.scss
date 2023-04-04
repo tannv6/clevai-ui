@@ -3,11 +3,60 @@
 $sizes: 16, 20, 24;
 
 .checkboxWrap {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   + .checkboxWrap {
     margin-left: 20px;
+  }
+
+  .checkbox-content {
+    &:hover {
+      background-color: $orangeColor1;
+    }
+
+    &.disabled:hover {
+      background-color: transparent;
+    }
+    .checkbox {
+      border-width: 1px;
+      border-style: solid;
+      border-color: $gray30Color;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      &.checked {
+        border-color: $primaryColor;
+      }
+      &:hover {
+        background-color: $orangeColor1;
+        border-color: $primaryColor;
+      }
+      &.disabled {
+        border-color: $gray15Color;
+        background-color: $gray10Color;
+        pointer-events: none;
+      }
+      .checkmark {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: $primaryColor;
+        display: none;
+      }
+      input {
+        display: none;
+      }
+      input:checked + .checkmark {
+        display: flex;
+      }
+      &.disabled .checkboxIcon {
+        display: none;
+      }
+    }
   }
 
   @each $size in $sizes {
@@ -20,59 +69,56 @@ $sizes: 16, 20, 24;
       background-color: transparent;
       border-radius: 4px;
       margin-left: 20px;
-
-      &:hover {
-        background-color: $orangeColor1;
-      }
-
-      &.disabled:hover {
-        background-color: transparent;
-      }
-
       .checkbox {
         width: ($size) * 1px;
         height: ($size) * 1px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: $gray30Color;
-        border-radius: 4px;
+      }
+    }
+    @media (min-width: $desktopWidthMin) {
+      .checkbox-xl-#{$size} {
         display: flex;
         align-items: center;
         justify-content: center;
-        box-sizing: border-box;
-
-        &.checked {
-          border-color: $primaryColor;
+        width: $size * 1px;
+        height: $size * 1px;
+        background-color: transparent;
+        border-radius: 4px;
+        margin-left: 20px;
+        .checkbox {
+          width: ($size) * 1px;
+          height: ($size) * 1px;
         }
-
-        &:hover {
-          background-color: $orangeColor1;
-          border-color: $primaryColor;
+      }
+    }
+    @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+      .checkbox-md-#{$size} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $size * 1px;
+        height: $size * 1px;
+        background-color: transparent;
+        border-radius: 4px;
+        margin-left: 20px;
+        .checkbox {
+          width: ($size) * 1px;
+          height: ($size) * 1px;
         }
-        &.disabled {
-          border-color: $gray15Color;
-          background-color: $gray10Color;
-          pointer-events: none;
-        }
-
-        .checkmark {
-          width: 100%;
-          height: 100%;
-          align-items: center;
-          justify-content: center;
-          background-color: $primaryColor;
-          display: none;
-        }
-        input {
-          display: none;
-        }
-
-        input:checked + .checkmark {
-          display: flex;
-        }
-
-        &.disabled .checkboxIcon {
-          display: none;
+      }
+    }
+    @media (max-width: $mobileWidthMax) {
+      .checkbox-sm-#{$size} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $size * 1px;
+        height: $size * 1px;
+        background-color: transparent;
+        border-radius: 4px;
+        margin-left: 20px;
+        .checkbox {
+          width: ($size) * 1px;
+          height: ($size) * 1px;
         }
       }
     }

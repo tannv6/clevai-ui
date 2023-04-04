@@ -1,8 +1,18 @@
 import React, { useRef, useEffect } from 'react';
 import styles from './radio.scss';
 import { Heading } from '../typography';
+import { genSizeClass } from '..';
 
 type ValueType = string | number;
+type TSize =
+  | 16
+  | 20
+  | 24
+  | {
+      xl: 16 | 20 | 24;
+      md: 16 | 20 | 24;
+      sm: 16 | 20 | 24;
+    };
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -12,7 +22,7 @@ interface Props
   value: ValueType;
   checkedRadio: ValueType;
   onRadioChange: (value: ValueType) => void;
-  size: 16 | 20 | 24;
+  outerSize: TSize;
   label?: string;
   disabled?: boolean;
 }
@@ -21,7 +31,7 @@ const Radio = ({
   value,
   checkedRadio,
   onRadioChange,
-  size,
+  outerSize,
   label,
   disabled,
   ...props
@@ -46,7 +56,13 @@ const Radio = ({
 
   return (
     <div className={styles.radioWrap}>
-      <div className={styles[`radio-${size}`]}>
+      <div
+        className={`${styles['radio-content']} ${genSizeClass(
+          outerSize,
+          'radio',
+          styles
+        )}`}
+      >
         <label ref={radioLabelRef} className={styles.radio}>
           <input
             {...props}

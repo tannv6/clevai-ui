@@ -37,7 +37,7 @@ const Search = ({
       >
         <Icon
           type='search'
-          size={'md'}
+          size='md'
           fill={value ? 'gray85Color' : 'gray30Color'}
         />
         <input
@@ -56,7 +56,7 @@ const Search = ({
           className={`${styles.closeIcon} ${value ? styles.showCloseIcon : ''}`}
           onClick={handleClearSearchValue}
         >
-          <Icon type='close' size={'sm'} fill='gray30Color' />
+          <Icon type='close' size='sm' fill='gray30Color' />
         </div>
       </div>
       {errorMessage && (

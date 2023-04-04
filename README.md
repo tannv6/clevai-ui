@@ -165,7 +165,19 @@ const App = () => {
           type={'normal'}
           checkedCheckboxArr={checkedCheckboxArr}
           onCheckboxChange={onCheckboxChange}
-          size={24}
+          outerSize={24}
+          label={checkbox.label}
+          disabled={false}
+        />
+      ))}
+      {checkboxValues.map((checkbox) => (
+        <Checkbox
+          key={checkbox.value}
+          value={checkbox.value}
+          type={'normal'}
+          checkedCheckboxArr={checkedCheckboxArr}
+          onCheckboxChange={onCheckboxChange}
+          outerSize={{ xl: 24, md: 20, sm: 16 }}
           label={checkbox.label}
           disabled={false}
         />
@@ -173,12 +185,13 @@ const App = () => {
     </div>
   );
 };
+export default App;
 ```
 
 ### _Radio Component_
 
 ```tsx
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Radio } from 'clevai-ui';
 import 'clevai-ui/dist/index.css';
@@ -208,13 +221,25 @@ const App = () => {
           checkedRadio={checkedRadio}
           onRadioChange={setCheckedRadio}
           label={radio.label}
-          size={24}
+          outerSize={24}
+          disabled={false}
+        />
+      ))}
+      {radioValues.map((radio) => (
+        <Radio
+          value={radio.value}
+          checkedRadio={checkedRadio}
+          onRadioChange={setCheckedRadio}
+          label={radio.label}
+          outerSize={{ xl: 24, md: 20, sm: 16 }}
           disabled={false}
         />
       ))}
     </div>
   );
 };
+
+export default App;
 ```
 
 ### _Dropdown Component_
@@ -313,13 +338,31 @@ const App = () => {
   return (
     <>
       <Tabs onChange={handleChange} gutters={6} value={value}>
-        <Tab size='md' icon='book'>
+        <Tab
+          size={['md', 'md', 'sm']}
+          icon='book'
+          type={'underline'}
+          hideLabelBreakPoint='sm'
+          columnBreakPoint='sm'
+        >
           Tab1
         </Tab>
-        <Tab size='md' icon='book'>
+        <Tab
+          size={['md', 'md', 'sm']}
+          icon='book'
+          type={'underline'}
+          hideLabelBreakPoint='sm'
+          columnBreakPoint='md'
+        >
           Tab2
         </Tab>
-        <Tab size='md' icon='book'>
+        <Tab
+          size={['md', 'md', 'sm']}
+          icon='book'
+          type={'underline'}
+          hideLabelBreakPoint='sm'
+          columnBreakPoint='md'
+        >
           Tab3
         </Tab>
       </Tabs>
@@ -347,18 +390,35 @@ const App = () => {
         }}
       />
       <ProgressCircle
+        bg='corn8'
         data={{
           val: 30,
-          w: 'md',
+          size: 280,
           rotate: 225,
           isReverse: false,
           text: 'Text',
           img: 'https://r73troypb4obj.vcdn.cloud/picture/L4%20icon/2.svg',
           bg: 'blue6',
-          icon: 'star'
+          icon: 'star',
+          textColor: 'white'
+        }}
+      />
+      <ProgressCircle
+        bg='corn8'
+        data={{
+          val: 30,
+          size: [280, 200, 64],
+          rotate: 225,
+          isReverse: false,
+          text: 'Text',
+          img: 'https://r73troypb4obj.vcdn.cloud/picture/L4%20icon/2.svg',
+          bg: 'blue6',
+          icon: 'star',
+          textColor: 'white'
         }}
       />
       <ProgressDotedBar
+        bg='blue8'
         data={{
           max: 10,
           val: 2
@@ -439,6 +499,25 @@ const App = () => {
           <img src='https://www.w3schools.com/bootstrap/ny.jpg' alt='' />
         </Carousel>
       </Wrapper>
+    </>
+  );
+};
+
+export default App;
+```
+
+### _Icon Component_
+
+```tsx
+import React from 'react';
+
+import 'clevai-ui/dist/index.css';
+import { Icon } from 'clevai-ui';
+const App = () => {
+  return (
+    <>
+      <Icon type='close2' fill='blue9' size={'lg'} />
+      <Icon type='close2' fill='blue9' size={['xl', 'md', 'sm']} />
     </>
   );
 };

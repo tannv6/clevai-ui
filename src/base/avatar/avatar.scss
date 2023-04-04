@@ -1,36 +1,56 @@
 @import '../../base/css/common.scss';
 
 $sizes: 18, 24, 30, 32, 48, 52, 120;
-$shapes: 'square', 'circle';
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9dadb;
+  overflow: hidden;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.square {
+  border-radius: 8%;
+}
+
+.img-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-default {
+  width: 61%;
+  height: 61%;
+  object-fit: cover;
+}
 
 @each $size in $sizes {
   .img-#{$size} {
     width: $size * 1px;
     height: $size * 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #d9dadb;
-    overflow: hidden;
-
-    &.circle {
-      border-radius: 50%;
+  }
+  @media (min-width: $desktopWidthMin) {
+    .img-xl-#{$size} {
+      width: $size * 1px;
+      height: $size * 1px;
     }
-
-    &.square {
-      border-radius: 8%;
+  }
+  @media (min-width: $tabletWidthMin) and (max-width: $tabletWidthMax) {
+    .img-md-#{$size} {
+      width: $size * 1px;
+      height: $size * 1px;
     }
-
-    .img-avatar {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .img-default {
-      width: 61%;
-      height: 61%;
-      object-fit: cover;
+  }
+  @media (max-width: $mobileWidthMax) {
+    .img-sm-#{$size} {
+      width: $size * 1px;
+      height: $size * 1px;
     }
   }
 }

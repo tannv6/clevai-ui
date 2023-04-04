@@ -50,11 +50,11 @@ const Button = ({
         />
       )}
       {icons && icons[0] && (
-        <Icon color='white' size={MAP_ICON_SIZE[size || '']} type={icons[0]} />
+        <Icon fill='white' size={MAP_ICON_SIZE[size || '']} type={icons[0]} />
       )}
       {children}
       {icons && icons[1] && (
-        <Icon color='white' size={MAP_ICON_SIZE[size || '']} type={icons[1]} />
+        <Icon fill='white' size={MAP_ICON_SIZE[size || '']} type={icons[1]} />
       )}
     </button>
   );
